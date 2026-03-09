@@ -1,0 +1,112 @@
+FONTE: Fatores associados as doencas cardiovasculares na populacao adulta brasileira
+Publicado em: Revista Brasileira de Epidemiologia, 2021
+Autores: Sa MG, Alves FTA, Ribeiro ALP, Malta DC, et al.
+Disponivel em: https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408
+Licenca: Creative Commons - Acesso Aberto
+DOI: https://doi.org/10.1590/1980-549720210013.supl.2
+
+---
+
+RESUMO
+
+Objetivo: Analisar os fatores associados as doencas cardiovasculares (DCV) autorreferidas na populacao adulta brasileira.
+
+Metodo: Estudo transversal com dados da Pesquisa Nacional de Saude (PNS) de 2019, conduzida pelo IBGE em parceria com o Ministerio da Saude. A amostra foi composta por adultos de 18 anos ou mais residentes em domicilios particulares permanentes do Brasil.
+
+Resultados: A prevalencia de DCV autorreferida foi de 8,4% na populacao adulta brasileira, sendo maior em mulheres (9,1%) do que em homens (7,6%). A prevalencia aumentou progressivamente com a faixa etaria, atingindo 30,6% entre adultos com 75 anos ou mais.
+
+---
+
+INTRODUCAO
+
+As doencas cardiovasculares (DCV) constituem a principal causa de morte no Brasil e no mundo. No Brasil, as DCV foram responsaveis por 27,3% de todos os obitos em 2019, sendo a doenca arterial coronariana (DAC) e as doencas cerebrovasculares as principais causas especificas.
+
+Os fatores de risco para DCV sao bem estabelecidos e incluem tanto fatores biologicos (hipertensao arterial, diabetes mellitus, dislipidemia, obesidade) quanto comportamentais (tabagismo, sedentarismo, alimentacao inadequada, consumo excessivo de alcool) e socioeconomicos (baixa escolaridade, renda familiar reduzida, ausencia de plano de saude).
+
+A Pesquisa Nacional de Saude (PNS), realizada em ciclos regulares pelo IBGE em parceria com o Ministerio da Saude, representa uma das principais fontes de dados sobre saude da populacao brasileira, permitindo analisar a distribuicao de doencas cronicas e seus fatores de risco em todo o territorio nacional.
+
+---
+
+METODOS
+
+Delineamento: Estudo epidemiologico transversal de base populacional.
+
+Populacao: Adultos com 18 anos ou mais, residentes em domicilios particulares permanentes em areas urbanas e rurais de todos os estados brasileiros e do Distrito Federal.
+
+Amostragem: Amostragem probabilistica por conglomerados em tres estagios (setores censitarios, domicilios e individuos), com representatividade nacional e estadual.
+
+Variavel desfecho: Doenca cardiovascular autorreferida, definida pela resposta positiva a pergunta: "Algum medico ja diagnosticou que o(a) sr(a) tem alguma doenca do coracao?"
+
+Variaveis independentes investigadas:
+- Sexo (masculino/feminino)
+- Faixa etaria (18-29, 30-44, 45-59, 60-74, 75 anos ou mais)
+- Cor ou raca (branca, preta, parda, amarela, indigena)
+- Escolaridade (sem instrucao, fundamental incompleto, fundamental completo, medio, superior)
+- Regiao geografica (Norte, Nordeste, Centro-Oeste, Sudeste, Sul)
+- Cobertura por plano de saude (sim/nao)
+- Hipertensao arterial autorreferida
+- Diabetes mellitus autorreferido
+- Obesidade (IMC >= 30 kg/m2)
+- Tabagismo atual
+- Nivel de atividade fisica insuficiente
+
+---
+
+RESULTADOS
+
+Prevalencia geral de DCV: 8,4% (IC95%: 8,0-8,8)
+Prevalencia em mulheres: 9,1%
+Prevalencia em homens: 7,6%
+
+Prevalencia por faixa etaria:
+- 18-29 anos: 0,9%
+- 30-44 anos: 2,7%
+- 45-59 anos: 9,3%
+- 60-74 anos: 22,4%
+- 75 anos ou mais: 30,6%
+
+Fatores associados a maior prevalencia de DCV (analise multivariada):
+- Hipertensao arterial: OR = 4,8 (IC95%: 4,2-5,5)
+- Diabetes mellitus: OR = 2,9 (IC95%: 2,6-3,3)
+- Idade avancada (75+ anos vs 18-29 anos): OR = 22,1
+- Sexo feminino: OR = 1,2 (IC95%: 1,1-1,4)
+- Baixa escolaridade: OR = 1,8 (IC95%: 1,5-2,2)
+- Ausencia de plano de saude: OR = 1,3 (IC95%: 1,1-1,5)
+- Obesidade: OR = 1,5 (IC95%: 1,3-1,7)
+- Tabagismo atual: OR = 1,4 (IC95%: 1,2-1,6)
+- Sedentarismo: OR = 1,2 (IC95%: 1,0-1,4)
+
+Diferencas regionais:
+- Maior prevalencia: Regiao Sul (9,8%) e Sudeste (9,2%)
+- Menor prevalencia: Regiao Norte (5,9%) e Nordeste (7,1%)
+
+---
+
+DISCUSSAO
+
+Os resultados evidenciam que a DCV autorreferida no Brasil esta fortemente associada a fatores de risco classicos, especialmente hipertensao e diabetes, e a variaveis socioeconomicas como escolaridade e acesso a plano de saude. A maior prevalencia em mulheres contrasta com dados de mortalidade, onde homens apresentam taxas mais elevadas, sugerindo que mulheres sobrevivem mais ao evento cardiaco inicial mas acumulam maior morbidade ao longo do tempo.
+
+As desigualdades regionais observadas refletem diferencas no perfil demografico, nivel socioeconomico, acesso a servicos de saude e prevalencia de fatores de risco entre as regioes brasileiras. A regiao Norte apresenta populacao mais jovem e menor tempo de exposicao a fatores de risco, enquanto as regioes Sul e Sudeste concentram populacao mais idosa e com maior prevalencia de hipertensao e diabetes.
+
+---
+
+CONCLUSAO
+
+A prevalencia de DCV autorreferida no Brasil e de 8,4%, com forte gradiente etario e associacao com fatores de risco modificaveis, especialmente hipertensao arterial e diabetes mellitus. Estrategias de prevencao que priorizem o controle desses fatores, associadas a reducao das iniquidades no acesso a cuidados de saude, sao essenciais para reduzir a carga das DCV na populacao brasileira.
+
+---
+
+RELEVANCIA PARA NLP E IA
+
+Este texto e rico em:
+1. Dados epidemiologicos estruturados (prevalencias, odds ratios, intervalos de confianca)
+2. Terminologia medica especifica em portugues (DCV, DAC, hipertensao, dislipidemia, IMC)
+3. Relacoes causais entre fatores de risco e doenca cardiaca
+4. Dados demograficos e socioeconomicos relevantes para modelos de equidade em saude
+5. Estrutura de artigo cientifico (IMRAD) util para treinar modelos de classificacao de secoes
+
+Aplicacoes: extracao de relacoes causais, NER medico em portugues, classificacao de risco cardiovascular baseada em texto, sumarizacao automatica de literatura epidemiologica.
+
+---
+FIM DO DOCUMENTO
+Arquivo gerado para uso academico no projeto CardioIA - FIAP 2026
