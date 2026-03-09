@@ -1,0 +1,56 @@
+FONTE: Estatistica Cardiovascular - Brasil 2023
+Publicado em: Arquivos Brasileiros de Cardiologia, 2024
+Autores: Gomes BFO, Oliveira GMM, et al.
+Disponivel em: https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt
+Licenca: Creative Commons - Acesso Aberto
+
+---
+
+RESUMO DO ARTIGO
+
+As doencas cardiovasculares (DCV) representam a principal causa de morte no Brasil e no mundo. A publicacao Estatistica Cardiovascular - Brasil tem por objetivo fornecer uma compilacao anual dos dados e das pesquisas sobre a epidemiologia das DCV no pais. Esta edicao de 2023 inclui capitulos sobre DCV total e cinco condicoes especificas: doenca cerebrovascular, doenca arterial coronariana, cardiomiopatia e insuficiencia cardiaca, e fibrilacao atrial.
+
+A publicacao segue a metodologia usada pela American Heart Association na producao anual da Heart Disease & Stroke Statistics Update, que tambem enfatiza dados epidemiologicos e de saude publica.
+
+PRINCIPAIS DADOS E INFORMACOES
+
+1. MORTALIDADE
+As DCV sao responsaveis por aproximadamente 30% de todas as mortes no Brasil. A taxa de mortalidade por DCV no Brasil ainda e superior a de paises desenvolvidos, refletindo desigualdades no acesso a cuidados de saude, controle de fatores de risco e adocao de estilos de vida saudaveis.
+
+2. FATORES DE RISCO PRINCIPAIS
+- Hipertensao arterial sistolica: afeta cerca de 32,5% da populacao adulta brasileira
+- Diabetes mellitus: prevalencia estimada de 7,7% na populacao geral
+- Obesidade e sobrepeso: mais de 50% dos adultos brasileiros estao acima do peso ideal
+- Tabagismo: em declinio, mas ainda presente em cerca de 12% da populacao adulta
+- Sedentarismo: mais de 45% da populacao nao atinge o nivel recomendado de atividade fisica
+- Dislipidemia: niveis elevados de colesterol LDL sao prevalentes em todas as faixas etarias
+
+3. DOENCA ARTERIAL CORONARIANA (DAC)
+A DAC e a principal causa individual de mortalidade cardiovascular no Brasil. O infarto agudo do miocardio (IAM) representa a manifestacao mais grave e e responsavel por grande parte das internacoes em unidades de terapia intensiva (UTI) cardiaca. O tratamento com angioplastia primaria nas primeiras horas do IAM reduz significativamente a mortalidade, mas o acesso a este procedimento ainda e limitado em regioes remotas do Brasil.
+
+4. INSUFICIENCIA CARDIACA
+A insuficiencia cardiaca e uma das principais causas de hospitalizacao no Brasil, especialmente em pacientes acima de 60 anos. A doenca de Chagas, endemia brasileira, e uma causa importante de cardiomiopatia dilatada e insuficiencia cardiaca no pais, diferenciando o perfil epidemiologico brasileiro do observado em paises europeus e norte-americanos.
+
+5. FIBRILACAO ATRIAL
+A fibrilacao atrial (FA) e a arritmia cardiaca mais comum na populacao adulta. No Brasil, estima-se que cerca de 1,5 a 2% da populacao adulta seja portadora de FA. Essa arritmia aumenta em 5 vezes o risco de acidente vascular cerebral (AVC) e e responsavel por grande numero de hospitalizacoes.
+
+6. DOENCA CEREBROVASCULAR
+O AVC e a segunda causa de morte e a principal causa de incapacidade no Brasil. O AVC isquemico representa cerca de 85% dos casos, sendo principalmente causado por aterosclerose carotidea, cardioembolismo (incluindo FA) e doenca de pequenos vasos cerebrais.
+
+RELEVANCIA PARA PROCESSAMENTO DE LINGUAGEM NATURAL (NLP)
+
+Este texto representa um documento cientifico tipico da area de saude cardiovascular em portugues. Suas caracteristicas o tornam valioso para aplicacoes de NLP:
+
+1. Extracao de entidades: identificacao de nomes de doencas (DAC, FA, AVC, IAM), fatores de risco (hipertensao, diabetes, tabagismo), tratamentos (angioplastia, anticoagulacao) e indicadores epidemiologicos.
+
+2. Classificacao de topicos: o texto abrange multiplos subtopicos cardiacos, permitindo treinar modelos de classificacao multiclasse.
+
+3. Reconhecimento de relacoes: o texto estabelece relacoes causais (ex: FA causa AVC) que podem ser extraidas automaticamente por modelos de relacao de entidades.
+
+4. Sumarizacao: o documento e longo e factual, ideal para treinar modelos de sumarizacao extrativa e abstrativa em portugues medico.
+
+5. Analise de frequencia terminologica: permite construir vocabularios e ontologias medicas especializadas em cardiologia no contexto brasileiro.
+
+---
+FIM DO DOCUMENTO
+Arquivo gerado para uso academico no projeto CardioIA - FIAP 2026
