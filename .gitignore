@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Ambientes virtuais
+venv/
+env/
+.venv/
+.env
+
+# Dados locais (nao versionar arquivos grandes)
+data/raw/
+data/processed/
+*.csv
+*.zip
+*.h5
+*.pkl
+*.joblib
+
+# Imagens de dataset (grandes demais para git)
+assets/images/
+*.jpg
+*.jpeg
+*.png
+*.dcm
+
+# Modelos treinados
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.pth
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Credenciais e configs sensiveis
+.env
+secrets.json
+config_local.py
