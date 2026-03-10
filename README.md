@@ -3,32 +3,45 @@
 **Curso:** Inteligência Artificial — FIAP  
 **Fase:** 1 — Batimentos de Dados  
 **Disciplina:** Do Python à Fronteira Quântica  
-**Integrante:** Tiago Alves Cordeiro — RM 561791  
 **Turma:** 1TIAO  
 **Data de entrega:** 10/03/2026  
 
 ---
 
-## Sobre o Projeto
+## 👥 Integrantes do Grupo
+
+| Nome | RM | Papel |
+|---|---|---|
+| Tiago Alves Cordeiro | RM 561791 | Líder do Repositório |
+| Matheus Parra | RM 561907 | Integrante |
+| Otavio Custodio de Oliveira | RM 565606 | Integrante |
+| Thiago Henrique Pereira de Almeida Santos | RM 563327 | Integrante |
+| Leandro Arthur Marinho Ferreira | RM 565240 | Integrante |
+
+---
+
+## 📌 Sobre o Projeto
 
 O **CardioIA** é um projeto acadêmico que simula o ecossistema de uma cardiologia moderna, integrando dados clínicos, Machine Learning, Visão Computacional, IoT e agentes inteligentes. Nesta **Fase 1**, atuamos como cientistas de dados hospitalares: o desafio foi levantar, organizar e compreender dados cardiológicos que futuramente alimentarão os módulos inteligentes do sistema.
 
 ---
 
-## Estrutura do Repositório
+## 📂 Estrutura do Repositório
 
 ```
 cardio-ia-fase1/
-├── README.md                  ← Este arquivo
-├── assets/
-│   ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
-│   └── texto_02_fatores_associados_doencas_cardiovasculares.txt
-└── links.md                   ← Links públicos dos dados completos
+├── README.md                          ← Este arquivo
+├── links.md                           ← Links públicos dos dados completos
+└── assets/
+    ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
+    └── texto_02_fatores_associados_doencas_cardiovasculares.txt
 ```
+
+> **Roadmap de fases futuras:** O repositório está preparado para receber pastas como `notebooks/`, `models/`, `data/` e `reports/` conforme o projeto evolui.
 
 ---
 
-## Parte 1 — Dados Numéricos (IoT)
+## 📊 Parte 1 — Dados Numéricos (IoT)
 
 ### Dataset Utilizado
 
@@ -72,7 +85,7 @@ Dados **reais**, coletados em contextos hospitalares em diferentes países e uni
 
 ---
 
-## Parte 2 — Dados Textuais (NLP)
+## 📝 Parte 2 — Dados Textuais (NLP)
 
 ### Arquivos
 
@@ -104,7 +117,7 @@ A maior parte dos dados de saúde está em formato não estruturado (prontuário
 
 ---
 
-## Parte 3 — Dados Visuais (Visão Computacional)
+## 🖼️ Parte 3 — Dados Visuais (Visão Computacional)
 
 ### Dataset Utilizado
 
@@ -138,7 +151,7 @@ A análise automatizada de imagens médicas é uma das áreas de maior impacto d
 
 ---
 
-## Governança de Dados e Ética
+## 🔒 Governança de Dados e Ética
 
 ### Licenciamento
 
@@ -150,7 +163,7 @@ A análise automatizada de imagens médicas é uma das áreas de maior impacto d
 
 ### Anonimização
 
-Nenhum dado contém informações pessoais identificáveis (PII). Os dados são completamente anonimizados, em conformidade com a LGPD e diretrizes éticas para pesquisa em saúde.
+Nenhum dado contém informações pessoais identificáveis (PII). Os dados são completamente anonimizados, em conformidade com a **LGPD** e diretrizes éticas para pesquisa em saúde.
 
 ### Vieses Identificados
 
@@ -168,10 +181,22 @@ Radiografias de diferentes equipamentos apresentam variações de contraste e br
 
 ---
 
-## Links Públicos dos Dados
+## 🔗 Links Públicos dos Dados
 
 Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dados hospedados em serviços públicos de armazenamento.
 
 ---
 
-> **Dica para fases futuras:** Este repositório está organizado para futuramente receber notebooks no Google Colab ou Jupyter que consumirão esses dados para treinar modelos de ML, NLP e Visão Computacional.
+## 🚀 Próximas Fases
+
+| Fase | Descrição | Status |
+|---|---|---|
+| Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
+| Fase 2 | Análise exploratória e pré-processamento (EDA) | 🔜 Próxima |
+| Fase 3 | Modelagem — ML, NLP e Visão Computacional | 🔜 Futura |
+| Fase 4 | Deploy, dashboard e integração IoT | 🔜 Futura |
+
+---
+
+*Repositório: https://github.com/tiagoalvescordeiro/cardio-ia-fase1*  
+*Turma: 1TIAO — FIAP 2026*
