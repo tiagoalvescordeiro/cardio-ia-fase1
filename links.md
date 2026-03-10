@@ -29,23 +29,15 @@
 | Descrição | Link |
 |---|---|
 | Cardiomegaly Chest X-Ray Dataset (Zenodo — fonte original) | https://zenodo.org/records/17937122 |
-| Pasta com 100+ imagens selecionadas (.jpg) | [INSERIR LINK DO GOOGLE DRIVE] |
-
-**Instruções para obter as imagens:**
-
-1. Acesse https://zenodo.org/records/17937122
-2. Faça o download do arquivo `cardiomegaly_set.zip` (64.8 MB)
-3. Extraia e selecione no mínimo 100 imagens .jpg
-4. Faça upload da pasta no Google Drive
-5. Compartilhe com acesso público e atualize o link acima
+| Pasta com 100+ imagens selecionadas (.jpg) — subpasta train | https://drive.google.com/drive/folders/1AI2IvKojPOuHu_9s4A9gAJN7EQXR4hmm?usp=drive_link |
 
 ---
 
 ## Notas
 
 - Os dados textuais já estão integrados ao repositório GitHub e não requerem link externo adicional
-- Os dados numéricos e visuais, por serem arquivos grandes, devem ser hospedados em serviço de armazenamento externo (Google Drive, OneDrive ou similar)
-- Atualizar o link marcado como [INSERIR LINK DO GOOGLE DRIVE] após fazer o upload das imagens
+- Os dados numéricos e visuais, por serem arquivos grandes, estão hospedados no Google Drive com acesso público
+- Todos os links estão configurados como "Qualquer pessoa com o link" para acesso durante a correção
 
 ---
 
