@@ -9,13 +9,7 @@
 | Descrição | Link |
 |---|---|
 | Heart Failure Prediction Dataset (Kaggle — fonte original) | https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction |
-| heart.csv — arquivo completo (918 linhas, 12 colunas) | [INSERIR LINK DO GOOGLE DRIVE] |
-
-**Instruções para obter o arquivo:**
-1. Acesse https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
-2. Clique em "Download" (requer conta gratuita no Kaggle)
-3. Faça upload do arquivo `heart.csv` no Google Drive
-4. Compartilhe com acesso público e atualize o link acima
+| heart.csv — arquivo completo (918 linhas, 12 colunas) | https://drive.google.com/file/d/16gj5NjprTpV9a2PC1y7pvYApqnnqrL1a/view?usp=drive_link |
 
 ---
 
@@ -23,8 +17,8 @@
 
 | Arquivo | Fonte Original | Link no Repositório |
 |---|---|---|
-| texto_01_estatistica_cardiovascular_brasil_2023.txt | https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt | [assets/texto_01](./assets/texto_01_estatistica_cardiovascular_brasil_2023.txt) |
-| texto_02_fatores_associados_doencas_cardiovasculares.txt | https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408 | [assets/texto_02](./assets/texto_02_fatores_associados_doencas_cardiovasculares.txt) |
+| texto_01_estatistica_cardiovascular_brasil_2023.txt | https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt | [assets/texto_01](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/texto_01_estatistica_cardiovascular_brasil_2023.txt) |
+| texto_02_fatores_associados_doencas_cardiovasculares.txt | https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408 | [assets/texto_02](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/texto_02_fatores_associados_doencas_cardiovasculares.txt) |
 
 > Os arquivos .txt já estão disponíveis diretamente neste repositório público do GitHub na pasta `assets/`.
 
@@ -38,6 +32,7 @@
 | Pasta com 100+ imagens selecionadas (.jpg) | [INSERIR LINK DO GOOGLE DRIVE] |
 
 **Instruções para obter as imagens:**
+
 1. Acesse https://zenodo.org/records/17937122
 2. Faça o download do arquivo `cardiomegaly_set.zip` (64.8 MB)
 3. Extraia e selecione no mínimo 100 imagens .jpg
@@ -50,8 +45,10 @@
 
 - Os dados textuais já estão integrados ao repositório GitHub e não requerem link externo adicional
 - Os dados numéricos e visuais, por serem arquivos grandes, devem ser hospedados em serviço de armazenamento externo (Google Drive, OneDrive ou similar)
-- Atualizar os links marcados como [INSERIR LINK DO GOOGLE DRIVE] após fazer o upload dos arquivos
+- Atualizar o link marcado como [INSERIR LINK DO GOOGLE DRIVE] após fazer o upload das imagens
 
 ---
+
 *Repositório: https://github.com/tiagoalvescordeiro/cardio-ia-fase1*  
-*Autor: Tiago Alves Cordeiro — RM 561791 — Turma 1TIAO — FIAP 2026*
+*Grupo 1TIAO — FIAP 2026*  
+*Integrantes: Tiago Alves Cordeiro (RM 561791) | Matheus Parra (RM 561907) | Otavio Custodio de Oliveira (RM 565606) | Thiago Henrique Pereira de Almeida Santos (RM 563327) | Leandro Arthur Marinho Ferreira (RM 565240)*
