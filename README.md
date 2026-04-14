@@ -37,8 +37,11 @@ cardio-ia-fase1/
     └── texto_02_fatores_associados_doencas_cardiovasculares.txt
 ```
 
-> **Roadmap de fases futuras:** O repositório está preparado para receber pastas como `notebooks/`, `models/`, `data/` e `reports/` conforme o projeto evolui.
 
+├── notebooks/               ← Notebooks Jupyter com análises EDA (Fase 2)
+    └── fase2_eda_parte1_dados_numericos.ipynb
+
+> **Fase 2 em andamento:** Notebooks de análise exploratória e pré-processamento sendo desenvolvidos.
 ---
 
 ## 📊 Parte 1 — Dados Numéricos (IoT)
@@ -192,8 +195,7 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 | Fase | Descrição | Status |
 |---|---|---|
 | Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
-| Fase 2 | Análise exploratória e pré-processamento (EDA) | 🔜 Próxima |
-| Fase 3 | Modelagem — ML, NLP e Visão Computacional | 🔜 Futura |
+| Fase 2 | Análise exploratória e pré-processamento (EDA) | 🔄 Em andamento || Fase 3 | Modelagem — ML, NLP e Visão Computacional | 🔜 Futura |
 | Fase 4 | Deploy, dashboard e integração IoT | 🔜 Futura |
 
 ---
