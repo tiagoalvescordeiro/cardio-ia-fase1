@@ -200,5 +200,52 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 
 ---
 
+---
+
+## Fase 2 - Cap 1: Diagnostico Automatizado - IA no Estetoscopio Digital
+
+**Data de entrega:** 14/04/2026  
+**Status:** Entregue
+
+### Parte 1 - Extracao de Sintomas e Diagnostico
+
+Implementacao de um sistema basico de apoio ao diagnostico cardiologico usando processamento de linguagem natural (NLP).
+
+**Arquivos entregues:**
+
+| Arquivo | Descricao |
+|---|---|
+| `notebooks/sintomas.txt` | 10 frases simulando descricoes de sintomas de pacientes |
+| `notebooks/mapa_conhecimento.csv` | 20 associacoes entre sintomas e doencas cardiologicas |
+| `notebooks/fase2_parte1_diagnostico.ipynb` | Codigo Python que le as frases, identifica sintomas e sugere diagnostico |
+
+### Parte 2 - Classificador Basico de Texto (Triagem de Risco)
+
+Classificador de risco cardiaco usando TF-IDF e Machine Learning para classificar frases como alto ou baixo risco.
+
+**Arquivos entregues:**
+
+| Arquivo | Descricao |
+|---|---|
+| `notebooks/dataset_risco.csv` | 30 frases rotuladas como alto risco ou baixo risco |
+| `notebooks/fase2_parte2_classificador.ipynb` | Notebook com TF-IDF, Decision Tree, Logistic Regression e avaliacao |
+
+### Video de Demonstracao
+
+> **Link do video (YouTube - nao listado):** _(a ser adicionado apos gravacao)_
+
+### Criterios de Avaliacao
+
+| Criterio | Pontos |
+|---|---|
+| Relatos e mapa de conhecimento organizados | 2 |
+| Codigo de extracao de informacoes funcional | 2 |
+| Dataset simples criado corretamente | 1 |
+| Classificador treinado e testado corretamente | 2 |
+| Documentacao clara e repositorio publico no GitHub com README completo | 1 |
+| Video de demonstracao no YouTube (nao listado) com link incluido no GitHub | 2 |
+
+---
+
 *Repositório: https://github.com/tiagoalvescordeiro/cardio-ia-fase1*  
 *Turma: 1TIAO — FIAP 2026*
