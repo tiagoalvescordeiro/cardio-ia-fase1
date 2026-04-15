@@ -230,10 +230,6 @@ Classificador de risco cardiaco usando TF-IDF e Machine Learning para classifica
 | `notebooks/dataset_risco.csv` | 30 frases rotuladas como alto risco ou baixo risco |
 | `notebooks/fase2_parte2_classificador.ipynb` | Notebook com TF-IDF, Decision Tree, Logistic Regression e avaliacao |
 
-### Video de Demonstracao
-
-> **Link do video (YouTube - nao listado):** _(a ser adicionado apos gravacao)_
-
 ### Criterios de Avaliacao
 
 | Criterio | Pontos |
