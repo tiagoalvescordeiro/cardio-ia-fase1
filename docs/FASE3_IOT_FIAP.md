@@ -26,6 +26,17 @@ Curso **on-line (FIAP)** — se solicitado, anexar comprovante de matrícula EAD
 
 ## Status da entrega (repositório)
 
-- Código Wokwi, fluxo Node-RED, relatórios Parte 1 e 2, `links.md` e diagrama de arquitetura em `assets/evidencias/arquitetura_fase3.svg`: **versionados no `main`**.  
-- **Link Share** numerado do site Wokwi (`wokwi.com/projects/...`): opcional; a correção pode reproduzir pelo GitHub + arquivos **raw** indicados em `links.md`.  
-- **Prints PNG** da simulação e do dashboard: acrescentar em `assets/evidencias/` apenas se o professor exigir explicitamente.
+- Código Wokwi, fluxo Node-RED, relatórios Parte 1 e 2, `links.md` e diagrama `assets/evidencias/arquitetura_fase3.svg`: **versionados no `main`**.  
+- **Export do dashboard Node-RED:** [`node-red/flows.json`](node-red/flows.json) (atende ao enunciado: *prints **ou** export*).  
+- **Link Share Wokwi** (`https://wokwi.com/projects/...`): **exigido no texto do enunciado** como entregável da Parte 1; não pode ser gerado automaticamente neste repositório — o grupo deve publicar no site Wokwi e colar o URL em `links.md` + Moodle (passo a passo em [`wokwi/README.md`](../wokwi/README.md)). Até lá, os **links raw** em `links.md` permitem reproduzir o projeto.  
+- **Prints PNG** (serial Wokwi, aba `/ui` do Node-RED): **recomendados** na pasta `assets/evidencias/` para facilitar a correção, em complemento ao `flows.json`.
+
+## Checklist rápido — Moodle (Cap 1 / Fase 3)
+
+Antes do prazo (**conferir data no `on.fiap.com.br`**):
+
+1. Repositório público GitHub com `wokwi/` e `docs/` atualizados.  
+2. **URL Share do Wokwi** obtido e informado (Moodle + `links.md`).  
+3. **Export** Node-RED: já está em `docs/node-red/flows.json`; opcionalmente anexar o mesmo ficheiro no Moodle se houver campo de ficheiro.  
+4. **Relatórios** Parte 1 e Parte 2: links no README / `docs/`.  
+5. (Recomendado) 1–2 **imagens** em `assets/evidencias/` com commit final.

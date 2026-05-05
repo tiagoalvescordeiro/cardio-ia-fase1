@@ -4,7 +4,9 @@
 
 - **`arquitetura_fase3.svg`** — diagrama Edge → MQTT → Node-RED (abre no navegador ou no VS Code).
 
-## Recomendado se a rubrica pedir capturas de tela
+## Recomendado (e alinhado ao enunciado FIAP)
+
+O enunciado aceita **prints da aplicação** *ou* **export do dashboard**; o export está em [`../../docs/node-red/flows.json`](../../docs/node-red/flows.json). Mesmo assim, **PNG** ajudam na correção.
 
 Inclua **PNG** que comprovem:
 

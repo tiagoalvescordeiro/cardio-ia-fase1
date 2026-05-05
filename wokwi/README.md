@@ -15,6 +15,17 @@
 3. Confirme que as bibliotecas **PubSubClient** e **DHT sensor library** (+ **Adafruit Unified Sensor**) foram instaladas (Wokwi costuma ler `libraries.txt`).  
 4. **Run** — o Monitor Serial deve mostrar alternância de modo simulado e fila; com Wi‑Fi virtual `Wokwi-GUEST` o MQTT publica em `cardioia/grupo54/telemetria`. Com o diagrama em foco, a tecla **P** também aciona o botão (atalho Wokwi).
 
+## Link público do projeto (Share) — entrega FIAP
+
+O enunciado pede **link do projeto no Wokwi**. Depois de colar `diagram.json`, `sketch.ino` e `libraries.txt` e validar a simulação:
+
+1. Faça login na Wokwi (conta gratuita), se ainda não estiver logado.  
+2. Use **Save** / **Salvar** para gravar o projeto na nuvem.  
+3. Abra **Share** / **Compartilhar** e copie o URL no formato `https://wokwi.com/projects/...`.  
+4. Cole esse URL em [`../links.md`](../links.md) (tabela Fase 3) e no campo de texto/link da **entrega no Moodle** (`on.fiap.com.br`), junto com o link do **GitHub**.
+
+A interface exata dos botões pode variar; o objetivo é um URL **público e estável** que abra o mesmo `diagram` + sketch.
+
 ## Tópico MQTT (telemetria)
 
 Publicação JSON de exemplo:

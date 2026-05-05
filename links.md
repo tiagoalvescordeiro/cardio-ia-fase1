@@ -50,7 +50,7 @@
 | **diagram.json (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/diagram.json |
 | **sketch.ino (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/sketch.ino |
 | **libraries.txt (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/libraries.txt |
-| **Projeto numerado no Wokwi (Share)** | Se o grupo publicar no site, inclua aqui `https://wokwi.com/projects/...` na entrega da plataforma FIAP (o repositório GitHub já basta para correção do código) |
+| **Projeto numerado no Wokwi (Share)** — *entregável do enunciado* | Cole aqui `https://wokwi.com/projects/...` após salvar e compartilhar no Wokwi (ver [wokwi/README.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/README.md#link-público-do-projeto-share--entrega-fiap)). Enquanto não houver URL, use os raw + GitHub na correção. |
 | **Broker MQTT usado na demonstração** | `broker.hivemq.com` porta `1883` (público de teste — **não** usar dados sensíveis) |
 | **Tópico de telemetria** | `cardioia/grupo54/telemetria` (payload JSON: `temp_c`, `hum_pct`, `bpm`, `ts_ms`) |
 | **Fluxo Node-RED (dashboard)** | [flows.json no repositório](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json) |

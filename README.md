@@ -212,7 +212,7 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 
 Conforme o enunciado da atividade (**monitoramento contínuo / IoT na saúde**), a entrega envolve **Wokwi (ESP32, DHT22 + segundo sensor)**, **resiliência offline**, **MQTT**, **dashboard Node-RED** (e Grafana opcional), além dos **relatórios** das partes 1 e 2.
 
-- **Checklist:** [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
+- **Checklist (inclui itens Moodle):** [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
 - **Wokwi (diagrama + firmware comentado):** pasta [`wokwi/`](wokwi/) e guia [`wokwi/README.md`](wokwi/README.md)  
 - **Relatório Parte 1 (Edge):** [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md)  
 - **Relatório Parte 2 (MQTT + dashboard):** [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md)  
