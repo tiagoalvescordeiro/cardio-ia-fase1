@@ -4,22 +4,22 @@ Atividade alinhada ao enunciado **“FASE 3: Monitoramento Contínuo – IoT na 
 
 ## Mapeamento enunciado → artefatos neste repositório
 
-| Requisito (enunciado) | Onde registrar / entregar |
-|------------------------|---------------------------|
-| Projeto Wokwi (ESP32, ≥2 sensores, DHT22 obrigatório) | Link público Wokwi + pasta `firmware/` (opcional cópia do `.ino`) |
-| Resiliência offline (fila / sync ao reconectar) | Comentários no firmware + relatório Parte 1 |
-| MQTT (ex.: HiveMQ Cloud) | Código + credenciais fora do Git (variáveis) + relatório Parte 2 |
-| Dashboard Node-RED (gráfico, gauge, alertas) | Export JSON em `docs/node-red/` + prints em `assets/evidencias/` |
-| Grafana (opcional) | Link ou print em `assets/evidencias/` |
-| Relatório Parte 1 (≥1 página) | `docs/relatorio_parte1_edge.md` (ou PDF) |
-| Relatório Parte 2 (≥2 páginas) | `docs/relatorio_parte2_mqtt_dashboard.md` (ou PDF) |
+| Requisito (enunciado) | Artefato entregue |
+|------------------------|-------------------|
+| Projeto Wokwi (ESP32, ≥2 sensores, **DHT22** obrigatório) | [`wokwi/diagram.json`](../wokwi/diagram.json), [`wokwi/sketch.ino`](../wokwi/sketch.ino), [`wokwi/README.md`](../wokwi/README.md) |
+| Código C++ comentado | `wokwi/sketch.ino` |
+| Resiliência offline (fila + sync ao “reconectar”) | Implementação em RAM no sketch (`enqueueSample`, `flushQueueIfOnline`) + variável `g_wifiSimuladoConectado` |
+| Simulação de conectividade Wi-Fi | Alternância periódica da variável + uso de `Wokwi-GUEST` quando na nuvem |
+| MQTT para nuvem | `PubSubClient` → `broker.hivemq.com`, tópico `cardioia/grupo54/telemetria` |
+| Dashboard Node-RED (gráfico, gauge, alerta) | [`node-red/flows.json`](node-red/flows.json) + instruções em [`node-red/README.md`](node-red/README.md) |
+| Relatório Parte 1 (≥1 página) | [`relatorio_parte1_edge.md`](relatorio_parte1_edge.md) |
+| Relatório Parte 2 (≥2 páginas) | [`relatorio_parte2_mqtt_dashboard.md`](relatorio_parte2_mqtt_dashboard.md) |
+| Grafana (opcional) | Não obrigatório — pode acrescentar prints em `assets/evidencias/` se o grupo implementar |
 
-## Links rápidos (preencher)
+## Observação (SPIFFS / simulador)
 
-- **Wokwi:** _(adicione o link do projeto compartilhado)_  
-- **Broker MQTT:** _(nome do cluster HiveMQ ou outro; sem senha no repositório)_  
-- **Vídeo (opcional “ir além”):** _(YouTube não listado — se aplicável a outra rubrica)_  
+O enunciado reconhece limitação de **SPIFFS** no simulador; a estratégia adotada foi **fila em RAM** + **Monitor Serial** para evidenciar o comportamento de borda (edge) sem depender de arquivo físico no Wokwi.
 
-## Observação (EAD / localização)
+## EAD / localização (verificação institucional)
 
-Se a verificação institucional pedir **prova de ensino remoto**, mantenha no relatório ou na carteirinha FIAP a menção explícita ao curso **on-line**, conforme orientação do próprio enunciado.
+Curso **on-line (FIAP)** — se solicitado, anexar comprovante de matrícula EAD junto à entrega na plataforma.

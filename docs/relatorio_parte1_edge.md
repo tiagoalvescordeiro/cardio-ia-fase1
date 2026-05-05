@@ -1,28 +1,37 @@
 # Relatório — Parte 1: Armazenamento e processamento local (Edge)
 
-**Disciplina / projeto:** CardioIA — Fase 3 (FIAP)  
-**Autores:** _(grupo)_  
-**Data:** _(preencher)_
+**Projeto:** CardioIA — Fase 3 (FIAP) — IoT em saúde  
+**Grupo:** 1TIAO  
+**Integrantes:** Tiago Alves Cordeiro (RM 561791), Matheus Parra (RM 561907), Otavio Custodio de Oliveira (RM 565606), Thiago Henrique Pereira de Almeida Santos (RM 563327), Leandro Arthur Marinho Ferreira (RM 565240)
 
-## 1. Objetivo
+---
 
-Descrever o fluxo do protótipo no **Wokwi** (ESP32) com **dois sensores** (obrigatório **DHT22** para temperatura e umidade + segundo sensor), simulação de **Wi‑Fi** e estratégia de **resiliência offline** (fila de leituras e envio quando “online”).
+## 1. Introdução
 
-## 2. Arquitetura local
+Esta etapa reproduz o papel do **Edge Computing** em um cenário de monitoramento cardíaco simplificado: o microcontrolador **ESP32** lê sensores com periodicidade estável, trata leituras localmente e precisa manter **continuidade operacional** mesmo quando a conectividade de nuvem não está disponível. O enunciado da FIAP exige explicitamente **dois sensores distintos**, sendo um deles o **DHT22** (temperatura e umidade relativa) e um segundo elemento para compor o “painel” de sinais vitais simulados — adotamos um **botão** com debounce que incrementa um **BPM simulado**, com decaimento lento para imitar variação fisiológica.
 
-- **Sensores:** DHT22 em pino _(documentar)_; segundo sensor _(tipo e pino)_.  
-- **Periodicidade de leitura:** _(ex.: a cada 2 s)_.  
-- **Armazenamento:** _(SPIFFS em hardware real / fila em RAM ou log no Serial no Wokwi — documentar a escolha do grupo)_.  
-- **Indicador de conectividade:** variável booleana `wifiConnected` (ou equivalente) e comportamento quando `false` vs `true`.
+## 2. Montagem virtual (Wokwi)
 
-## 3. Lógica de resiliência
+O arquivo `diagram.json` descreve o hardware virtual: **ESP32 DevKit v1**, **DHT22** ligado ao **GPIO 4** e **botão** no **GPIO 18** com lógica `INPUT_PULLUP` no firmware. O Wokwi permite validar o comportamento sem componentes físicos, o que atende à restrição de custo do projeto acadêmico.
 
-Explique em texto: o que acontece **sem rede** (acúmulo de leituras), o que acontece **ao reconectar** (envio em lote, limpeza da fila/arquivo), e como evita perda de dados dentro dos limites da memória.
+## 3. Fluxo de leitura e periodicidade
 
-## 4. Limitações do simulador
+No `sketch.ino`, a leitura do DHT22 ocorre a cada **3 segundos**, intervalo superior ao mínimo recomendado pela biblioteca para evitar leituras instáveis. Quando a leitura é inválida (`NaN`), o ciclo é ignorado e o sistema não enfileira lixo — isso reduz ruído na fila e evita publicações MQTT inconsistentes.
 
-Registre limitações do **Wokwi** (ex.: SPIFFS) e como o grupo contornou usando **Monitor Serial** ou outra estratégia aceita pelo enunciado.
+## 4. Simulação de conectividade e resiliência
 
-## 5. Link do projeto
+O enunciado pede uma **variável booleana** que simule estar “conectado” ou não à rede. Implementamos `g_wifiSimuladoConectado`, que **alterna aproximadamente a cada 45 segundos**. Quando falsa, o firmware **não tenta publicar na nuvem**; em vez disso, cada amostra válida é armazenada em uma **fila circular em RAM** (`queue[]`, capacidade 48 itens). Quando a variável volta a verdadeira, o laço principal restabelece **Wi-Fi** (`Wokwi-GUEST`, canal 6, conforme documentação Wokwi) e **MQTT** (`broker.hivemq.com`) e executa `flushQueueIfOnline`, drenando a fila com publicações JSON.
 
-**Wokwi:** _(colar URL pública do projeto compartilhado)_
+Essa política demonstra o princípio de **sincronização adiada**: dados produzidos no perímetro são preservados quando o canal WAN está indisponível e reenviados quando o canal retorna — analogia direta com dispositivos vestíveis em corredor hospitalar ou domiciliar com Wi-Fi intermitente.
+
+## 5. SPIFFS e limitações do simulador
+
+O roteiro da FIAP cita **SPIFFS** como armazenamento local opcional, mas alerta que o recurso não reflete fielmente no simulador. Por isso adotamos **persistência volátil em fila** + **trilhas no Monitor Serial** (`Serial.printf`), o que cumpre o espírito do requisito (“garantir resiliência offline”) sem depender de sistema de arquivos flash virtual.
+
+## 6. Monitor Serial como evidência
+
+Além do MQTT, cada publicação gera uma linha `[CLOUD] {...}` no serial — atendendo à sugestão do material de usar o monitor como prova textual do envio quando o ambiente não expõe SPIFFS.
+
+## 7. Conclusão da Parte 1
+
+O protótipo cumpre os pilares de **coleta**, **simulação de conectividade** e **resiliência** no edge, com sensores distintos e documentação no repositório (`wokwi/`). A próxima etapa (Parte 2) detalha a integração **MQTT** e a visualização em **Node-RED**, usando o mesmo payload JSON para manter rastreabilidade ponta a ponta.

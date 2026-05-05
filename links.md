@@ -41,16 +41,17 @@
 
 ---
 
----
-
 ## Fase 3 — IoT (Wokwi, MQTT, Node-RED)
 
-| Descrição | Link |
+| Descrição | Link / recurso |
 |---|---|
-| Projeto ESP32 no **Wokwi** (compartilhar como “Anyone can view”) | _adicione aqui o link público do projeto_ |
-| Broker **MQTT** (ex.: HiveMQ Cloud — sem colar senha; apenas URL do cluster se for público) | _opcional / ver relatório_ |
+| **Código-fonte do projeto Wokwi** (`diagram.json`, `sketch.ino`, `libraries.txt`) | [pasta `wokwi` no GitHub](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/tree/main/wokwi) |
+| **Link público “Share” do Wokwi** (opcional, após publicar no simulador) | _adicione aqui o URL `wokwi.com/projects/...` quando disponível_ |
+| **Broker MQTT usado na demonstração** | `broker.hivemq.com` porta `1883` (público de teste — **não** usar dados sensíveis) |
+| **Tópico de telemetria** | `cardioia/grupo54/telemetria` (payload JSON: `temp_c`, `hum_pct`, `bpm`, `ts_ms`) |
+| **Fluxo Node-RED (dashboard)** | [flows.json no repositório](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json) |
 
-Arquivos exportados do **Node-RED** devem ficar em `docs/node-red/` no repositório; prints em `assets/evidencias/`.
+Arquivos exportados adicionais do **Node-RED** e **prints** de tela: `docs/node-red/` e `assets/evidencias/`.
 
 ---
 

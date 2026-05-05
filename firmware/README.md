@@ -1,7 +1,7 @@
-# Firmware — ESP32 (CardioIA / Fase 3 IoT)
+# Firmware (ESP32)
 
-Coloque aqui o **sketch Arduino** (`.ino`) espelhando o projeto **Wokwi**, ou apenas mantenha o link do Wokwi no `README.md` raiz e nesta pasta um `README` com o nome do arquivo principal.
+O sketch principal da **Fase 3 (IoT)** está na pasta **`wokwi/sketch.ino`**, acompanhado de **`wokwi/diagram.json`** para simulação no **Wokwi**.
 
-- Simulador recomendado pelo enunciado: [Wokwi](https://wokwi.com/)  
-- Sensores mínimos: **DHT22** (temperatura + umidade) + **um segundo sensor** (ex.: PIR, potenciômetro simulando BPM, etc.).  
-- Não versionar senhas de Wi-Fi ou MQTT: use `#define` local ignorado pelo `.gitignore` ou variáveis de ambiente documentadas só no relatório.
+Motivo: o enunciado pede link do projeto Wokwi e código comentado — manter `.ino` junto do diagrama facilita importação e correção.
+
+Após validar no simulador, você pode copiar o mesmo `.ino` para esta pasta com outro nome (ex.: `cardioia_fase3.ino`) se quiser padronizar entregas locais.

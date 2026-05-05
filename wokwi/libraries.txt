@@ -1,0 +1,4 @@
+# Dependências Arduino (Wokwi) — https://docs.wokwi.com/project-config
+PubSubClient
+DHT sensor library
+Adafruit Unified Sensor

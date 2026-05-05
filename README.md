@@ -34,6 +34,7 @@ Este repositório concentra **várias entregas FIAP** (Fases 1–3). A atividade
 cardio-ia-fase1/
 ├── README.md
 ├── links.md
+├── wokwi/                   ← Fase 3: diagram.json + sketch.ino + libraries.txt (Wokwi)
 ├── assets/
 │   ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
 │   ├── texto_02_fatores_associados_doencas_cardiovasculares.txt
@@ -47,10 +48,14 @@ cardio-ia-fase1/
 │   ├── fase2_parte1_diagnostico.ipynb
 │   └── fase2_parte2_classificador.ipynb
 ├── docs/
-│   ├── FASE3_IOT_FIAP.md    ← mapeamento enunciado FIAP (IoT) → artefatos
-│   └── node-red/            ← export JSON dos fluxos (preencher na entrega)
+│   ├── FASE3_IOT_FIAP.md
+│   ├── relatorio_parte1_edge.md
+│   ├── relatorio_parte2_mqtt_dashboard.md
+│   └── node-red/
+│       ├── README.md
+│       └── flows.json       ← fluxo dashboard (importar no Node-RED)
 └── firmware/
-    └── README.md            ← ESP32 / Arduino — espelho ou complemento ao Wokwi
+    └── README.md            ← aponta para wokwi/sketch.ino
 ```
 
 ---
@@ -207,12 +212,14 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 
 Conforme o enunciado da atividade (**monitoramento contínuo / IoT na saúde**), a entrega envolve **Wokwi (ESP32, DHT22 + segundo sensor)**, **resiliência offline**, **MQTT**, **dashboard Node-RED** (e Grafana opcional), além dos **relatórios** das partes 1 e 2.
 
-- **Checklist e pastas sugeridas:** [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
-- **Relatório Parte 1 (Edge):** [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md) _(expandir até ≥1 página conforme rubrica)_  
-- **Relatório Parte 2 (MQTT + dashboard):** [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md) _(expandir até ≥2 páginas)_  
-- **Firmware / Wokwi:** [`firmware/README.md`](firmware/README.md)  
-- **Evidências (prints, exports):** [`assets/evidencias/README.md`](assets/evidencias/README.md)  
-- **Links públicos (Wokwi, etc.):** seção correspondente em [`links.md`](./links.md) _(preencher com o link do projeto compartilhado)_
+- **Checklist:** [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
+- **Wokwi (diagrama + firmware comentado):** pasta [`wokwi/`](wokwi/) e guia [`wokwi/README.md`](wokwi/README.md)  
+- **Relatório Parte 1 (Edge):** [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md)  
+- **Relatório Parte 2 (MQTT + dashboard):** [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md)  
+- **Node-RED (importar fluxo):** [`docs/node-red/flows.json`](docs/node-red/flows.json) + [`docs/node-red/README.md`](docs/node-red/README.md)  
+- **Firmware (referência):** [`firmware/README.md`](firmware/README.md)  
+- **Evidências (prints):** [`assets/evidencias/README.md`](assets/evidencias/README.md)  
+- **Links consolidados:** [`links.md`](./links.md)
 
 ---
 
@@ -222,7 +229,7 @@ Conforme o enunciado da atividade (**monitoramento contínuo / IoT na saúde**),
 |---|---|---|
 | Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
 | Fase 2 | EDA, NLP e classificação (notebooks em `notebooks/`) | ✅ Entregue / evolução contínua |
-| Fase 3 | Atividade FIAP — IoT, MQTT, Edge/Fog (Wokwi + Node-RED) | 🔄 Em andamento — ver `docs/FASE3_IOT_FIAP.md` |
+| Fase 3 | Atividade FIAP — IoT, MQTT, Edge/Fog (Wokwi + Node-RED) | Concluída — ver `docs/FASE3_IOT_FIAP.md` e `wokwi/` |
 | Fase 4 | Modelagem integrada (ML, NLP, Visão) e deploy | 🔜 Futura |
 
 ---

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "CardioIA — FIAP",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -28.8, "left": -124.8, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -144,
+      "left": 38.4,
+      "attrs": { "temperature": "23.5", "humidity": "58" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnBpm",
+      "top": 38.4,
+      "left": 182.4,
+      "attrs": { "color": "green", "label": "Pulso (BPM)" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "h0" ] ],
+    [ "dht1:SDA", "esp:4", "green", [ "h0" ] ],
+    [ "btnBpm:1.l", "esp:18", "gold", [ "h0" ] ],
+    [ "btnBpm:2.r", "esp:GND.2", "black", [ "h0" ] ]
+  ]
+}
