@@ -24,27 +24,40 @@
 
 O **CardioIA** é um projeto acadêmico que simula o ecossistema de uma cardiologia moderna, integrando dados clínicos, Machine Learning, Visão Computacional, IoT e agentes inteligentes. Nesta **Fase 1**, atuamos como cientistas de dados hospitalares: o desafio foi levantar, organizar e compreender dados cardiológicos que futuramente alimentarão os módulos inteligentes do sistema.
 
+Este repositório concentra **várias entregas FIAP** (Fases 1–3). A atividade **Fase 3 — IoT** (Wokwi, ESP32, MQTT, Node-RED) está descrita e checklistada em [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md).
+
 ---
 
 ## 📂 Estrutura do Repositório
 
 ```
 cardio-ia-fase1/
-├── README.md                          ← Este arquivo
-├── links.md                           ← Links públicos dos dados completos
-└── assets/
-    ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
-    └── texto_02_fatores_associados_doencas_cardiovasculares.txt
+├── README.md
+├── links.md
+├── assets/
+│   ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
+│   ├── texto_02_fatores_associados_doencas_cardiovasculares.txt
+│   └── evidencias/          ← prints / exports (Fase 3 — Node-RED, Grafana opcional)
+├── notebooks/
+│   ├── README_FASE2.md
+│   ├── sintomas.txt
+│   ├── mapa_conhecimento.csv
+│   ├── dataset_risco.csv
+│   ├── fase2_eda_parte1_dados_numericos.ipynb
+│   ├── fase2_parte1_diagnostico.ipynb
+│   └── fase2_parte2_classificador.ipynb
+├── docs/
+│   ├── FASE3_IOT_FIAP.md    ← mapeamento enunciado FIAP (IoT) → artefatos
+│   └── node-red/            ← export JSON dos fluxos (preencher na entrega)
+└── firmware/
+    └── README.md            ← ESP32 / Arduino — espelho ou complemento ao Wokwi
 ```
 
-
-├── notebooks/               ← Notebooks Jupyter com análises EDA (Fase 2)
-    └── fase2_eda_parte1_dados_numericos.ipynb
-
-> **Fase 2 em andamento:** Notebooks de análise exploratória e pré-processamento sendo desenvolvidos.
 ---
 
-## 📊 Parte 1 — Dados Numéricos (IoT)
+## 📊 Parte 1 — Dados numéricos (dataset clínico tabular)
+
+_Não confundir com a **Fase 3 IoT** do enunciado FIAP (ESP32/Wokwi). Aqui trata-se de dados **estruturados em CSV** para análise e modelagem._
 
 ### Dataset Utilizado
 
@@ -190,13 +203,27 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 
 ---
 
+## Fase 3 (FIAP) — Cap 1: CardioIA Conectada — IoT e visualização de dados
+
+Conforme o enunciado da atividade (**monitoramento contínuo / IoT na saúde**), a entrega envolve **Wokwi (ESP32, DHT22 + segundo sensor)**, **resiliência offline**, **MQTT**, **dashboard Node-RED** (e Grafana opcional), além dos **relatórios** das partes 1 e 2.
+
+- **Checklist e pastas sugeridas:** [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
+- **Relatório Parte 1 (Edge):** [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md) _(expandir até ≥1 página conforme rubrica)_  
+- **Relatório Parte 2 (MQTT + dashboard):** [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md) _(expandir até ≥2 páginas)_  
+- **Firmware / Wokwi:** [`firmware/README.md`](firmware/README.md)  
+- **Evidências (prints, exports):** [`assets/evidencias/README.md`](assets/evidencias/README.md)  
+- **Links públicos (Wokwi, etc.):** seção correspondente em [`links.md`](./links.md) _(preencher com o link do projeto compartilhado)_
+
+---
+
 ## 🚀 Próximas Fases
 
 | Fase | Descrição | Status |
 |---|---|---|
 | Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
-| Fase 2 | Análise exploratória e pré-processamento (EDA) | 🔄 Em andamento || Fase 3 | Modelagem — ML, NLP e Visão Computacional | 🔜 Futura |
-| Fase 4 | Deploy, dashboard e integração IoT | 🔜 Futura |
+| Fase 2 | EDA, NLP e classificação (notebooks em `notebooks/`) | ✅ Entregue / evolução contínua |
+| Fase 3 | Atividade FIAP — IoT, MQTT, Edge/Fog (Wokwi + Node-RED) | 🔄 Em andamento — ver `docs/FASE3_IOT_FIAP.md` |
+| Fase 4 | Modelagem integrada (ML, NLP, Visão) e deploy | 🔜 Futura |
 
 ---
 

@@ -41,6 +41,19 @@
 
 ---
 
-*Repositório: https://github.com/tiagoalvescordeiro/cardio-ia-fase1*  
-*Grupo 1TIAO — FIAP 2026*  
+---
+
+## Fase 3 — IoT (Wokwi, MQTT, Node-RED)
+
+| Descrição | Link |
+|---|---|
+| Projeto ESP32 no **Wokwi** (compartilhar como “Anyone can view”) | _adicione aqui o link público do projeto_ |
+| Broker **MQTT** (ex.: HiveMQ Cloud — sem colar senha; apenas URL do cluster se for público) | _opcional / ver relatório_ |
+
+Arquivos exportados do **Node-RED** devem ficar em `docs/node-red/` no repositório; prints em `assets/evidencias/`.
+
+---
+
+*Repositório: https://github.com/tiagoalvescordeiro/cardio-ia-fase1* 
+*Grupo 1TIAO — FIAP 2026* 
 *Integrantes: Tiago Alves Cordeiro (RM 561791) | Matheus Parra (RM 561907) | Otavio Custodio de Oliveira (RM 565606) | Thiago Henrique Pereira de Almeida Santos (RM 563327) | Leandro Arthur Marinho Ferreira (RM 565240)*
