@@ -33,6 +33,7 @@ assets/images/
 *.jpg
 *.jpeg
 *.png
+!assets/evidencias/*.png
 *.dcm
 
 # Modelos treinados
