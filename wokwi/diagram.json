@@ -16,7 +16,7 @@
       "id": "btnBpm",
       "top": 38.4,
       "left": 182.4,
-      "attrs": { "color": "green", "label": "Pulso (BPM)" }
+      "attrs": { "color": "green", "label": "Pulso (BPM)", "bounce": "0", "key": "P" }
     }
   ],
   "connections": [

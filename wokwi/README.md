@@ -13,7 +13,7 @@
 1. Acesse [https://wokwi.com](https://wokwi.com) e crie **Novo projeto** → **ESP32** → **Arduino**.  
 2. Substitua o conteúdo de `diagram.json` e `sketch.ino` pelos arquivos desta pasta (ou importe o repositório GitHub se a opção estiver disponível).  
 3. Confirme que as bibliotecas **PubSubClient** e **DHT sensor library** (+ **Adafruit Unified Sensor**) foram instaladas (Wokwi costuma ler `libraries.txt`).  
-4. **Run** — o Monitor Serial deve mostrar alternância de modo simulado e fila; com Wi‑Fi virtual `Wokwi-GUEST` o MQTT publica em `cardioia/grupo54/telemetria`.
+4. **Run** — o Monitor Serial deve mostrar alternância de modo simulado e fila; com Wi‑Fi virtual `Wokwi-GUEST` o MQTT publica em `cardioia/grupo54/telemetria`. Com o diagrama em foco, a tecla **P** também aciona o botão (atalho Wokwi).
 
 ## Tópico MQTT (telemetria)
 
