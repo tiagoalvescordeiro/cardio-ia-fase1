@@ -24,7 +24,7 @@
 
 O **CardioIA** é um projeto acadêmico que simula o ecossistema de uma cardiologia moderna, integrando dados clínicos, Machine Learning, Visão Computacional, IoT e agentes inteligentes. Nesta **Fase 1**, atuamos como cientistas de dados hospitalares: o desafio foi levantar, organizar e compreender dados cardiológicos que futuramente alimentarão os módulos inteligentes do sistema.
 
-Este repositório concentra **várias entregas FIAP** (Fases 1–3). A atividade **Fase 3 — IoT** (Wokwi, ESP32, MQTT, Node-RED) está descrita e checklistada em [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md).
+Este repositório junta o que a gente foi entregando ao longo do curso (Fases 1 a 3). A parte de **IoT na Fase 3** — simulador Wokwi, MQTT, Node-RED — está explicada com mais detalhe em [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md), que a gente usa como guia interno também.
 
 ---
 
@@ -63,7 +63,7 @@ cardio-ia-fase1/
 
 ## 📊 Parte 1 — Dados numéricos (dataset clínico tabular)
 
-_Não confundir com a **Fase 3 IoT** do enunciado FIAP (ESP32/Wokwi). Aqui trata-se de dados **estruturados em CSV** para análise e modelagem._
+_Isso aqui embaixo é outra coisa: dados em **CSV** para EDA/modelagem, não o protótipo com ESP32 da Fase 3._
 
 ### Dataset Utilizado
 
@@ -209,19 +209,23 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 
 ---
 
-## Fase 3 (FIAP) — Cap 1: CardioIA Conectada — IoT e visualização de dados
+## Fase 3 — Cap 1: CardioIA conectada (IoT e um dashboard simples)
 
-Conforme o enunciado da atividade (**monitoramento contínuo / IoT na saúde**), a entrega envolve **Wokwi (ESP32, DHT22 + segundo sensor)**, **resiliência offline**, **MQTT**, **dashboard Node-RED** (e Grafana opcional), além dos **relatórios** das partes 1 e 2.
+Nesta etapa a gente montou um **protótipo no Wokwi** com ESP32, **DHT22** (temperatura e umidade) e um **botão** que simula variação de BPM, porque o desafio da disciplina era pensar monitoramento contínuo no estilo IoT em saúde. O firmware alterna um “modo online/offline” de propósito: quando está “sem rede”, os dados vão para uma **fila em memória**; quando volta, a ideia é drenar e publicar de novo. Para nuvem usamos **MQTT** (broker público da HiveMQ) e montamos um **dashboard no Node-RED** com gráficos, um gauge e um texto de alerta quando BPM ou temperatura passam dos limites que a gente definiu.
 
-- **Checklist (inclui itens Moodle):** [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
-- **Texto para colar na entrega Moodle:** [`docs/TEXTO_ENTREGA_MOODLE.txt`](docs/TEXTO_ENTREGA_MOODLE.txt)  
-- **Wokwi (diagrama + firmware comentado):** pasta [`wokwi/`](wokwi/) e guia [`wokwi/README.md`](wokwi/README.md)  
-- **Relatório Parte 1 (Edge):** [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md)  
-- **Relatório Parte 2 (MQTT + dashboard):** [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md)  
-- **Node-RED (importar fluxo):** [`docs/node-red/flows.json`](docs/node-red/flows.json) + [`docs/node-red/README.md`](docs/node-red/README.md)  
-- **Firmware (referência):** [`firmware/README.md`](firmware/README.md)  
-- **Evidências (prints):** [`assets/evidencias/README.md`](assets/evidencias/README.md)  
-- **Links consolidados:** [`links.md`](./links.md)
+Não é um produto hospitalar de verdade — é um laboratório para entender o fluxo **dados → edge → broker → tela** — mas dá para explicar no relatório o que funcionou e onde a gente simplificou (por exemplo, SPIFFS no simulador é chato, então ficou fila em RAM mesmo).
+
+**Onde está cada coisa:**
+
+- Resumo e organização da entrega: [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
+- Texto que a gente colou no Moodle (links prontos): [`docs/TEXTO_ENTREGA_MOODLE.txt`](docs/TEXTO_ENTREGA_MOODLE.txt)  
+- Código do simulador: pasta [`wokwi/`](wokwi/) e dicas em [`wokwi/README.md`](wokwi/README.md)  
+- Relatório da parte “edge”: [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md)  
+- Relatório da parte MQTT + dashboard: [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md)  
+- Fluxo do Node-RED (importar no editor): [`docs/node-red/flows.json`](docs/node-red/flows.json) e [`docs/node-red/README.md`](docs/node-red/README.md)  
+- Ponte rápida para o sketch: [`firmware/README.md`](firmware/README.md)  
+- Imagens e SVG que a gente anexou como evidência: [`assets/evidencias/README.md`](assets/evidencias/README.md)  
+- Links todos juntos: [`links.md`](./links.md)
 
 ---
 
@@ -231,7 +235,7 @@ Conforme o enunciado da atividade (**monitoramento contínuo / IoT na saúde**),
 |---|---|---|
 | Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
 | Fase 2 | EDA, NLP e classificação (notebooks em `notebooks/`) | ✅ Entregue / evolução contínua |
-| Fase 3 | Atividade FIAP — IoT, MQTT, Edge/Fog (Wokwi + Node-RED) | Concluída — ver `docs/FASE3_IOT_FIAP.md` e `wokwi/` |
+| Fase 3 | IoT no Wokwi + MQTT + Node-RED (protótipo CardioIA conectada) | Concluída — código em `wokwi/`, docs em `docs/` |
 | Fase 4 | Modelagem integrada (ML, NLP, Visão) e deploy | 🔜 Futura |
 
 ---
