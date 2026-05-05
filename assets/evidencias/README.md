@@ -1,6 +1,12 @@
 # Evidências (prints / exports)
 
-Inclua aqui **capturas de tela** que comprovem:
+## Entregue no repositório
+
+- **`arquitetura_fase3.svg`** — diagrama Edge → MQTT → Node-RED (abre no navegador ou no VS Code).
+
+## Recomendado se a rubrica pedir capturas de tela
+
+Inclua **PNG** que comprovem:
 
 1. **Wokwi** em execução com leituras no Monitor Serial (fila + modo simulado).  
 2. **Node-RED / Dashboard** (`/ui`) com gráficos e alerta acionado.  

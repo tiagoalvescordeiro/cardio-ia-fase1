@@ -34,4 +34,4 @@ Além do MQTT, cada publicação gera uma linha `[CLOUD] {...}` no serial — at
 
 ## 7. Conclusão da Parte 1
 
-O protótipo cumpre os pilares de **coleta**, **simulação de conectividade** e **resiliência** no edge, com sensores distintos e documentação no repositório (`wokwi/`). A próxima etapa (Parte 2) detalha a integração **MQTT** e a visualização em **Node-RED**, usando o mesmo payload JSON para manter rastreabilidade ponta a ponta.
+O protótipo cumpre os pilares de **coleta**, **simulação de conectividade** e **resiliência** no edge, com sensores distintos e documentação no repositório (`wokwi/`). O ficheiro **`assets/evidencias/arquitetura_fase3.svg`** documenta visualmente a posição do edge no pipeline completo. A próxima etapa (Parte 2) detalha a integração **MQTT** e a visualização em **Node-RED**, usando o mesmo payload JSON para manter rastreabilidade ponta a ponta.

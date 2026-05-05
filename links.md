@@ -46,12 +46,17 @@
 | Descrição | Link / recurso |
 |---|---|
 | **Código-fonte do projeto Wokwi** (`diagram.json`, `sketch.ino`, `libraries.txt`) | [pasta `wokwi` no GitHub](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/tree/main/wokwi) |
-| **Link público “Share” do Wokwi** (opcional, após publicar no simulador) | _adicione aqui o URL `wokwi.com/projects/...` quando disponível_ |
+| **Instruções de reprodução no Wokwi (sem link Share)** | [wokwi/README.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/README.md) — novo projeto ESP32 Arduino em [wokwi.com/projects/new/esp32](https://wokwi.com/projects/new/esp32), colar `diagram.json` e `sketch.ino` a partir dos **raw** abaixo |
+| **diagram.json (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/diagram.json |
+| **sketch.ino (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/sketch.ino |
+| **libraries.txt (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/libraries.txt |
+| **Projeto numerado no Wokwi (Share)** | Se o grupo publicar no site, inclua aqui `https://wokwi.com/projects/...` na entrega da plataforma FIAP (o repositório GitHub já basta para correção do código) |
 | **Broker MQTT usado na demonstração** | `broker.hivemq.com` porta `1883` (público de teste — **não** usar dados sensíveis) |
 | **Tópico de telemetria** | `cardioia/grupo54/telemetria` (payload JSON: `temp_c`, `hum_pct`, `bpm`, `ts_ms`) |
 | **Fluxo Node-RED (dashboard)** | [flows.json no repositório](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json) |
+| **Diagrama de arquitetura (evidência)** | [arquitetura_fase3.svg](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/evidencias/arquitetura_fase3.svg) |
 
-Arquivos exportados adicionais do **Node-RED** e **prints** de tela: `docs/node-red/` e `assets/evidencias/`.
+Arquivos do **Node-RED**: `docs/node-red/`. **Prints** opcionais da simulação/UI: `assets/evidencias/` (ver README da pasta).
 
 ---
 

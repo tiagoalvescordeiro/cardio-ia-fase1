@@ -66,4 +66,4 @@ Não foi obrigatório para a rubrica base. Caso o grupo deseje “ir além”, r
 
 ## 8. Conclusão da Parte 2
 
-Demonstramos o encadeamento **device → MQTT → dashboard**, com separação de papéis e evidências versionadas (`flows.json`, README). Os prints finais da interface devem ser anexados em `assets/evidencias/` para fechar o ciclo de documentação exigido pela FIAP.
+Demonstramos o encadeamento **device → MQTT → dashboard**, com separação de papéis e evidências versionadas (`flows.json`, README). O diagrama **`assets/evidencias/arquitetura_fase3.svg`** resume a arquitetura; **prints PNG** da interface podem ser acrescentados na mesma pasta se a rubrica da FIAP exigir capturas de tela.

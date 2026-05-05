@@ -23,3 +23,9 @@ O enunciado reconhece limitação de **SPIFFS** no simulador; a estratégia adot
 ## EAD / localização (verificação institucional)
 
 Curso **on-line (FIAP)** — se solicitado, anexar comprovante de matrícula EAD junto à entrega na plataforma.
+
+## Status da entrega (repositório)
+
+- Código Wokwi, fluxo Node-RED, relatórios Parte 1 e 2, `links.md` e diagrama de arquitetura em `assets/evidencias/arquitetura_fase3.svg`: **versionados no `main`**.  
+- **Link Share** numerado do site Wokwi (`wokwi.com/projects/...`): opcional; a correção pode reproduzir pelo GitHub + arquivos **raw** indicados em `links.md`.  
+- **Prints PNG** da simulação e do dashboard: acrescentar em `assets/evidencias/` apenas se o professor exigir explicitamente.

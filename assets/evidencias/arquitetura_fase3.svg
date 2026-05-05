@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280">
+  <rect width="720" height="280" fill="#f8fafc"/>
+  <text x="360" y="28" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600" fill="#0f172a">CardioIA  Fase 3: fluxo Edge ’ MQTT ’ Dashboard</text>
+  <rect x="24" y="56" width="168" height="168" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="108" y="92" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#0c4a6e">Wokwi / ESP32</text>
+  <text x="108" y="118" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">DHT22 + botão</text>
+  <text x="108" y="142" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Fila RAM offline</text>
+  <text x="108" y="166" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">WiFi Wokwi-GUEST</text>
+  <text x="108" y="198" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">sketch.ino</text>
+  <path d="M 192 140 L 248 140" stroke="#64748b" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="220" y="132" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">MQTT</text>
+  <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#64748b"/></marker></defs>
+  <rect x="256" y="56" width="200" height="168" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="356" y="92" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#78350f">Broker público</text>
+  <text x="356" y="118" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">broker.hivemq.com:1883</text>
+  <text x="356" y="148" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">cardioia/grupo54/</text>
+  <text x="356" y="168" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">telemetria (JSON)</text>
+  <path d="M 456 140 L 512 140" stroke="#64748b" stroke-width="2" marker-end="url(#ah2)"/>
+  <defs><marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#64748b"/></marker></defs>
+  <rect x="520" y="56" width="176" height="168" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="608" y="92" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#4c1d95">Node-RED</text>
+  <text x="608" y="118" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">mqtt in ’ parse</text>
+  <text x="608" y="142" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">charts + gauge + alerta</text>
+  <text x="608" y="174" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">flows.json</text>
+  <text x="360" y="262" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">Grupo 1TIAO  FIAP 2026  evidência de arquitetura (não substitui prints de simulação se exigidos)</text>
+</svg>

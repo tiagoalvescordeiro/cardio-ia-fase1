@@ -38,7 +38,7 @@ cardio-ia-fase1/
 ├── assets/
 │   ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
 │   ├── texto_02_fatores_associados_doencas_cardiovasculares.txt
-│   └── evidencias/          ← prints / exports (Fase 3 — Node-RED, Grafana opcional)
+│   └── evidencias/          ← arquitetura_fase3.svg + prints opcionais (Fase 3)
 ├── notebooks/
 │   ├── README_FASE2.md
 │   ├── sintomas.txt
