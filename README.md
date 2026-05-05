@@ -38,7 +38,7 @@ cardio-ia-fase1/
 ├── assets/
 │   ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
 │   ├── texto_02_fatores_associados_doencas_cardiovasculares.txt
-│   └── evidencias/          ← arquitetura_fase3.svg + prints opcionais (Fase 3)
+│   └── evidencias/          ← PNG (Wokwi, GitHub flows) + arquitetura_fase3.svg (Fase 3)
 ├── notebooks/
 │   ├── README_FASE2.md
 │   ├── sintomas.txt
@@ -48,6 +48,7 @@ cardio-ia-fase1/
 │   ├── fase2_parte1_diagnostico.ipynb
 │   └── fase2_parte2_classificador.ipynb
 ├── docs/
+│   ├── TEXTO_ENTREGA_MOODLE.txt
 │   ├── FASE3_IOT_FIAP.md
 │   ├── relatorio_parte1_edge.md
 │   ├── relatorio_parte2_mqtt_dashboard.md
@@ -213,6 +214,7 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 Conforme o enunciado da atividade (**monitoramento contínuo / IoT na saúde**), a entrega envolve **Wokwi (ESP32, DHT22 + segundo sensor)**, **resiliência offline**, **MQTT**, **dashboard Node-RED** (e Grafana opcional), além dos **relatórios** das partes 1 e 2.
 
 - **Checklist (inclui itens Moodle):** [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
+- **Texto para colar na entrega Moodle:** [`docs/TEXTO_ENTREGA_MOODLE.txt`](docs/TEXTO_ENTREGA_MOODLE.txt)  
 - **Wokwi (diagrama + firmware comentado):** pasta [`wokwi/`](wokwi/) e guia [`wokwi/README.md`](wokwi/README.md)  
 - **Relatório Parte 1 (Edge):** [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md)  
 - **Relatório Parte 2 (MQTT + dashboard):** [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md)  

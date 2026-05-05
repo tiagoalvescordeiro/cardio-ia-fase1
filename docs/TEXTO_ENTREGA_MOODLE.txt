@@ -1,0 +1,27 @@
+================================================================================
+TEXTO PRONTO PARA COLAR NA ENTREGA (Moodle) — Cap 1 / Fase 3 IoT
+================================================================================
+(Ajuste quebras de linha se o campo do Moodle for uma única caixa de texto.)
+
+Repositório GitHub (código, relatórios, flows Node-RED, diagrama Wokwi):
+https://github.com/tiagoalvescordeiro/cardio-ia-fase1
+
+Link público do projeto no Wokwi (entregável Parte 1):
+https://wokwi.com/projects/463138220013169665
+
+Instrução para o professor / correção: no Wokwi, abra o separador Code e confira que o sketch e o diagram.json coincidem com a pasta wokwi/ do GitHub (ou cole a partir dos raw links em links.md). No Library Manager, adicione PubSubClient, DHT sensor library e Adafruit Unified Sensor (conforme libraries.txt no repositório).
+
+Export do dashboard Node-RED (entregável Parte 2 — prints OU export):
+https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json
+
+Evidências em imagem no repositório (pasta assets/evidencias/):
+- wokwi_projeto_publico_url.png — projeto Wokwi aberto no editor
+- node_red_flows_github_export.png — export flows.json no GitHub
+- arquitetura_fase3.svg — diagrama Edge → MQTT → Node-RED
+
+Broker MQTT (demonstração): broker.hivemq.com:1883
+Tópico telemetria: cardioia/grupo54/telemetria
+
+================================================================================
+FIM — Grupo 54 / 1TIAO — FIAP 2026
+================================================================================

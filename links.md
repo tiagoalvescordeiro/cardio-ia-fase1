@@ -50,13 +50,13 @@
 | **diagram.json (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/diagram.json |
 | **sketch.ino (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/sketch.ino |
 | **libraries.txt (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/libraries.txt |
-| **Projeto numerado no Wokwi (Share)** — *entregável do enunciado* | Cole aqui `https://wokwi.com/projects/...` após salvar e compartilhar no Wokwi (ver [wokwi/README.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/README.md#link-público-do-projeto-share--entrega-fiap)). Enquanto não houver URL, use os raw + GitHub na correção. |
+| **Projeto numerado no Wokwi (Share)** — *entregável do enunciado* | **https://wokwi.com/projects/463138220013169665** (CardioIA Fase3 Grupo54 FIAP — público). Sincronize o **código** com o repositório: mesmo conteúdo que [`wokwi/sketch.ino`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/sketch.ino) e [`wokwi/diagram.json`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/diagram.json); instale as bibliotecas de [`libraries.txt`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/libraries.txt) no *Library Manager*. |
 | **Broker MQTT usado na demonstração** | `broker.hivemq.com` porta `1883` (público de teste — **não** usar dados sensíveis) |
 | **Tópico de telemetria** | `cardioia/grupo54/telemetria` (payload JSON: `temp_c`, `hum_pct`, `bpm`, `ts_ms`) |
 | **Fluxo Node-RED (dashboard)** | [flows.json no repositório](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json) |
 | **Diagrama de arquitetura (evidência)** | [arquitetura_fase3.svg](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/evidencias/arquitetura_fase3.svg) |
 
-Arquivos do **Node-RED**: `docs/node-red/`. **Prints** opcionais da simulação/UI: `assets/evidencias/` (ver README da pasta).
+Arquivos do **Node-RED**: `docs/node-red/`. **Prints** em `assets/evidencias/` (ver README da pasta). **Texto pronto para colar no Moodle:** [`docs/TEXTO_ENTREGA_MOODLE.txt`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/TEXTO_ENTREGA_MOODLE.txt).
 
 ---
 

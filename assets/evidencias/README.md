@@ -2,7 +2,9 @@
 
 ## Entregue no repositório
 
-- **`arquitetura_fase3.svg`** — diagrama Edge → MQTT → Node-RED (abre no navegador ou no VS Code).
+- **`arquitetura_fase3.svg`** — diagrama Edge → MQTT → Node-RED (abre no navegador ou no VS Code).  
+- **`wokwi_projeto_publico_url.png`** — captura do projeto Wokwi público (editor / URL do simulador).  
+- **`node_red_flows_github_export.png`** — captura do `flows.json` no GitHub (evidência do export Node-RED).
 
 ## Recomendado (e alinhado ao enunciado FIAP)
 

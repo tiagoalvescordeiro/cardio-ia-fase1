@@ -1,5 +1,9 @@
 # Simulação Wokwi — CardioIA Fase 3 (FIAP)
 
+**Projeto público no simulador:** https://wokwi.com/projects/463138220013169665  
+
+Garanta que o **sketch** e o **diagram.json** no site sejam os mesmos desta pasta do GitHub (use copiar/colar a partir do repositório ou dos links *raw* em [`../links.md`](../links.md)).
+
 ## Conteúdo
 
 | Arquivo | Função |
