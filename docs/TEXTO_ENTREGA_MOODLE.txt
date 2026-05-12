@@ -11,10 +11,10 @@ Cole o bloco abaixo no campo de texto da entrega (ajuste quebras de linha se o M
 Repositório GitHub (código-fonte, relatórios, export Node-RED, diagrama e evidências):
 https://github.com/tiagoalvescordeiro/cardio-ia-fase1
 
-Projeto Wokwi (ESP32 — link público Share):
+Projeto Wokwi (ESP32 — link público de partilha):
 https://wokwi.com/projects/463138220013169665
 
-Para correção no Wokwi: abrir o separador Code e conferir que sketch.ino e diagram.json coincidem com a pasta wokwi/ do GitHub (ou colar a partir dos links raw em links.md na raiz do repositório). Bibliotecas: PubSubClient, DHT sensor library e Adafruit Unified Sensor — ver wokwi/libraries.txt.
+Para correção no Wokwi: abrir a aba **Code** e conferir que `sketch.ino` e `diagram.json` coincidem com a pasta `wokwi/` do GitHub (ou colar a partir dos links *raw* em `links.md` na raiz do repositório). Bibliotecas: PubSubClient, DHT sensor library e Adafruit Unified Sensor — ver `wokwi/libraries.txt`.
 
 Export do dashboard Node-RED (atende ao enunciado: capturas OU export):
 https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json

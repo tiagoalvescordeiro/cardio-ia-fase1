@@ -1,14 +1,14 @@
 # CardioIA — FIAP (turma 1TIAO)
 
-Repositório do grupo para o projeto **CardioIA** no curso de **Inteligência Artificial**. Aqui estão os artefatos pedidos em cada fase: curadoria de dados (Fase 1), notebooks de NLP e classificação (Fase 2) e protótipo IoT com MQTT e Node-RED (Fase 3).
+Repositório do grupo para o projeto **CardioIA** no curso de **Inteligência Artificial**. Abaixo resumimos os **entregáveis** (artefatos) por fase: curadoria de dados (Fase 1), notebooks de NLP e classificação (Fase 2) e protótipo IoT com MQTT e Node-RED (Fase 3).
 
-**Fase 1 —** disciplina *Do Python à Fronteira Quântica*; Cap 1 no FIAP ON: *Robôs, Neurônios e Saúde: Uma Integração Inovadora pela IA*, com entrega do **Desafio Integrador: IA entre Robôs, Sinapses e Medicina** (datas no [FIAP ON](https://on.fiap.com.br)).
+**Fase 1 —** disciplina *Do Python à Fronteira Quântica*; Cap 1 no FIAP ON: *Robôs, Neurônios e Saúde: Uma Integração Inovadora pela IA*, com entrega do **Desafio Integrador: IA entre Robôs, Sinapses e Medicina** (prazos no [FIAP ON](https://on.fiap.com.br)).
 
 ## Integrantes
 
 | Nome | RM | Função no grupo |
 |------|-----|-----------------|
-| Tiago Alves Cordeiro | 561791 | Repositório |
+| Tiago Alves Cordeiro | 561791 | Responsável pelo repositório |
 | Matheus Parra | 561907 | Integrante |
 | Otavio Custodio de Oliveira | 565606 | Integrante |
 | Thiago Henrique Pereira de Almeida Santos | 563327 | Integrante |
@@ -34,7 +34,7 @@ cardio-ia-fase1/
 ├── assets/
 │   ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
 │   ├── texto_02_fatores_associados_doencas_cardiovasculares.txt
-│   └── evidencias/          ← prints e diagrama da Fase 3
+│   └── evidencias/          ← capturas (PNG) e diagrama da Fase 3
 ├── notebooks/
 │   ├── README_FASE2.md
 │   ├── sintomas.txt
@@ -52,7 +52,7 @@ cardio-ia-fase1/
 │       ├── README.md
 │       └── flows.json
 └── firmware/
-    └── README.md            ← remete ao sketch em wokwi/
+    └── README.md            ← indica o sketch em wokwi/
 ```
 
 ---
