@@ -1,44 +1,40 @@
-# CardioIA — repositório do grupo (FIAP)
+# CardioIA — FIAP (turma 1TIAO)
 
-Projeto acadêmico do curso de **Inteligência Artificial** (FIAP, **turma 1TIAO**). O repositório concentra entregas do **CardioIA**: aplicação de IA a um cenário cardiológico, evoluindo por fases conforme o programa do curso.
+Repositório do grupo para o projeto **CardioIA** no curso de **Inteligência Artificial**. Aqui estão os artefatos pedidos em cada fase: curadoria de dados (Fase 1), notebooks de NLP e classificação (Fase 2) e protótipo IoT com MQTT e Node-RED (Fase 3).
 
-**Fase 1 (disciplina):** *Do Python à Fronteira Quântica* — Cap 1 no FIAP ON: **Robôs, Neurônios e Saúde: Uma Integração Inovadora pela IA** (atividade avaliada **Desafio Integrador: IA entre Robôs, Sinapses e Medicina**; prazos no [FIAP ON](https://on.fiap.com.br)).
+**Fase 1 —** disciplina *Do Python à Fronteira Quântica*; Cap 1 no FIAP ON: *Robôs, Neurônios e Saúde: Uma Integração Inovadora pela IA*, com entrega do **Desafio Integrador: IA entre Robôs, Sinapses e Medicina** (datas no [FIAP ON](https://on.fiap.com.br)).
 
----
+## Integrantes
 
-## 👥 Integrantes
+| Nome | RM | Função no grupo |
+|------|-----|-----------------|
+| Tiago Alves Cordeiro | 561791 | Repositório |
+| Matheus Parra | 561907 | Integrante |
+| Otavio Custodio de Oliveira | 565606 | Integrante |
+| Thiago Henrique Pereira de Almeida Santos | 563327 | Integrante |
+| Leandro Arthur Marinho Ferreira | 565240 | Integrante |
 
-| Nome | RM | Papel |
-|---|---|---|
-| Tiago Alves Cordeiro | RM 561791 | Líder do Repositório |
-| Matheus Parra | RM 561907 | Integrante |
-| Otavio Custodio de Oliveira | RM 565606 | Integrante |
-| Thiago Henrique Pereira de Almeida Santos | RM 563327 | Integrante |
-| Leandro Arthur Marinho Ferreira | RM 565240 | Integrante |
+## O que foi entregue em cada fase
 
----
+| Fase | O que está neste repo |
+|------|------------------------|
+| **1** | Base **tabular** (Heart Failure — links e uso no notebook de EDA), dois **textos** em `assets/` com fonte citada, referência a **imagens** de raio-X (link público no `links.md`; arquivos grandes ficam fora do Git). README com origem das bases e limitações. |
+| **2** | Parte com regras: `sintomas.txt`, `mapa_conhecimento.csv`, `fase2_parte1_diagnostico.ipynb`. Parte com ML: `dataset_risco.csv`, TF-IDF + modelos no `fase2_parte2_classificador.ipynb`. Detalhes em `notebooks/README_FASE2.md`. |
+| **3** | Firmware e diagrama Wokwi (`wokwi/`), MQTT para `broker.hivemq.com`, fluxo em `docs/node-red/flows.json`, relatórios em `docs/`, evidências em `assets/evidencias/`. Prazo no calendário: **até 12/05/2026**; checklist em `docs/FASE3_IOT_FIAP.md`. Texto pronto para colar no Moodle: `docs/TEXTO_ENTREGA_MOODLE.txt`. |
 
-## 📌 Sobre o repositório
+Tudo aqui é **trabalho de disciplina** (protótipo e relatórios), não produto clínico nem sistema validado para paciente.
 
-No material do **FIAP ON**, o eixo do curso associa **IA**, **IoT** e desenvolvimento de sistemas ao projeto **CardioIA**, com ênfase em governança de dados e impacto social (objetivo explícito na **Fase 3**). Trata-se de **protótipos e entregas acadêmicas**, não de um produto clínico homologado.
-
-Na **Fase 1**, o foco foi curadoria e documentação de dados **tabulares**, **textuais** e de **imagem**, com fontes públicas, notas de licença e discussão de vieses e LGPD.
-
-Nas fases seguintes há notebooks de NLP e classificação; na **Fase 3**, integração **Wokwi + MQTT + Node-RED**. O roteiro detalhado da IoT está em [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md).
-
----
-
-## 📂 Estrutura do Repositório
+## Estrutura do repositório
 
 ```
 cardio-ia-fase1/
 ├── README.md
 ├── links.md
-├── wokwi/                   ← Fase 3: diagram.json + sketch.ino + libraries.txt (Wokwi)
+├── wokwi/                   ← Fase 3: diagram.json, sketch.ino, libraries.txt
 ├── assets/
 │   ├── texto_01_estatistica_cardiovascular_brasil_2023.txt
 │   ├── texto_02_fatores_associados_doencas_cardiovasculares.txt
-│   └── evidencias/          ← PNG (Wokwi, GitHub flows) + arquitetura_fase3.svg (Fase 3)
+│   └── evidencias/          ← prints e diagrama da Fase 3
 ├── notebooks/
 │   ├── README_FASE2.md
 │   ├── sintomas.txt
@@ -54,205 +50,107 @@ cardio-ia-fase1/
 │   ├── relatorio_parte2_mqtt_dashboard.md
 │   └── node-red/
 │       ├── README.md
-│       └── flows.json       ← fluxo dashboard (importar no Node-RED)
+│       └── flows.json
 └── firmware/
-    └── README.md            ← aponta para wokwi/sketch.ino
+    └── README.md            ← remete ao sketch em wokwi/
 ```
 
 ---
 
-## 📊 Parte 1 — Dados numéricos (tabela / CSV)
+## Fase 1 — Dados para o CardioIA
 
-**Observação:** no enunciado da FIAP, a *Parte 1* aparece como «Dados numéricos (IoT)» no sentido de **base tabular** para o projeto CardioIA — **não** se refere ao protótipo ESP32/MQTT da **Fase 3**. O **Heart Failure Prediction** (abaixo) é o CSV usado para EDA/modelagem em Python; a telemetria da Fase 3 é outro fluxo.
+### Parte 1 — Dados numéricos (planilha / CSV)
 
-### Dataset Utilizado
+No enunciado a expressão “dados numéricos (IoT)” na Fase 1 trata da **tabela** usada no projeto, não do ESP32 da Fase 3. Usamos o **Heart Failure Prediction** (Kaggle) para EDA em Python; o CSV completo não vai no Git por tamanho — download pelo link em `links.md` e uso como indicado no notebook (`../data/heart.csv`).
 
-| Item | Detalhe |
-|---|---|
-| **Nome** | Heart Failure Prediction Dataset |
-| **Autor** | Federico Soriano (fedesoriano) |
-| **Fonte** | [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) |
-| **Link público** | [Ver em links.md](./links.md) |
-| **Formato** | `.csv` |
-| **Registros** | 918 pacientes |
-| **Variáveis** | 12 (11 features + 1 target) |
+| Campo | Valor |
+|-------|--------|
+| Nome | Heart Failure Prediction Dataset |
+| Autor | Federico Soriano (fedesoriano) |
+| Fonte | [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) |
+| Registros / colunas | 918 linhas; 12 colunas (11 atributos + alvo `HeartDisease`) |
 
-### Origem dos dados
+Conjunto internacional; serve para exercício de modelo, mas **não** representa o Brasil.
 
-Dataset público no **Kaggle**, agregando registros de bases internacionais (p.ex. Cleveland, Hungarian, Switzerland, Long Beach VA, Stalog). É adequado para exercícios de modelagem, mas **não** representa a população brasileira.
+| Variável | Tipo | Comentário breve |
+|----------|------|------------------|
+| Age, RestingBP, Cholesterol, MaxHR, Oldpeak | Numéricos | Idade, PA, colesterol, FC máx., depressão ST |
+| Sex, ChestPainType, RestingECG, ExerciseAngina, ST_Slope | Categóricos | Sexo, dor torácica, ECG, angina no teste, inclinação ST |
+| FastingBS | Binário | Glicemia de jejum alterada |
+| HeartDisease | Binário | **Alvo** — presença de doença cardíaca no registro |
 
-### Variáveis e Justificativa Clínica
+### Parte 2 — Textos
 
-| Variável | Tipo | Relevância Clínica |
-|---|---|---|
-| `Age` | Numérico | Risco cardiovascular cresce exponencialmente com a idade |
-| `Sex` | Categórico | Homens têm maior incidência de DAC; mulheres apresentam sintomas atípicos |
-| `ChestPainType` | Categórico | Sintoma cardinal de infarto; orienta triagem de risco |
-| `RestingBP` | Numérico | Hipertensão é o principal fator de risco modificável para AVC e infarto |
-| `Cholesterol` | Numérico | Níveis elevados de LDL causam aterosclerose |
-| `FastingBS` | Binário | Diabetes multiplica em até 4x o risco de doença coronariana |
-| `RestingECG` | Categórico | Identifica arritmias, hipertrofia e isquemia silenciosa |
-| `MaxHR` | Numérico | Indicador da reserva funcional cardíaca |
-| `ExerciseAngina` | Binário | Altamente sugestivo de isquemia miocárdica |
-| `Oldpeak` | Numérico | Marcador de isquemia durante o esforço físico |
-| `ST_Slope` | Categórico | Inclinação descendente associada a coronariopatia grave |
-| `HeartDisease` | Binário | **Variável alvo** — o que o modelo de IA deve prever |
+| Arquivo | Conteúdo | Fonte |
+|---------|-----------|--------|
+| `assets/texto_01_estatistica_cardiovascular_brasil_2023.txt` | Números sobre DCV no Brasil | [SciELO / ABC](https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt) |
+| `assets/texto_02_fatores_associados_doencas_cardiovasculares.txt` | Fatores de risco em texto | [SciELO / preprint](https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408) |
 
-### Uso em modelos de IA (acadêmico)
+Textos em português para trabalhar vetorização e NLP em PT-BR.
 
-- Classificação supervisionada para prever `HeartDisease` (ex.: árvore de decisão, regressão logística, ensembles)
-- Análise de importância de variáveis e explicabilidade (**SHAP** ou equivalentes)
-- Montagem de um fluxo simples de **triagem** com escore — apenas como exercício; **não** constitui apoio diagnóstico real
+### Parte 3 — Imagens
+
+| Campo | Valor |
+|-------|--------|
+| Nome | Cardiomegaly Chest X-Ray Image Dataset |
+| Fonte | [Zenodo / NIH](https://zenodo.org/records/17937122) |
+| Uso na entrega | Subconjunto (100+ imagens) com link no `links.md`; pastas de imagem não são versionadas no Git |
+
+Uso estritamente acadêmico: pipeline e limitações do modelo, sem aplicação clínica real.
 
 ---
 
-## 📝 Parte 2 — Dados Textuais (NLP)
+## Fase 2 — NLP e classificação
 
-### Arquivos
+**Atividade:** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* (prazo **14/04/2026** no portal). Conteúdo relacionado: Caps **10** e **11** do FIAP ON (NLP por regras e NLP clássico).
 
-| Arquivo | Tema | Fonte |
-|---|---|---|
-| `assets/texto_01_estatistica_cardiovascular_brasil_2023.txt` | Estatísticas nacionais de DCV 2023 | [SciELO / Arq. Bras. Cardiologia](https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt) |
-| `assets/texto_02_fatores_associados_doencas_cardiovasculares.txt` | Fatores associados às DCV na população brasileira | [SciELO / Rev. Bras. Epidemiologia](https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408) |
+### Parte 1 — Sintomas e mapa (regras)
 
-### Linhas de trabalho em NLP
+10 frases em `notebooks/sintomas.txt`, 20 linhas no `notebooks/mapa_conhecimento.csv` e o notebook `fase2_parte1_diagnostico.ipynb`, que cruza texto com o mapa e **sugere** diagnóstico — exercício de sala, sem valor clínico.
 
-Com base nos textos em português, são possíveis, entre outras:
+### Parte 2 — TF-IDF e risco
 
-- **NER** (entidades clínicas): desde regras e léxicos até modelos contextualizados (transformers), conforme o nível da disciplina
-- **Modelagem de tópicos** (ex.: LDA) para agrupar trechos por tema
-- **Sumarização** (modelos seq2seq) como extensão opcional
-- **Análise de tom ou polaridade** em trechos selecionados (exercício introdutório)
+30 frases rotuladas em `notebooks/dataset_risco.csv`; no `fase2_parte2_classificador.ipynb`: TF-IDF, split treino/teste, árvore de decisão e regressão logística. Dataset pequeno de propósito para enxergar métricas.
 
-### Escolha dos textos
-
-Fontes em **português**, com **dados e discussão sobre o Brasil**, o que facilita EDA e vetorização em PT-BR e complementa o viés geográfico de datasets internacionais.
-
----
-
-## 🖼️ Parte 3 — Dados Visuais (Visão Computacional)
-
-### Dataset Utilizado
-
-| Item | Detalhe |
-|---|---|
-| **Nome** | Cardiomegaly Chest X-Ray Image Dataset |
-| **Fonte** | [Zenodo / NIH Clinical Centre](https://zenodo.org/records/17937122) |
-| **Link público** | [Ver em links.md](./links.md) |
-| **Formato** | `.jpg` / `.png` (128x128px, escala de cinza) |
-| **Total de imagens** | 5.552 imagens (mínimo 100 utilizados na Fase 1) |
-| **Classes** | Cardiomegalia presente / Cardiomegalia ausente |
-| **Divisão** | 80% treino / 20% teste |
-
-### Abordagens típicas em visão computacional
-
-- **Classificação** com CNNs (presença ou ausência de sinais associados a cardiomegalia)
-- **Segmentação** (ex.: U-Net) para contorno cardíaco e medidas como ICT, com maior custo de implementação
-- **Detecção de anomalias** em cenários com poucos rótulos ou classes desbalanceadas
-
-### Escopo acadêmico
-
-Imagens médicas exigem controle rigoroso de domínio, protocolo de aquisição e validação clínica. Neste repositório, o foco é o **pipeline técnico** (dados → treino → validação → limitações), sem pretensão de uso assistencial em produção.
-
----
-
-## 🔒 Ética, licenças e limitações dos dados
-
-Utilizamos apenas fontes adequadas a **uso acadêmico** e sem identificação pessoal.
-
-### Licenças (resumo)
-
-| Dado | Licença | Observação |
-|---|---|---|
-| Heart Failure (Kaggle) | termos do Kaggle / CC conforme página do dataset | pesquisa e ensino |
-| Textos SciELO | Creative Commons / acesso aberto | citar a fonte |
-| Raio-X (Zenodo/NIH) | open access NIH | uso não comercial |
-
-### LGPD e anonimização
-
-Os conjuntos referenciados são **anonimizados** ou agregados, compatíveis com discussão de LGPD em ambiente de laboratório.
-
-### Vieses relevantes
-
-- **Geografia:** amostras internacionais não refletem a população brasileira
-- **Sexo:** sub-representação feminina é comum e pode degradar desempenho por subgrupo
-- **Seleção:** dados hospitalares não captam população assintomática ou sem acesso a serviços
-- **Imagem:** variação de equipamento e protocolo afeta generalização do modelo
-
----
-
-## 🔗 Links dos dados
-
-URLs e arquivos grandes (Drive, Kaggle, etc.) estão listados em [links.md](./links.md).
-
----
-
-## Fase 3 — IoT (*CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital*)
-
-**Prazo (FIAP ON):** até **12/05/2026** — confirmar no calendário da disciplina.
-
-**Protótipo (Wokwi):** ESP32, sensor **DHT22** (temperatura e umidade) e **botão** para simular variação de **BPM**. O firmware implementa alternância **online/offline**; em modo sem conectividade, as leituras entram em **fila circular em RAM** e, ao restabelecer conexão, são publicadas via **MQTT** (`broker.hivemq.com`). O **Node-RED** consome o tópico e exibe gráficos, gauge e alerta por limiar.
-
-Em vez de **SPIFFS** no simulador, optou-se por fila volátil e registro no **Serial**, conforme documentado nos relatórios.
-
-**Documentação e artefatos:**
-
-- Checklist e mapeamento ao enunciado: [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
-- Texto para colagem no Moodle: [`docs/TEXTO_ENTREGA_MOODLE.txt`](docs/TEXTO_ENTREGA_MOODLE.txt)  
-- Firmware e diagrama: [`wokwi/`](wokwi/), [`wokwi/README.md`](wokwi/README.md)  
-- Relatório edge: [`docs/relatorio_parte1_edge.md`](docs/relatorio_parte1_edge.md)  
-- Relatório MQTT + dashboard: [`docs/relatorio_parte2_mqtt_dashboard.md`](docs/relatorio_parte2_mqtt_dashboard.md)  
-- Fluxo Node-RED: [`docs/node-red/flows.json`](docs/node-red/flows.json), [`docs/node-red/README.md`](docs/node-red/README.md)  
-- Ponte ao sketch: [`firmware/README.md`](firmware/README.md)  
-- Evidências gráficas: [`assets/evidencias/README.md`](assets/evidencias/README.md)  
-- Links consolidados: [`links.md`](./links.md)
-
----
-
-## 🚀 Fases do curso (resumo)
-
-| Fase | Entrega principal | Status |
-|---|---|---|
-| 1 | Dados tabulares, textuais e de imagem + documentação | Concluída |
-| 2 | NLP e classificação (*Desafio Integrador…*; Caps **10** e **11** no FIAP ON) | Entregue (14/04/2026) |
-| 3 | IoT: Wokwi, MQTT, Node-RED (*CardioIA Conectada*) | Código no repositório; **validar entrega no Moodle** (12/05/2026) |
-| 4 | Integração ML + NLP + visão (planejamento futuro) | Não iniciada |
-
----
-
-## Fase 2 — *Início da IA avançada* (FIAP ON)
-
-**Atividade (Cap 1):** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026**.  
-**Conteúdos correlatos no portal:** *Cap 10 — IA que Entende: Processamento de Linguagem Natural Baseado em Regras*; *Cap 11 — NLP no Estilo Clássico: Estatística, Vetores e Emoções em Texto*.
-
-### Parte 1 — sintomas e mapa de conhecimento (regras)
-
-Dez descrições sintéticas em `sintomas.txt`, mapa com 20 associações em `mapa_conhecimento.csv` e notebook que cruza texto e regras para **sugestão** de diagnóstico — **exercício didático**, sem validade clínica.
-
-| Arquivo | Descrição |
-|---|---|
-| `notebooks/sintomas.txt` | 10 descrições sintéticas de sintomas |
-| `notebooks/mapa_conhecimento.csv` | 20 associações sintoma–doença |
-| `notebooks/fase2_parte1_diagnostico.ipynb` | leitura das frases, correspondência com o mapa e saída sugerida |
-
-### Parte 2 — TF-IDF e classificação de risco
-
-Vetorização **TF-IDF**, divisão treino/teste e modelos **árvore de decisão** e **regressão logística** sobre 30 frases em `dataset_risco.csv`. O conjunto é reduzido **de propósito**, para priorizar interpretação de métricas em ambiente controlado.
-
-| Arquivo | Descrição |
-|---|---|
-| `notebooks/dataset_risco.csv` | 30 frases rotuladas (`alto risco` / `baixo risco`) |
-| `notebooks/fase2_parte2_classificador.ipynb` | treino, teste e relatório de desempenho |
-
-### Critérios de avaliação (especificação da atividade)
+### Critérios da atividade (rubrica)
 
 | Critério | Pontos |
-|---|---|
+|----------|--------|
 | Relatos e mapa de conhecimento organizados | 2 |
 | Código de extração de informações funcional | 2 |
 | Dataset simples criado corretamente | 1 |
 | Classificador treinado e testado corretamente | 2 |
-| Documentação clara e repositório público no GitHub com README completo | 1 |
+| Documentação clara e repositório público com README completo | 1 |
+
+---
+
+## Fase 3 — IoT (*CardioIA Conectada*)
+
+**Atividade no FIAP ON:** *CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital* — prazo **12/05/2026** (confirmar no calendário).
+
+ESP32 no Wokwi com **DHT22** (temperatura/umidade) e **botão** simulando variação de **BPM**. O código alterna cenário online/offline; offline grava leituras em **fila em RAM** e tenta enviar de novo quando há “conexão”. Publicação MQTT em `broker.hivemq.com`, tópico `cardioia/grupo54/telemetria`. **Node-RED** lê o tópico e monta dashboard (gráfico, gauge, alerta). Não usamos SPIFFS no simulador; o comportamento e a fila estão explicados nos relatórios.
+
+**Arquivos principais:** `docs/FASE3_IOT_FIAP.md` · `docs/TEXTO_ENTREGA_MOODLE.txt` · `wokwi/` · `docs/relatorio_parte1_edge.md` · `docs/relatorio_parte2_mqtt_dashboard.md` · `docs/node-red/flows.json` · `docs/node-red/README.md` · `firmware/README.md` · `assets/evidencias/` · `links.md`
+
+---
+
+## Licenças, LGPD e vieses
+
+Só usamos bases adequadas a **uso acadêmico**, sem identificar pessoa.
+
+| Dado | Licença / uso |
+|------|----------------|
+| Heart Failure (Kaggle) | Termos do Kaggle / licença indicada na página do dataset |
+| Textos SciELO | CC / acesso aberto — citar fonte |
+| Raio-X (Zenodo/NIH) | Uso de pesquisa, não comercial |
+
+Limitações comuns: amostra **não brasileira** no Kaggle; desbalanceamento por sexo; dados hospitalares não cobrem quem não procura atendimento; imagens dependem de aparelho e protocolo.
+
+---
+
+## Links externos dos dados
+
+Lista centralizada (Drive, Kaggle, Zenodo, Wokwi, GitHub raw): [`links.md`](./links.md).
 
 ---
 
