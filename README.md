@@ -253,9 +253,6 @@ Vetorização **TF-IDF**, divisão treino/teste e modelos **árvore de decisão*
 | Dataset simples criado corretamente | 1 |
 | Classificador treinado e testado corretamente | 2 |
 | Documentação clara e repositório público no GitHub com README completo | 1 |
-| Vídeo de demonstração no YouTube (não listado) com link no GitHub | 2 |
-
-**Vídeo (rubrica):** quando o grupo publicar a demonstração em **YouTube (não listado)**, o link deve constar neste `README.md` (seção sugerida: logo abaixo desta tabela) para fechar o critério acima.
 
 ---
 
