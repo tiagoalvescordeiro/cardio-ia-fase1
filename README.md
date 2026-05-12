@@ -1,13 +1,12 @@
-# CardioIA — Repositório do projeto (FIAP ON)
+# CardioIA — projeto da turma (FIAP)
 
-**Curso:** Inteligência Artificial — FIAP  
-**Fase 1 (disciplina):** Do Python à Fronteira Quântica — *Cap 1 no portal:* **A Busca de Dados: Preparando o Terreno para a Inteligência Cardiológica**  
-**Turma:** 1TIAO  
-**Data de entrega (Cap 1 / Fase 1):** 10/03/2026 *(conforme calendário no [FIAP ON](https://on.fiap.com.br))*  
+Somos alunos do curso de **Inteligência Artificial** da FIAP (**turma 1TIAO**). Esse repositório é onde a gente centraliza o **CardioIA**: um projeto de IA aplicada a contexto cardiológico, que vai ganhando módulos conforme as fases do curso.
+
+**Fase 1 da graduação:** *Do Python à Fronteira Quântica* — no FIAP ON o Cap 1 chama **A Busca de Dados: Preparando o Terreno para a Inteligência Cardiológica** (entrega **10/03/2026** — [FIAP ON](https://on.fiap.com.br)).
 
 ---
 
-## 👥 Integrantes do Grupo
+## 👥 Quem somos
 
 | Nome | RM | Papel |
 |---|---|---|
@@ -19,11 +18,13 @@
 
 ---
 
-## 📌 Sobre o Projeto
+## 📌 O que é esse repo
 
-O **CardioIA** é o fio condutor do curso no **FIAP ON**: integrar IA, IoT e sistemas para apoiar diagnósticos cardíacos com **governança de dados** e visão de **impacto social** (objetivo declarado na **Fase 3 — Além das Fronteiras Digitais**). Neste repositório, a **Fase 1** corresponde ao Cap 1 da Fase 1 do curso — levantamento e organização de dados **numéricos, textuais e visuais** que alimentarão os módulos seguintes.
+No portal, o professor descreve a ideia geral: juntar **IA**, **IoT** e desenvolvimento para pensar na **CardioIA** como um ecossistema (inclusive com foco em governança de dados e impacto social — isso aparece forte na **Fase 3**). Aqui a gente não está entregando um produto hospitalar; é **trabalho de curso**, mas a gente tenta manter organizado como se fosse um projeto real.
 
-Este repositório junta o que a gente foi entregando ao longo do curso (Fases 1 a 3). A parte de **IoT na Fase 3** — simulador Wokwi, MQTT, Node-RED — está explicada com mais detalhe em [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md), que a gente usa como guia interno também.
+Na **Fase 1** a gente focou no básico de cientista de dados: **dados tabulares**, **texto** e **imagem**, escolhendo fontes públicas e comentando limitações (viés, licença, LGPD).
+
+Nas fases seguintes entram os notebooks de NLP/classificação, e na **Fase 3** um protótipo com **Wokwi + MQTT + Node-RED**. O passo a passo da parte de IoT está em [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md) — é o “guia” que a gente mesmo usa pra não esquecer nada na entrega.
 
 ---
 
@@ -60,9 +61,9 @@ cardio-ia-fase1/
 
 ---
 
-## 📊 Parte 1 — Dados numéricos (dataset clínico tabular)
+## 📊 Parte 1 — Dados numéricos (tabela / CSV)
 
-_Isso aqui embaixo é outra coisa: dados em **CSV** para EDA/modelagem, não o protótipo com ESP32 da Fase 3._
+**Importante:** isso aqui é o dataset **Heart Failure** pra EDA e modelagem no Python — **não** é o mesmo dado do simulador com ESP32 da Fase 3 (lá é outro fluxo, mais “IoT”).
 
 ### Dataset Utilizado
 
@@ -76,9 +77,9 @@ _Isso aqui embaixo é outra coisa: dados em **CSV** para EDA/modelagem, não o p
 | **Registros** | 918 pacientes |
 | **Variáveis** | 12 (11 features + 1 target) |
 
-### Origem dos Dados
+### Origem dos dados
 
-Dados **reais**, coletados em contextos hospitalares em diferentes países e unificados a partir de 5 bases cardiológicas internacionais: Cleveland, Hungarian, Switzerland, Long Beach VA e Stalog Heart Dataset.
+É um CSV “clássico” de Kaggle: junta bases de heart disease de vários centros (Cleveland, Hungarian, etc.). Serve bem pra aprender, mas **não** é amostra do Brasil.
 
 ### Variáveis e Justificativa Clínica
 
@@ -97,12 +98,11 @@ Dados **reais**, coletados em contextos hospitalares em diferentes países e uni
 | `ST_Slope` | Categórico | Inclinação descendente associada a coronariopatia grave |
 | `HeartDisease` | Binário | **Variável alvo** — o que o modelo de IA deve prever |
 
-### Aplicações em IA
+### O que dá pra fazer com isso em IA (na prática de curso)
 
-- Modelos de classificação (Random Forest, XGBoost, Redes Neurais) para prever doença cardíaca
-- Triagem automatizada em pronto-socorro com score de risco
-- Detecção de anomalias em perfis atípicos de pacientes
-- Explicabilidade clínica via SHAP values
+- Treinar classificadores (árvore, regressão logística, etc.) pra prever `HeartDisease`
+- Brincar com **SHAP** / importância de features pra “explicar” o que o modelo olhou mais
+- Simular uma **triagem** com score — sempre lembrando que é exercício, não decisão médica
 
 ---
 
@@ -115,26 +115,18 @@ Dados **reais**, coletados em contextos hospitalares em diferentes países e uni
 | `assets/texto_01_estatistica_cardiovascular_brasil_2023.txt` | Estatísticas nacionais de DCV 2023 | [SciELO / Arq. Bras. Cardiologia](https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt) |
 | `assets/texto_02_fatores_associados_doencas_cardiovasculares.txt` | Fatores associados às DCV na população brasileira | [SciELO / Rev. Bras. Epidemiologia](https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408) |
 
-### Como Esses Textos Podem Ser Explorados por NLP
+### E NLP, o que entra?
 
-**1. Extração de entidades clínicas (NER)**  
-Identificação automática de termos médicos como nomes de doenças, medicamentos, procedimentos e marcadores clínicos presentes nos textos.
+Com texto aberto dá pra treinar várias coisas que a gente vê na disciplina:
 
-**2. Classificação de tópicos (Topic Modeling)**  
-Algoritmos como LDA identificam automaticamente temas presentes nos documentos — fatores de risco, prevalência, tratamento, prevenção — sem supervisão humana.
+- **NER** (achar doença, medicamento, sintoma…) — hoje em dia muito com modelo transformer, mas dá pra começar com regras + dicionário
+- **Tópicos** (tipo LDA) pra ver “de que assunto é esse parágrafo”
+- **Sumarização** (T5/BART…) se alguém quiser ir além do escopo
+- **Sentimento/tom** (útil mais em estudo de opinião do que em paper científico, mas é um exercício clássico)
 
-**3. Extração de sintomas e fatores de risco**  
-Modelos especializados em saúde (BioBERT, BiomedBERT em português) extraem listas estruturadas de sintomas e comorbidades a partir de texto não estruturado.
+### Por que a gente escolheu esses textos
 
-**4. Sumarização automática**  
-Modelos Seq2Seq (T5, BART) condensam artigos longos em resumos curtos, facilitando triagem bibliográfica e acesso rápido à informação clínica.
-
-**5. Análise de sentimento e tom clínico**  
-Identifica se trechos expressam certeza, dúvida, urgência ou negação — essencial para sistemas de apoio à decisão clínica.
-
-### Relevância para IA em Saúde
-
-A maior parte dos dados de saúde está em formato não estruturado (prontuários, relatórios, laudos). Dominar NLP aplicado à medicina é essencial para qualquer plataforma de IA cardiológica abrangente. Os textos escolhidos são de alta qualidade científica, em português e com dados brasileiros.
+São materiais **em português** e com **ângulo Brasil**, o que ajuda quando a gente treina vetorização ou faz análise exploratória — e foge um pouco do dataset “só gringo” que a gente vê em tudo quanto é lugar.
 
 ---
 
@@ -152,71 +144,60 @@ A maior parte dos dados de saúde está em formato não estruturado (prontuário
 | **Classes** | Cardiomegalia presente / Cardiomegalia ausente |
 | **Divisão** | 80% treino / 20% teste |
 
-### Como Essas Imagens Serão Analisadas por Visão Computacional
+### Visão computacional — por onde começar
 
-**1. Detecção de padrões (Pattern Recognition)**  
-Redes Neurais Convolucionais (CNNs) identificam padrões visuais como aumento da silhueta cardíaca, redistribuição vascular e derrame pleural.
+Em aula a gente costuma ouvir falar de:
 
-**2. Segmentação de bordas**  
-Algoritmos como U-Net segmentam as bordas do coração na radiografia, permitindo medição automatizada do índice cardiotorácico (ICT) — critério diagnóstico de cardiomegalia.
+- **CNN** pra classificar “tem sinal de cardiomegalia?” vs “não tem”
+- **Segmentação** (tipo U-Net) se o trabalho for medir área / ICT — é mais trabalhoso, mas é o caminho “bonito”
+- **Anomaly detection** se o dataset tiver muito desbalanceamento ou pouco label
 
-**3. Reconhecimento de anomalias**  
-Modelos treinados com padrões normais identificam imagens que fogem do padrão, úteis para triagem e encaminhamento de casos urgentes.
+### Expectativa realista
 
-**4. Classificação binária (normal vs. alterado)**  
-Arquiteturas como ResNet, EfficientNet e VGG classificam radiografias como normais ou com sinais de cardiomegalia com acurácia comparável à de médicos residentes.
-
-### Importância para IA na Saúde
-
-A análise automatizada de imagens médicas é uma das áreas de maior impacto da IA na medicina. A detecção precoce de cardiomegalia em radiografias rotineiras pode antecipar diagnósticos de insuficiência cardíaca, doença de Chagas, valvopatias e miocardiopatias, salvando vidas com custo mínimo.
+Pipeline de imagem médica é difícil: qualidade de exame varia, domínio muda de hospital pra hospital, e **nenhum modelo de turma substitui radiologista**. A ideia aqui é aprender o fluxo (dados → treino → validação → limitações).
 
 ---
 
-## 🔒 Governança de Dados e Ética
+## 🔒 Ética, licença e “pegadinhas” de dataset
 
-### Licenciamento
+A gente tentou usar só coisa com licença ok pra trabalho acadêmico e sem dado identificável.
 
-| Dado | Licença | Restrição |
+### Licenças (resumo)
+
+| Dado | Licença | Observação |
 |---|---|---|
-| Heart Failure Dataset | Open Data (Kaggle CC) | Uso acadêmico e pesquisa |
-| Artigos SciELO | Creative Commons (Acesso Aberto) | Citação obrigatória |
-| Chest X-Ray NIH/Zenodo | Open Access (NIH) | Uso não comercial |
+| Heart Failure (Kaggle) | aberto no Kaggle | uso acadêmico / estudo |
+| Textos SciELO | CC / aberto | citar a fonte |
+| Raio-X (Zenodo/NIH) | open access | não comercializar |
 
-### Anonimização
+### LGPD / anonimização
 
-Nenhum dado contém informações pessoais identificáveis (PII). Os dados são completamente anonimizados, em conformidade com a **LGPD** e diretrizes éticas para pesquisa em saúde.
+Os conjuntos que a gente linkou são **anonimizados** ou agregados — não é prontuário real da família de ninguém.
 
-### Vieses Identificados
+### Vieses que aparecem em prova (e na vida)
 
-**1. Viés de representatividade geográfica**  
-O dataset numérico foi coletado majoritariamente em países europeus e norte-americanos. Características da população brasileira podem não estar representadas.
-
-**2. Viés de sexo**  
-Datasets cardiológicos historicamente super-representam pacientes do sexo masculino, o que pode gerar pior desempenho do modelo para mulheres.
-
-**3. Viés de seleção hospitalar**  
-Dados coletados em ambiente hospitalar excluem pacientes com doença assintomática ou sem acesso ao sistema de saúde.
-
-**4. Qualidade variável das imagens**  
-Radiografias de diferentes equipamentos apresentam variações de contraste e brilho que podem afetar a generalização dos modelos.
+- **Geografia:** o CSV de heart failure mistura bases de vários países — não é “Brasil puro”
+- **Sexo:** muito dataset cardiológico tem mais homem na amostra → modelo pode errar mais em mulher
+- **Seleção:** dado de hospital não representa quem nunca foi ao hospital
+- **Imagem:** contraste/resolução diferentes atrapalham generalização
 
 ---
 
-## 🔗 Links Públicos dos Dados
+## 🔗 Onde baixar / ver os dados
 
-Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dados hospedados em serviços públicos de armazenamento.
+Tudo que é link “pesado” (Drive, Kaggle, etc.) a gente centralizou em [links.md](./links.md) pra não ficar espalhado.
 
 ---
 
-## Fase 3 — Cap 1 (portal FIAP): *CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital*
+## Fase 3 — IoT (*CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital*)
 
-**Prazo no calendário FIAP ON:** até **12/05/2026** (confirmar no seu *dashboard* da disciplina).
+**Prazo:** no nosso calendário aparece até **12/05/2026** — vale olhar de novo no **FIAP ON** pra não perder o horário.
 
-Nesta etapa montamos um **protótipo no Wokwi** com ESP32, **DHT22** (temperatura e umidade) e um **botão** que simula variação de BPM, atendendo ao roteiro de **monitoramento contínuo** e **resiliência offline** do enunciado. O firmware alterna um “modo online/offline” de propósito: quando está “sem rede”, os dados vão para uma **fila em memória**; quando volta, a ideia é drenar e publicar de novo. Para nuvem usamos **MQTT** (broker público da HiveMQ) e montamos um **dashboard no Node-RED** com gráficos, um gauge e um texto de alerta quando BPM ou temperatura passam dos limites que a gente definiu.
+Aqui a gente montou um **protótipo** no **Wokwi**: ESP32 + **DHT22** (temperatura/umidade) + **botão** que mexe num **BPM simulado** só pra fingir sinal vital. O enunciado pedia pensar em **queda de rede**: por isso o código finge “online/offline” e, quando cai, os pontos vão pra uma **fila em RAM**; quando volta, a gente tenta **drenar** e mandar pro **MQTT** (`broker.hivemq.com`). Na frente, um **Node-RED** com gráfico, gauge e um texto de alerta quando passa do limite.
 
-Não é um produto hospitalar de verdade — é um laboratório para entender o fluxo **dados → edge → broker → tela** — mas dá para explicar no relatório o que funcionou e onde a gente simplificou (por exemplo, SPIFFS no simulador é chato, então ficou fila em RAM mesmo).
+SPIFFS no simulador é meio chato de justificar, então a gente ficou na fila em memória + log no Serial — o relatório explica isso melhor.
 
-**Onde está cada coisa:**
+**Arquivos úteis:**
 
 - Resumo e organização da entrega: [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md)  
 - Texto que a gente colou no Moodle (links prontos): [`docs/TEXTO_ENTREGA_MOODLE.txt`](docs/TEXTO_ENTREGA_MOODLE.txt)  
@@ -230,61 +211,52 @@ Não é um produto hospitalar de verdade — é um laboratório para entender o 
 
 ---
 
-## 🚀 Próximas Fases
+## 🚀 Como as fases fecham (visão rápida)
 
-| Fase | Descrição | Status |
+| Fase | O que a gente fez | Status |
 |---|---|---|
-| Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
-| Fase 2 (*Início da IA avançada*) | Cap 1 no portal: **Desafio Integrador: IA entre Robôs, Sinapses e Medicina** — notebooks em `notebooks/` (apoio nos Caps **10** e **11**) | ✅ Entregue *(até 14/04/2026 no FIAP ON)* |
-| Fase 3 | IoT no Wokwi + MQTT + Node-RED (*CardioIA Conectada* — Cap 1 da Fase 3 no FIAP ON) | Repositório pronto; **confirmar entrega no Moodle** até **12/05/2026** |
-| Fase 4 | Modelagem integrada (ML, NLP, Visão) e deploy | 🔜 Futura |
+| 1 | Dados (tabela, texto, imagem) + README | ✅ entregue |
+| 2 | NLP “na mão” + classificador TF-IDF (*Desafio Integrador…* — Caps **10** e **11** no portal) | ✅ entregue (**14/04**) |
+| 3 | Wokwi + MQTT + Node-RED (*CardioIA Conectada*) | código no ar; **falta conferir Moodle** (**12/05**) |
+| 4 | Ideia: juntar ML + NLP + visão num pipeline mais “de produto” | 🔜 ainda não |
 
 ---
 
----
+## Fase 2 — *Início da IA avançada* (FIAP ON)
 
-## Fase 2 — *Início da IA avançada* — Cap 1 (FIAP ON): **Desafio Integrador: IA entre Robôs, Sinapses e Medicina**
+**Atividade principal (Cap 1):** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026**.  
+**Aulas que mais conversam com o que a gente codou:** *Cap 10 — IA que Entende: Processamento de Linguagem Natural Baseado em Regras* e *Cap 11 — NLP no Estilo Clássico: Estatística, Vetores e Emoções em Texto*.
 
-**Título no portal (atividade / Cap 1):** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026** (calendário FIAP ON).  
-**Conteúdos de aula relacionados ao NLP (mesma fase no portal):** *Cap 10 — IA que Entende: Processamento de Linguagem Natural Baseado em Regras*; *Cap 11 — NLP no Estilo Clássico: Estatística, Vetores e Emoções em Texto*.
+### Parte 1 — sintomas + mapinha de conhecimento (bem “regras + CSV”)
 
-**Status:** Entregue
+A gente inventou 10 descrições em `sintomas.txt`, montou um `mapa_conhecimento.csv` com 20 linhas e um notebook que “lê a frase e chuta” um diagnóstico **só pra aprender fluxo** — não é pra usar em paciente real.
 
-### Parte 1 — Extração de sintomas e diagnóstico (NLP baseado em regras / mapa de conhecimento)
-
-Implementação de um sistema básico de apoio ao diagnóstico cardiológico com **NLP por regras e mapa de conhecimento**, no contexto do desafio integrador **CardioIA**.
-
-**Arquivos entregues:**
-
-| Arquivo | Descricao |
+| Arquivo | Descrição |
 |---|---|
-| `notebooks/sintomas.txt` | 10 frases simulando descricoes de sintomas de pacientes |
-| `notebooks/mapa_conhecimento.csv` | 20 associacoes entre sintomas e doencas cardiologicas |
-| `notebooks/fase2_parte1_diagnostico.ipynb` | Codigo Python que le as frases, identifica sintomas e sugere diagnostico |
+| `notebooks/sintomas.txt` | 10 frases fictícias de “paciente” |
+| `notebooks/mapa_conhecimento.csv` | 20 regras sintoma → doença (didático) |
+| `notebooks/fase2_parte1_diagnostico.ipynb` | código que cruza frase + mapa |
 
-### Parte 2 — Classificador de texto (vetores / TF-IDF e triagem de risco)
+### Parte 2 — TF-IDF + modelo simples (triagem de texto)
 
-Classificador de risco cardíaco com **TF-IDF** e **Machine Learning**, alinhado ao eixo do **Cap 11** (NLP clássico com vetores e modelo discriminativo).
+Aqui a gente foi pro classique da disciplina: **TF-IDF**, split treino/teste, **árvore** e **regressão logística** em cima de 30 frases rotuladas (`dataset_risco.csv`). É pequeno de propósito — o ponto é ver vetor + métrica, não ganhar Kaggle.
 
-**Arquivos entregues:**
-
-| Arquivo | Descricao |
+| Arquivo | Descrição |
 |---|---|
-| `notebooks/dataset_risco.csv` | 30 frases rotuladas como alto risco ou baixo risco |
-| `notebooks/fase2_parte2_classificador.ipynb` | Notebook com TF-IDF, Decision Tree, Logistic Regression e avaliacao |
+| `notebooks/dataset_risco.csv` | 30 frases (`alto risco` / `baixo risco`) |
+| `notebooks/fase2_parte2_classificador.ipynb` | notebook com treino + avaliação |
 
-### Criterios de Avaliacao
+### Rubrica (como o professor pontuou na especificação)
 
-| Criterio | Pontos |
+| Critério | Pontos |
 |---|---|
-| Relatos e mapa de conhecimento organizados | 2 |
-| Codigo de extracao de informacoes funcional | 2 |
-| Dataset simples criado corretamente | 1 |
-| Classificador treinado e testado corretamente | 2 |
-| Documentacao clara e repositorio publico no GitHub com README completo | 1 |
-| Video de demonstracao no YouTube (nao listado) com link incluido no GitHub | 2 |
+| Relatos + mapa organizados | 2 |
+| Extração funcionando | 2 |
+| Dataset simples ok | 1 |
+| Classificador treinado/testado | 2 |
+| README/repo público redondos | 1 |
+| Vídeo demo (YouTube não listado) linkado no GitHub | 2 |
 
 ---
 
-*Repositório: https://github.com/tiagoalvescordeiro/cardio-ia-fase1*  
-*Turma: 1TIAO — FIAP 2026*
+Se caiu aqui de fora: **https://github.com/tiagoalvescordeiro/cardio-ia-fase1** — turma **1TIAO**, FIAP **2026**.
