@@ -50,7 +50,7 @@ O pacote **node-red-dashboard** provê os nós `ui_*`. Após importar, o deploy 
 
 ## 5. Regras de alerta
 
-Conforme rubrica sugerida pelo enunciado (exemplos):
+Como exemplos de regras fixadas para demonstração:
 
 - **Taquicardia simulada:** `bpm > 120` → mensagem `ALERTA: BPM elevado`.  
 - **Febre simulada:** `temp_c > 38.0` → mensagem `ALERTA: febre (temperatura)`.
@@ -59,7 +59,7 @@ A prioridade visual é simples: o último critério verdadeiro sobrescreve o tex
 
 ## 6. Grafana (opcional)
 
-Não foi exigido na rubrica base. Para extensão, pode-se conectar o HiveMQ como *datasource* MQTT ou ingerir os mesmos JSON via **Telegraf** → **InfluxDB** → **Grafana Cloud**, mantendo credenciais fora do repositório.
+Não faz parte do escopo base deste relatório. Para extensão, pode-se conectar o HiveMQ como *datasource* MQTT ou ingerir os mesmos JSON via **Telegraf** → **InfluxDB** → **Grafana Cloud**, mantendo credenciais fora do repositório.
 
 ## 7. Testes integrados sugeridos
 
@@ -68,4 +68,4 @@ Não foi exigido na rubrica base. Para extensão, pode-se conectar o HiveMQ como
 
 ## 8. Conclusão da Parte 2
 
-Demonstra-se o encadeamento **dispositivo → MQTT → *dashboard*** com artefatos versionados (`flows.json`, documentação em `docs/node-red/`). O arquivo **`assets/evidencias/arquitetura_fase3.svg`** resume a arquitetura; **capturas PNG** da interface podem ser acrescentadas em `assets/evidencias/` se a rubrica exigir *prints* além do export.
+Demonstra-se o encadeamento **dispositivo → MQTT → *dashboard*** com artefatos versionados (`flows.json`, documentação em `docs/node-red/`). O arquivo **`assets/evidencias/arquitetura_fase3.svg`** resume a arquitetura; **capturas PNG** da interface podem ser acrescentadas em `assets/evidencias/` se for pedida documentação visual além do export.

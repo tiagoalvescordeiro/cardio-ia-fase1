@@ -8,7 +8,7 @@
 
 ## Recomendações adicionais
 
-O enunciado da Fase 3 admite **capturas da aplicação** *ou* **export do *dashboard***; o export está em [`../../docs/node-red/flows.json`](../../docs/node-red/flows.json). Mesmo assim, **PNG** facilitam a correção.
+A Fase 3 pode ser documentada com **capturas da aplicação** ou com **export do *dashboard***; o export está em [`../../docs/node-red/flows.json`](../../docs/node-red/flows.json). Mesmo assim, **PNG** ajudam a mostrar o sistema em execução.
 
 Sugestão de evidências:
 

@@ -19,14 +19,14 @@ Recomenda-se manter o **sketch** e o **diagram.json** no Wokwi **idênticos** ao
 3. Instalar **PubSubClient**, **DHT sensor library** e **Adafruit Unified Sensor** (o Wokwi costuma resolver via `libraries.txt`).  
 4. Executar (**Run**). O Monitor Serial deve exibir alternância de modo simulado e comportamento da fila; com Wi-Fi virtual `Wokwi-GUEST`, as publicações MQTT seguem para `cardioia/grupo54/telemetria`. Com o diagrama em foco, a tecla **P** aciona o botão (atalho Wokwi).
 
-## Link Share (entrega FIAP)
+## Link público do projeto
 
-O enunciado exige **URL público do projeto Wokwi**. Após validar a simulação:
+É necessário um **URL público** do projeto Wokwi. Após validar a simulação:
 
 1. Autenticar-se na Wokwi, se necessário.  
 2. **Salvar** o projeto na nuvem.  
 3. **Compartilhar** e copiar o URL `https://wokwi.com/projects/...`.  
-4. Registrar o URL em [`../links.md`](../links.md) e no campo correspondente da entrega no **Moodle** (FIAP ON), junto com o link do **GitHub**.
+4. Manter o URL em [`../links.md`](../links.md) e na entrega oficial da disciplina, junto com o link do **GitHub**.
 
 A interface da Wokwi pode variar entre versões; o relevante é um link **público e estável** que abra o mesmo diagrama e *sketch*.
 

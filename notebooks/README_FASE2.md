@@ -2,10 +2,10 @@
 
 Complemento ao [`README.md`](../README.md) da raiz: aqui só o que roda nesta pasta e os arquivos de dados usados pelos notebooks.
 
-## Atividade (FIAP ON)
+## Fase 2 — conteúdo desta etapa
 
-**Desafio Integrador:** *IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026**.  
-Matéria de apoio no portal: Cap **10** (NLP por regras) e Cap **11** (NLP clássico / vetores).
+**Trabalho:** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina*.  
+Apoio teórico no material do curso: Cap **10** (NLP por regras) e Cap **11** (NLP clássico / vetores).
 
 ## Arquivos e notebooks
 
@@ -20,9 +20,9 @@ Matéria de apoio no portal: Cap **10** (NLP por regras) e Cap **11** (NLP clás
 
 Execute os notebooks a partir desta pasta (`notebooks/`) para os caminhos relativos funcionarem.
 
-## O que não entra nesta entrega
+## Escopo desta pasta
 
-O EDA de números e o material de texto/imagem da **Fase 1** estão descritos no README da raiz. Não há obrigação de entregar LDA, nuvem de palavras ou notebook de imagem **aqui**; isso seria extra se alguém do grupo quisesse acrescentar depois.
+O EDA numérico e o material textual/imagem da **Fase 1** estão descritos no README da raiz. Esta pasta concentra só o bloco de NLP e classificação; extensões (LDA, nuvem de palavras, notebook de imagem) seriam trabalho adicional, fora do que aqui se apresenta.
 
 ## Métricas (Parte 2)
 

@@ -20,7 +20,7 @@ Este arquivo concentra **URLs públicas** para correção e reprodução: dados 
 | texto_01_estatistica_cardiovascular_brasil_2023.txt | https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt | [assets/texto_01](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/texto_01_estatistica_cardiovascular_brasil_2023.txt) |
 | texto_02_fatores_associados_doencas_cardiovasculares.txt | https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408 | [assets/texto_02](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/texto_02_fatores_associados_doencas_cardiovasculares.txt) |
 
-Os arquivos `.txt` estão versionados em `assets/`, conforme o enunciado da Fase 1.
+Os arquivos `.txt` estão versionados em `assets/`, como parte da documentação da Fase 1.
 
 ---
 

@@ -2,7 +2,6 @@
 ENTREGA — Moodle / FIAP ON
 Atividade: Cap 1 — CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital (Fase 3 — Além das Fronteiras Digitais)
 Turma: 1TIAO — FIAP 2026
-Prazo (conferir no calendário da disciplina): até 12/05/2026
 ================================================================================
 
 Cole o bloco abaixo no campo de texto da entrega (ajuste quebras de linha se o Moodle usar uma única caixa).
@@ -16,7 +15,7 @@ https://wokwi.com/projects/463138220013169665
 
 Para correção no Wokwi: abrir a aba **Code** e conferir que `sketch.ino` e `diagram.json` coincidem com a pasta `wokwi/` do GitHub (ou colar a partir dos links *raw* em `links.md` na raiz do repositório). Bibliotecas: PubSubClient, DHT sensor library e Adafruit Unified Sensor — ver `wokwi/libraries.txt`.
 
-Export do dashboard Node-RED (atende ao enunciado: capturas OU export):
+Export do dashboard Node-RED (capturas de ecrã ou arquivo JSON de export):
 https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json
 
 Evidências gráficas (pasta assets/evidencias/ no repositório):

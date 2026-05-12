@@ -23,7 +23,7 @@ O fluxo referencia o broker **mqtt-broker** (`broker.hivemq.com:1883`) e assina 
 - **BPM** > 120 → mensagem na área **Status**.  
 - **Temperatura** > 38 °C → mensagem na área **Status**.
 
-Os limiares podem ser ajustados no nó **function** `parse + alertas`, conforme exigências do enunciado ou da orientação docente.
+Os limiares podem ser ajustados no nó **function** `parse + alertas`, conforme critérios do trabalho ou orientação docente.
 
 ## Evidências
 

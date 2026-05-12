@@ -2,7 +2,7 @@
 
 Repositório do grupo para o projeto **CardioIA** no curso de **Inteligência Artificial**. Abaixo resumimos os **entregáveis** (artefatos) por fase: curadoria de dados (Fase 1), notebooks de NLP e classificação (Fase 2) e protótipo IoT com MQTT e Node-RED (Fase 3).
 
-**Fase 1 —** disciplina *Do Python à Fronteira Quântica*; Cap 1 no FIAP ON: *Robôs, Neurônios e Saúde: Uma Integração Inovadora pela IA*, com entrega do **Desafio Integrador: IA entre Robôs, Sinapses e Medicina** (prazos no [FIAP ON](https://on.fiap.com.br)).
+**Fase 1 —** disciplina *Do Python à Fronteira Quântica*; capítulo *Robôs, Neurônios e Saúde: Uma Integração Inovadora pela IA*; integrador **Desafio Integrador: IA entre Robôs, Sinapses e Medicina**. Informações do curso: [FIAP ON](https://on.fiap.com.br).
 
 ## Integrantes
 
@@ -20,7 +20,7 @@ Repositório do grupo para o projeto **CardioIA** no curso de **Inteligência Ar
 |------|------------------------|
 | **1** | Base **tabular** (Heart Failure — links e uso no notebook de EDA), dois **textos** em `assets/` com fonte citada, referência a **imagens** de raio-X (link público no `links.md`; arquivos grandes ficam fora do Git). README com origem das bases e limitações. |
 | **2** | Parte com regras: `sintomas.txt`, `mapa_conhecimento.csv`, `fase2_parte1_diagnostico.ipynb`. Parte com ML: `dataset_risco.csv`, TF-IDF + modelos no `fase2_parte2_classificador.ipynb`. Detalhes em `notebooks/README_FASE2.md`. |
-| **3** | Firmware e diagrama Wokwi (`wokwi/`), MQTT para `broker.hivemq.com`, fluxo em `docs/node-red/flows.json`, relatórios em `docs/`, evidências em `assets/evidencias/`. Prazo no calendário: **até 12/05/2026**; checklist em `docs/FASE3_IOT_FIAP.md`. Texto pronto para colar no Moodle: `docs/TEXTO_ENTREGA_MOODLE.txt`. |
+| **3** | Firmware e diagrama Wokwi (`wokwi/`), MQTT para `broker.hivemq.com`, fluxo em `docs/node-red/flows.json`, relatórios em `docs/`, evidências em `assets/evidencias/`. Detalhes técnicos em `docs/FASE3_IOT_FIAP.md`. Texto auxiliar para envio na plataforma em `docs/TEXTO_ENTREGA_MOODLE.txt`. |
 
 Tudo aqui é **trabalho de disciplina** (protótipo e relatórios), não produto clínico nem sistema validado para paciente.
 
@@ -61,7 +61,7 @@ cardio-ia-fase1/
 
 ### Parte 1 — Dados numéricos (planilha / CSV)
 
-No enunciado a expressão “dados numéricos (IoT)” na Fase 1 trata da **tabela** usada no projeto, não do ESP32 da Fase 3. Usamos o **Heart Failure Prediction** (Kaggle) para EDA em Python; o CSV completo não vai no Git por tamanho — download pelo link em `links.md` e uso como indicado no notebook (`../data/heart.csv`).
+Nesta fase, **dados numéricos** referem-se à **base tabular** (registros agregados) usada em Python para exploração e modelagem, **independente** do protótipo com **ESP32** da Fase 3. O conjunto **Heart Failure Prediction** (Kaggle) foi utilizado na EDA. O CSV completo não está no repositório por tamanho; o link de download está em `links.md`. Coloque o arquivo em `../data/heart.csv` conforme o notebook de EDA.
 
 | Campo | Valor |
 |-------|--------|
@@ -94,7 +94,7 @@ Textos em português para trabalhar vetorização e NLP em PT-BR.
 |-------|--------|
 | Nome | Cardiomegaly Chest X-Ray Image Dataset |
 | Fonte | [Zenodo / NIH](https://zenodo.org/records/17937122) |
-| Uso na entrega | Subconjunto (100+ imagens) com link no `links.md`; pastas de imagem não são versionadas no Git |
+| Uso no projeto | Subconjunto (100+ imagens) com link no `links.md`; pastas de imagem não são versionadas no Git |
 
 Uso estritamente acadêmico: pipeline e limitações do modelo, sem aplicação clínica real.
 
@@ -102,17 +102,17 @@ Uso estritamente acadêmico: pipeline e limitações do modelo, sem aplicação 
 
 ## Fase 2 — NLP e classificação
 
-**Atividade:** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* (prazo **14/04/2026** no portal). Conteúdo relacionado: Caps **10** e **11** do FIAP ON (NLP por regras e NLP clássico).
+**Trabalho desenvolvido:** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina*. Conteúdo de apoio no material do curso: Cap **10** (NLP por regras) e Cap **11** (NLP clássico / vetores).
 
 ### Parte 1 — Sintomas e mapa (regras)
 
-10 frases em `notebooks/sintomas.txt`, 20 linhas no `notebooks/mapa_conhecimento.csv` e o notebook `fase2_parte1_diagnostico.ipynb`, que cruza texto com o mapa e **sugere** diagnóstico — exercício de sala, sem valor clínico.
+10 frases em `notebooks/sintomas.txt`, 20 linhas no `notebooks/mapa_conhecimento.csv` e o notebook `fase2_parte1_diagnostico.ipynb`, que cruza texto com o mapa e **sugere** diagnóstico — demonstração didática, sem valor clínico.
 
 ### Parte 2 — TF-IDF e risco
 
 30 frases rotuladas em `notebooks/dataset_risco.csv`; no `fase2_parte2_classificador.ipynb`: TF-IDF, split treino/teste, árvore de decisão e regressão logística. Dataset pequeno de propósito para enxergar métricas.
 
-### Critérios da atividade (rubrica)
+### Critérios de avaliação (referência de pontuação)
 
 | Critério | Pontos |
 |----------|--------|
@@ -126,7 +126,7 @@ Uso estritamente acadêmico: pipeline e limitações do modelo, sem aplicação 
 
 ## Fase 3 — IoT (*CardioIA Conectada*)
 
-**Atividade no FIAP ON:** *CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital* — prazo **12/05/2026** (confirmar no calendário).
+**Conteúdo:** *CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital* — telemetria simulada, MQTT e dashboard.
 
 ESP32 no Wokwi com **DHT22** (temperatura/umidade) e **botão** simulando variação de **BPM**. O código alterna cenário online/offline; offline grava leituras em **fila em RAM** e tenta enviar de novo quando há “conexão”. Publicação MQTT em `broker.hivemq.com`, tópico `cardioia/grupo54/telemetria`. **Node-RED** lê o tópico e monta dashboard (gráfico, gauge, alerta). Não usamos SPIFFS no simulador; o comportamento e a fila estão explicados nos relatórios.
 
