@@ -2,7 +2,7 @@
 
 Projeto acadêmico do curso de **Inteligência Artificial** (FIAP, **turma 1TIAO**). O repositório concentra entregas do **CardioIA**: aplicação de IA a um cenário cardiológico, evoluindo por fases conforme o programa do curso.
 
-**Fase 1 (disciplina):** *Do Python à Fronteira Quântica* — Cap 1 no FIAP ON: **A Busca de Dados: Preparando o Terreno para a Inteligência Cardiológica** (entrega **10/03/2026**; calendário em [FIAP ON](https://on.fiap.com.br)).
+**Fase 1 (disciplina):** *Do Python à Fronteira Quântica* — Cap 1 no FIAP ON: **Robôs, Neurônios e Saúde: Uma Integração Inovadora pela IA** (atividade avaliada **Desafio Integrador: IA entre Robôs, Sinapses e Medicina**; prazos no [FIAP ON](https://on.fiap.com.br)).
 
 ---
 
