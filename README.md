@@ -18,7 +18,7 @@ Repositório do grupo para o projeto **CardioIA** no curso de **Inteligência Ar
 
 | Fase | O que está neste repo |
 |------|------------------------|
-| **1** | Base **tabular** (Heart Failure — links e uso no notebook de EDA), dois **textos** em `assets/` com fonte citada, referência a **imagens** de raio-X (link público no `links.md`; arquivos grandes ficam fora do Git). README com origem das bases e limitações. |
+| **1** | **Dados tabulares** (Heart Failure — `links.md` e notebook de EDA), **dados textuais** em `assets/` (dois arquivos com fonte citada), referência a **imagens** de raio-X (link público em `links.md`; arquivos grandes ficam fora do Git). README com origem das bases e limitações. |
 | **2** | Parte com regras: `sintomas.txt`, `mapa_conhecimento.csv`, `fase2_parte1_diagnostico.ipynb`. Parte com ML: `dataset_risco.csv`, TF-IDF + modelos no `fase2_parte2_classificador.ipynb`. Detalhes em `notebooks/README_FASE2.md`. |
 | **3** | Firmware e diagrama Wokwi (`wokwi/`), MQTT para `broker.hivemq.com`, fluxo em `docs/node-red/flows.json`, relatórios em `docs/`, evidências em `assets/evidencias/`. Detalhes técnicos em `docs/FASE3_IOT_FIAP.md`. Texto auxiliar para envio na plataforma em `docs/TEXTO_ENTREGA_MOODLE.txt`. |
 
