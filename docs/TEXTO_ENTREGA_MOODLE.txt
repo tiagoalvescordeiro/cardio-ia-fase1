@@ -1,6 +1,8 @@
 ================================================================================
 TEXTO PRONTO PARA COLAR NA ENTREGA (Moodle) — Cap 1 / Fase 3 IoT
 ================================================================================
+**Prazo (calendário FIAP ON — conferir no *dashboard*):** até **12/05/2026**.
+
 (Ajuste quebras de linha se o campo do Moodle for uma única caixa de texto.)
 
 Repositório GitHub (código, relatórios, flows Node-RED, diagrama Wokwi):

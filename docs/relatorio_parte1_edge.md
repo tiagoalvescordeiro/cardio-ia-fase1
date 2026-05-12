@@ -8,7 +8,7 @@
 
 ## 1. Introdução
 
-Esta etapa reproduz o papel do **Edge Computing** em um cenário de monitoramento cardíaco simplificado: o microcontrolador **ESP32** lê sensores com periodicidade estável, trata leituras localmente e precisa manter **continuidade operacional** mesmo quando a conectividade de nuvem não está disponível. O enunciado da FIAP exige explicitamente **dois sensores distintos**, sendo um deles o **DHT22** (temperatura e umidade relativa) e um segundo elemento para compor o “painel” de sinais vitais simulados — adotamos um **botão** com debounce que incrementa um **BPM simulado**, com decaimento lento para imitar variação fisiológica.
+Esta etapa reproduz o papel do **Edge Computing** em um cenário de monitoramento cardíaco simplificado: o microcontrolador **ESP32** lê sensores com periodicidade estável, trata leituras localmente e precisa manter **continuidade operacional** mesmo quando a conectividade de nuvem não está disponível. O enunciado da FIAP exige explicitamente **dois sensores distintos**, sendo um deles o **DHT22** (temperatura e umidade relativa) e um segundo elemento para compor o “painel” de sinais vitais simulados — adotamos um **botão** com debounce que incrementa um **BPM simulado**, com decaimento lento para imitar variação fisiológica. Esse desenho conecta-se ao objetivo macro do **FIAP ON** na Fase 3 (*Além das Fronteiras Digitais*): dados de sensores alimentando visualizações e decisões no ecossistema **CardioIA**, com foco em governança e impacto social no âmbito acadêmico (telemetria simulada, sem dados identificáveis de pacientes).
 
 ## 2. Montagem virtual (Wokwi)
 

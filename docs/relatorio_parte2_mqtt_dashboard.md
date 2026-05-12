@@ -10,6 +10,8 @@
 
 Após consolidar o processamento em borda, o fluxo Fog/Cloud concentra-se em **transportar telemetria** até um broker **MQTT** acessível pela Internet e em **exibir** esses dados em um **dashboard Node-RED**, com elementos gráficos e **alertas automáticos** quando variáveis ultrapassam limiares definidos pelo grupo. Essa arquitetura é típica de MVPs de IoT em saúde: sensores baratos publicam tópicos leves; aplicações de visualização assinam esses tópicos e disparam ações (notificações, cores, textos de alerta).
 
+No **FIAP ON**, a Fase 3 (*Além das Fronteiras Digitais*) explicita o objetivo de integrar IA, IoT e sistemas na **CardioIA**, com atenção a **escalabilidade**, **governança de dados** e **impacto social** — este protótipo atende ao âmbito acadêmico (dados simulados, broker público, sem identificação de pacientes), mantendo o repositório e os relatórios como instrumentos de transparência e reprodutibilidade.
+
 ## 2. Escolha do broker e tópicos
 
 Para fins acadêmicos e de reprodutibilidade internacional, utilizamos o broker público de testes **`broker.hivemq.com`** na porta **1883**, sem credencial embutida no firmware — o que evita vazamento de segredos no GitHub. O cliente MQTT do ESP32 utiliza um **ID único** derivado do endereço MAC da placa simulada, reduzindo colisões de sessão.

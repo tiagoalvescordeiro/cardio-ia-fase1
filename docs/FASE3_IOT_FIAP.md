@@ -1,6 +1,6 @@
-# Fase 3 (FIAP) — Cap 1: CardioIA Conectada — IoT e visualização de dados
+# Fase 3 (FIAP ON — *Além das Fronteiras Digitais*) — **Cap 1: CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital**
 
-Atividade alinhada ao enunciado **“FASE 3: Monitoramento Contínuo – IoT na Saúde”** (ESP32, Wokwi, MQTT, Node-RED, resiliência offline).
+Atividade alinhada ao enunciado **“FASE 3: Monitoramento Contínuo – IoT na Saúde”** (ESP32, Wokwi, MQTT, Node-RED, resiliência offline) e ao **objetivo da fase no portal**: integrar IA, IoT e desenvolvimento de sistemas na **CardioIA**, com dashboards que apoiem decisões clínicas, **governança de dados** e **impacto social** positivo (texto orientador no FIAP ON).
 
 ## Mapeamento enunciado → artefatos neste repositório
 
@@ -33,7 +33,7 @@ Curso **on-line (FIAP)** — se solicitado, anexar comprovante de matrícula EAD
 
 ## Checklist rápido — Moodle (Cap 1 / Fase 3)
 
-Antes do prazo (**conferir data no `on.fiap.com.br`**):
+Antes do prazo (**até 12/05/2026** no calendário FIAP ON — conferir no *dashboard*):
 
 1. Repositório público GitHub com `wokwi/` e `docs/` atualizados.  
 2. **URL Share do Wokwi** obtido e informado (Moodle + `links.md`).  

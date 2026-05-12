@@ -1,21 +1,21 @@
 Sintoma1,Sintoma2,Sintoma3,Doenca_Associada
-dor no peito,pressao no torax,aperto no peito,Infarto do Miocardio
-cansaco constante,fadiga,fraqueza,Insuficiencia Cardiaca
-falta de ar,dificuldade para respirar,dispneia,Angina Pectoris
-palpitacoes,batimentos irregulares,coracao acelerado,Arritmia Cardiaca
-tontura,desmaio,visao turva,Hipotensao Ortostática
-dor no braco esquerdo,dor no pescoco,dor no ombro,Infarto do Miocardio
-sudorese fria,suor excessivo,suor noturno,Infarto do Miocardio
-dificuldade ao deitar,ortopneia,edema,Insuficiencia Cardiaca
-batimentos acelerados,taquicardia,ansiedade,Taquicardia Supraventricular
-pressao constante,dor leve no peito,desconforto toracico,Angina Estavél
-cansaco ao esforco,fadiga aos esforcos,dispneia aos esforcos,Angina de Esforco
-inchaco nas pernas,edema de membros inferiores,retencao de liquido,Insuficiencia Cardiaca
-dor na nuca,cefaleia,dor de cabeca,Hipertensao Arterial
-visao borrada,confusao mental,tontura severa,Hipertensao Grave
-perda de consciencia,desmaio prolongado,sincope,Bloqueio Cardiaco
-cor azulada nos labios,cianose,labios roxos,Doenca Cardiaca Congenita
-dor no peito ao respirar,pleurite,dificuldade respiratoria,Pericardite
-febre com dor no peito,mal estar,calafrios,Miocardite
-cheiro de remedio,uso de anticoagulante,controle de pressao,Hipertensao Cronica
-dor difusa no peito,irradiacao para costas,dor posterior,Disseccao Aortica
+dor no peito,esforco fisico,pressao torax,Angina de esforço / DAC
+cansaco constante,pernas inchadas,descansar noite,Insuficiência cardíaca
+falta de ar,subir escadas,coracao acelera,ICC ou cardiopatia com limitação funcional
+palpitações irregulares,coracao para,recomeco,Arritmia (FA ou extrassístoles)
+tontura desmaios,levanto rapido,visao turva,Síncope ortostática / hipotensão
+dor intensa,braco esquerdo,pescoco esquerdo,Síndrome coronariana aguda (suspeita)
+aperto torax,ombro esquerdo,sudorese fria,Angina típica ou IAM
+dificuldade respirar,deitar,dois travesseiros,Insuficiência cardíaca (ortopneia)
+batimentos acelerados,irregulares com,ansiedade intensa,Taquicardia / hiperativação autonômica
+dor no peito,pressao constante,refeicoes repouso,Angina atípica ou dispepsia (diferencial)
+dor peito leve,cinco dias,piorando progressão,Angina instável (suspeita)
+peito que piora,esforco fisico,pressao forte,Angina estável
+pernas inchadas,cansaco noturno,edema membros,ICC direita / insuficiência venosa
+falta de ar,frequente escadas,sem infarto prévio,Doença pulmonar ou descondicionamento (diferencial)
+palpitações tres dias,sensacao parada,volta sozinha,Extrassístoles benignas vs FA paroxística
+dor braco esquerdo,piora esforco,irradiacao pescoço,DAC / síndrome coronariana
+suor frio,de manha,torax apertado,Angina matinal (padrão coronariano)
+batimentos irregulares,ansiedade intensa,acomp palpitações,Transtorno de ansiedade vs arritmia (diferencial)
+visao turva,alguns segundos,apos levantar,Hipotensão ortostática
+dificuldade dormir,respirar deitado,travesseiros extra,Congestão pulmonar / ICC

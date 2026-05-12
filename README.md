@@ -1,10 +1,9 @@
-# CardioIA — Fase 1: Batimentos de Dados
+# CardioIA — Repositório do projeto (FIAP ON)
 
 **Curso:** Inteligência Artificial — FIAP  
-**Fase:** 1 — Batimentos de Dados  
-**Disciplina:** Do Python à Fronteira Quântica  
+**Fase 1 (disciplina):** Do Python à Fronteira Quântica — *Cap 1 no portal:* **A Busca de Dados: Preparando o Terreno para a Inteligência Cardiológica**  
 **Turma:** 1TIAO  
-**Data de entrega:** 10/03/2026  
+**Data de entrega (Cap 1 / Fase 1):** 10/03/2026 *(conforme calendário no [FIAP ON](https://on.fiap.com.br))*  
 
 ---
 
@@ -22,7 +21,7 @@
 
 ## 📌 Sobre o Projeto
 
-O **CardioIA** é um projeto acadêmico que simula o ecossistema de uma cardiologia moderna, integrando dados clínicos, Machine Learning, Visão Computacional, IoT e agentes inteligentes. Nesta **Fase 1**, atuamos como cientistas de dados hospitalares: o desafio foi levantar, organizar e compreender dados cardiológicos que futuramente alimentarão os módulos inteligentes do sistema.
+O **CardioIA** é o fio condutor do curso no **FIAP ON**: integrar IA, IoT e sistemas para apoiar diagnósticos cardíacos com **governança de dados** e visão de **impacto social** (objetivo declarado na **Fase 3 — Além das Fronteiras Digitais**). Neste repositório, a **Fase 1** corresponde ao Cap 1 da Fase 1 do curso — levantamento e organização de dados **numéricos, textuais e visuais** que alimentarão os módulos seguintes.
 
 Este repositório junta o que a gente foi entregando ao longo do curso (Fases 1 a 3). A parte de **IoT na Fase 3** — simulador Wokwi, MQTT, Node-RED — está explicada com mais detalhe em [`docs/FASE3_IOT_FIAP.md`](docs/FASE3_IOT_FIAP.md), que a gente usa como guia interno também.
 
@@ -209,9 +208,11 @@ Consulte o arquivo [links.md](./links.md) para todos os links de acesso aos dado
 
 ---
 
-## Fase 3 — Cap 1: CardioIA conectada (IoT e um dashboard simples)
+## Fase 3 — Cap 1 (portal FIAP): *CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital*
 
-Nesta etapa a gente montou um **protótipo no Wokwi** com ESP32, **DHT22** (temperatura e umidade) e um **botão** que simula variação de BPM, porque o desafio da disciplina era pensar monitoramento contínuo no estilo IoT em saúde. O firmware alterna um “modo online/offline” de propósito: quando está “sem rede”, os dados vão para uma **fila em memória**; quando volta, a ideia é drenar e publicar de novo. Para nuvem usamos **MQTT** (broker público da HiveMQ) e montamos um **dashboard no Node-RED** com gráficos, um gauge e um texto de alerta quando BPM ou temperatura passam dos limites que a gente definiu.
+**Prazo no calendário FIAP ON:** até **12/05/2026** (confirmar no seu *dashboard* da disciplina).
+
+Nesta etapa montamos um **protótipo no Wokwi** com ESP32, **DHT22** (temperatura e umidade) e um **botão** que simula variação de BPM, atendendo ao roteiro de **monitoramento contínuo** e **resiliência offline** do enunciado. O firmware alterna um “modo online/offline” de propósito: quando está “sem rede”, os dados vão para uma **fila em memória**; quando volta, a ideia é drenar e publicar de novo. Para nuvem usamos **MQTT** (broker público da HiveMQ) e montamos um **dashboard no Node-RED** com gráficos, um gauge e um texto de alerta quando BPM ou temperatura passam dos limites que a gente definiu.
 
 Não é um produto hospitalar de verdade — é um laboratório para entender o fluxo **dados → edge → broker → tela** — mas dá para explicar no relatório o que funcionou e onde a gente simplificou (por exemplo, SPIFFS no simulador é chato, então ficou fila em RAM mesmo).
 
@@ -235,7 +236,7 @@ Não é um produto hospitalar de verdade — é um laboratório para entender o 
 |---|---|---|
 | Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
 | Fase 2 | EDA, NLP e classificação (notebooks em `notebooks/`) | ✅ Entregue / evolução contínua |
-| Fase 3 | IoT no Wokwi + MQTT + Node-RED (protótipo CardioIA conectada) | Concluída — código em `wokwi/`, docs em `docs/` |
+| Fase 3 | IoT no Wokwi + MQTT + Node-RED (*CardioIA Conectada* — Cap 1 da Fase 3 no FIAP ON) | Repositório pronto; **confirmar entrega no Moodle** até **12/05/2026** |
 | Fase 4 | Modelagem integrada (ML, NLP, Visão) e deploy | 🔜 Futura |
 
 ---

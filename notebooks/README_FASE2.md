@@ -1,8 +1,8 @@
-# CardioIA - Fase 2: Análise Exploratória de Dados (EDA)
+# CardioIA - Fase 2: Análise Exploratória de Dados (EDA) e atividades do Cap 1 (FIAP)
 
 **Data de início:** 14/04/2026  
-**Status:** 🔄 Em andamento  
-**Objetivo:** Realizar análise exploratória e pré-processamento dos dados cardiovasculares
+**Status:** Entregue (repositório com notebooks e CSVs em `notebooks/`)  
+**Objetivo:** EDA e pré-processamento dos dados cardiovasculares; **Cap 1 da Fase 2** no portal — diagnóstico assistido por NLP e classificador de risco em texto (enunciado FIAP ON).
 
 ---
 
@@ -94,9 +94,9 @@
 
 ---
 
-## 📊 Métricas de Avaliação (Fase 3)
+## 📊 Métricas de Avaliação (modelagem nas fases seguintes)
 
-Apesar de ainda estarmos na Fase 2, já planejamos as métricas:
+Quando os modelos forem consolidados em produção acadêmica, recomenda-se reportar:
 
 **Para classificação (Dados Numéricos e Visuais):**
 - Acurácia
@@ -114,10 +114,10 @@ Apesar de ainda estarmos na Fase 2, já planejamos as métricas:
 
 | Atividade | Status | Prazo |
 |-----------|--------|-------|
-| EDA Parte 1 - Dados Numéricos | 🔄 Em andamento | 14/04/2026 |
-| EDA Parte 2 - Dados Textuais | 🕐 Pendente | 15/04/2026 |
-| EDA Parte 3 - Dados Visuais | 🕐 Pendente | 16/04/2026 |
-| Relatório de Conclusão Fase 2 | 🕐 Pendente | 17/04/2026 |
+| EDA Parte 1 - Dados Numéricos | Concluído | 14/04/2026 |
+| EDA Parte 2 - Dados Textuais | Planejado / opcional | — |
+| EDA Parte 3 - Dados Visuais | Planejado / opcional | — |
+| Atividades Cap 1 (NLP + classificador) | Entregue | 14/04/2026 |
 
 ---
 
