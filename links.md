@@ -35,6 +35,8 @@ Os arquivos `.txt` estão versionados em `assets/`, como parte da documentação
 
 ## Fase 3 — IoT (Wokwi, MQTT, Node-RED)
 
+O link **Share** do Wokwi abre o projeto na nuvem: o código lá **tem de coincidir** com o GitHub (colar os *raw* abaixo no separador **Code** e **Save** na Wokwi). Se aparecer `Hello, ESP32!`, o projeto online ainda não foi sincronizado.
+
 | Descrição | Link / recurso |
 |---|---|
 | Código-fonte Wokwi (`diagram.json`, `sketch.ino`, `libraries.txt`) | [pasta `wokwi` no GitHub](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/tree/main/wokwi) |

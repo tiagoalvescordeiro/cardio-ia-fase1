@@ -2,6 +2,8 @@
 
 **Projeto público (Share):** https://wokwi.com/projects/463138220013169665  
 
+**Importante:** o URL acima só está correto se o projeto **guardado na conta Wokwi** tiver o mesmo `sketch.ino` e `diagram.json` que estão no GitHub. Se no separador **Code** aparecer o sketch padrão (`Hello, ESP32!`), o projeto na nuvem **não foi atualizado** — copie o conteúdo dos links *raw* em [`../links.md`](../links.md), cole em **Code**, instale as bibliotecas e clique em **Save** (com login na Wokwi).
+
 Recomenda-se manter o **sketch** e o **diagram.json** no Wokwi **idênticos** aos desta pasta no GitHub (copiar a partir do repositório ou dos links *raw* em [`../links.md`](../links.md)).
 
 ## Conteúdo da pasta
