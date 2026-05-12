@@ -235,7 +235,7 @@ Não é um produto hospitalar de verdade — é um laboratório para entender o 
 | Fase | Descrição | Status |
 |---|---|---|
 | Fase 1 | Curadoria e levantamento de dados | ✅ Concluída |
-| Fase 2 | EDA, NLP e classificação (notebooks em `notebooks/`) | ✅ Entregue / evolução contínua |
+| Fase 2 (*Início da IA avançada*) | Cap 1 no portal: **Desafio Integrador: IA entre Robôs, Sinapses e Medicina** — notebooks em `notebooks/` (apoio nos Caps **10** e **11**) | ✅ Entregue *(até 14/04/2026 no FIAP ON)* |
 | Fase 3 | IoT no Wokwi + MQTT + Node-RED (*CardioIA Conectada* — Cap 1 da Fase 3 no FIAP ON) | Repositório pronto; **confirmar entrega no Moodle** até **12/05/2026** |
 | Fase 4 | Modelagem integrada (ML, NLP, Visão) e deploy | 🔜 Futura |
 
@@ -243,14 +243,16 @@ Não é um produto hospitalar de verdade — é um laboratório para entender o 
 
 ---
 
-## Fase 2 - Cap 1: Diagnostico Automatizado - IA no Estetoscopio Digital
+## Fase 2 — *Início da IA avançada* — Cap 1 (FIAP ON): **Desafio Integrador: IA entre Robôs, Sinapses e Medicina**
 
-**Data de entrega:** 14/04/2026  
+**Título no portal (atividade / Cap 1):** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026** (calendário FIAP ON).  
+**Conteúdos de aula relacionados ao NLP (mesma fase no portal):** *Cap 10 — IA que Entende: Processamento de Linguagem Natural Baseado em Regras*; *Cap 11 — NLP no Estilo Clássico: Estatística, Vetores e Emoções em Texto*.
+
 **Status:** Entregue
 
-### Parte 1 - Extracao de Sintomas e Diagnostico
+### Parte 1 — Extração de sintomas e diagnóstico (NLP baseado em regras / mapa de conhecimento)
 
-Implementacao de um sistema basico de apoio ao diagnostico cardiologico usando processamento de linguagem natural (NLP).
+Implementação de um sistema básico de apoio ao diagnóstico cardiológico com **NLP por regras e mapa de conhecimento**, no contexto do desafio integrador **CardioIA**.
 
 **Arquivos entregues:**
 
@@ -260,9 +262,9 @@ Implementacao de um sistema basico de apoio ao diagnostico cardiologico usando p
 | `notebooks/mapa_conhecimento.csv` | 20 associacoes entre sintomas e doencas cardiologicas |
 | `notebooks/fase2_parte1_diagnostico.ipynb` | Codigo Python que le as frases, identifica sintomas e sugere diagnostico |
 
-### Parte 2 - Classificador Basico de Texto (Triagem de Risco)
+### Parte 2 — Classificador de texto (vetores / TF-IDF e triagem de risco)
 
-Classificador de risco cardiaco usando TF-IDF e Machine Learning para classificar frases como alto ou baixo risco.
+Classificador de risco cardíaco com **TF-IDF** e **Machine Learning**, alinhado ao eixo do **Cap 11** (NLP clássico com vetores e modelo discriminativo).
 
 **Arquivos entregues:**
 

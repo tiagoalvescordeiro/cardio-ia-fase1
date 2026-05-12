@@ -1,8 +1,11 @@
-# CardioIA - Fase 2: Análise Exploratória de Dados (EDA) e atividades do Cap 1 (FIAP)
+# CardioIA — Fase 2 (*Início da IA avançada* — FIAP ON)
 
-**Data de início:** 14/04/2026  
-**Status:** Entregue (repositório com notebooks e CSVs em `notebooks/`)  
-**Objetivo:** EDA e pré-processamento dos dados cardiovasculares; **Cap 1 da Fase 2** no portal — diagnóstico assistido por NLP e classificador de risco em texto (enunciado FIAP ON).
+**Atividade (Cap 1 no portal):** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026**.  
+**Aulas de apoio (NLP):** *Cap 10 — IA que Entende: Processamento de Linguagem Natural Baseado em Regras*; *Cap 11 — NLP no Estilo Clássico: Estatística, Vetores e Emoções em Texto*.
+
+**Data de início (grupo):** 14/04/2026  
+**Status:** Entregue (notebooks + CSVs em `notebooks/`)  
+**Objetivo:** EDA dos dados tabulares; entregáveis do desafio integrador **CardioIA** — NLP por regras (`fase2_parte1_*`) e classificação textual com TF-IDF (`fase2_parte2_*`).
 
 ---
 
