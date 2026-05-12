@@ -1,30 +1,30 @@
-# Node-RED — dashboard CardioIA
+# Node-RED — *dashboard* CardioIA (Fase 3)
 
 ## Pré-requisitos
 
 - Node-RED instalado ([documentação oficial](https://nodered.org/docs/getting-started/local)).  
-- Pacote **node-red-dashboard**: na pasta do seu perfil Node-RED execute  
+- Pacote **node-red-dashboard**: no diretório do perfil Node-RED, executar  
   `npm install node-red-dashboard`  
-  reinicie o Node-RED e confirme que o conjunto **dashboard** aparece na paleta.
+  Reiniciar o Node-RED e confirmar o conjunto **dashboard** na paleta.
 
 ## Importar o fluxo
 
-1. Abra o editor Node-RED.  
-2. Menu **⋮** → **Importar** → cole o conteúdo de [`flows.json`](./flows.json) (ou importe o arquivo).  
-3. Faça **Implantar (Deploy)**.  
-4. Acesse a UI em `http://localhost:1880/ui` (porta padrão) — o separador **Monitoramento** deve aparecer.
+1. Abrir o editor Node-RED.  
+2. Menu **⋮** → **Importar** → colar o conteúdo de [`flows.json`](./flows.json) (ou importar o arquivo).  
+3. **Implantar (Deploy)**.  
+4. Abrir a UI em `http://localhost:1880/ui` (porta padrão). O separador **Monitoramento** deve aparecer.
 
 ## MQTT
 
-O fluxo usa o broker configurado em **mqtt-broker** (`broker.hivemq.com:1883`) e assina `cardioia/grupo54/telemetria`, o mesmo tópico publicado pelo firmware em [`../../wokwi/sketch.ino`](../../wokwi/sketch.ino).
+O fluxo referencia o broker **mqtt-broker** (`broker.hivemq.com:1883`) e assina `cardioia/grupo54/telemetria`, o mesmo tópico publicado em [`../../wokwi/sketch.ino`](../../wokwi/sketch.ino).
 
-## Alertas (rubrica)
+## Limiares de alerta
 
-- **BPM** > 120 → texto de alerta na área **Status**.  
-- **Temperatura** > 38 °C → texto de alerta na área **Status**.
+- **BPM** > 120 → mensagem na área **Status**.  
+- **Temperatura** > 38 °C → mensagem na área **Status**.
 
-Ajuste os limiares no nó **function** `parse + alertas` se o professor pedir outros valores.
+Os limiares podem ser ajustados no nó **function** `parse + alertas`, conforme exigências do enunciado ou da orientação docente.
 
-## Evidência para entrega
+## Evidências
 
-Capture **prints** da UI com o simulador Wokwi publicando dados e salve em `assets/evidencias/` (ex.: `dashboard_mqtt.png`).
+Capturar **capturas de tela** da UI com o Wokwi a publicar dados e arquivar em `assets/evidencias/` (ex.: `dashboard_mqtt.png`), em complemento ao `flows.json`.

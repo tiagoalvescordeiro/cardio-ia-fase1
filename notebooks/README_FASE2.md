@@ -1,138 +1,46 @@
-# CardioIA — Fase 2 (*Início da IA avançada* — FIAP ON)
+# CardioIA — Fase 2 (*Início da IA avançada*, FIAP ON)
 
-**Atividade (Cap 1 no portal):** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026**.  
-**Aulas de apoio (NLP):** *Cap 10 — IA que Entende: Processamento de Linguagem Natural Baseado em Regras*; *Cap 11 — NLP no Estilo Clássico: Estatística, Vetores e Emoções em Texto*.
+Documentação complementar aos notebooks desta pasta. O contexto geral do repositório está no [`README.md`](../README.md) principal.
 
-**Data de início (grupo):** 14/04/2026  
-**Status:** Entregue (notebooks + CSVs em `notebooks/`)  
-**Objetivo:** EDA dos dados tabulares; entregáveis do desafio integrador **CardioIA** — NLP por regras (`fase2_parte1_*`) e classificação textual com TF-IDF (`fase2_parte2_*`).
+## Atividade avaliada (Cap 1)
 
----
+**Título no portal:** *Desafio Integrador: IA entre Robôs, Sinapses e Medicina* — prazo **14/04/2026**.  
+**Conteúdos de apoio (NLP):** *Cap 10 — IA que Entende: Processamento de Linguagem Natural Baseado em Regras*; *Cap 11 — NLP no Estilo Clássico: Estatística, Vetores e Emoções em Texto*.
 
-## 📊 Notebooks Planejados
+## Entregáveis versionados
 
-### 1. `fase2_eda_parte1_dados_numericos.ipynb`
-**Status:** ✅ Iniciado  
-**Descrição:** Análise exploratória do dataset Heart Failure Prediction (918 registros)
+| Notebook | Descrição |
+|----------|-----------|
+| `fase2_parte1_diagnostico.ipynb` | NLP por regras: leitura de `sintomas.txt` e `mapa_conhecimento.csv`, saída sugerida (didático). |
+| `fase2_parte2_classificador.ipynb` | TF-IDF + modelos lineares / árvore sobre `dataset_risco.csv`. |
+| `fase2_eda_parte1_dados_numericos.ipynb` | EDA opcional do dataset tabular (Heart Failure); requer `heart.csv` em `../data/` conforme células do notebook. |
 
-**Conteúdo:**
-- Carregamento e inspeção inicial dos dados
-- Análise de valores ausentes e duplicados
-- Estatísticas descritivas (média, mediana, desvio padrão)
-- Detecção de outliers com boxplots
-- Análise de correlações (heatmap)
-- Visualizações de distribuições das variáveis
-- Identificação de padrões clínicos relevantes
+Arquivos de dados: `sintomas.txt`, `mapa_conhecimento.csv`, `dataset_risco.csv`.
 
-**Variáveis analisadas:**
-- `Age`, `Sex`, `ChestPainType`
-- `RestingBP`, `Cholesterol`, `FastingBS`
-- `RestingECG`, `MaxHR`, `ExerciseAngina`
-- `Oldpeak`, `ST_Slope`
-- `HeartDisease` (variável alvo)
+## EDA adicional (opcional)
 
----
+Os itens abaixo **não** são obrigatórios para o *Desafio Integrador* descrito acima; figuram como extensão de estudo (dados textuais e imagens já tratados na **Fase 1** no `README.md` raiz).
 
-### 2. `fase2_eda_parte2_dados_textuais.ipynb`
-**Status:** 🕐 Planejado  
-**Descrição:** Análise de processamento de linguagem natural (NLP) dos textos científicos
+- **Texto / NLP avançado:** tokenização, LDA, nuvem de termos, etc. (novo notebook, se desejado).  
+- **Imagens:** amostras do conjunto de raio-X referenciado no `README.md` / `links.md` (novo notebook, se desejado).
 
-**Conteúdo planejado:**
-- Leitura dos arquivos TXT (assets/texto_01 e texto_02)
-- Pré-processamento: tokenização, remoção de stopwords
-- Extração de entidades médicas (NER - Named Entity Recognition)
-- Análise de frequência de termos (TF-IDF)
-- Nuvem de palavras com termos clínicos
-- Identificação de fatores de risco mencionados
-- Topic Modeling (LDA) para descobrir temas principais
+## Métricas (fases futuras)
 
-**Bibliotecas:**
-- `nltk`, `spacy`, `wordcloud`
-- `sklearn.feature_extraction.text`
-- `gensim` (para topic modeling)
+Para trabalhos de classificação: acurácia, precisão, *recall*, F1, matriz de confusão, ROC-AUC. Para NLP não supervisionado: coerência de tópicos e relevância de termos, conforme método.
 
----
+## Cronograma interno (referência)
 
-### 3. `fase2_eda_parte3_dados_visuais.ipynb`
-**Status:** 🕐 Planejado  
-**Descrição:** Análise de imagens de raio-X torácico para detecção de cardiomegalia
+| Item | Situação | Prazo de referência |
+|------|----------|---------------------|
+| EDA numérica (`fase2_eda_parte1_*`) | Opcional | 14/04/2026 |
+| Desafio Integrador (partes 1 e 2) | Entregue | 14/04/2026 |
 
-**Conteúdo planejado:**
-- Carregamento de imagens do Google Drive (100+ amostras)
-- Inspeção das dimensões e formatos das imagens
-- Análise da distribuição de classes (cardiomegalia presente/ausente)
-- Visualização de amostras de cada classe
-- Análise de histogramas de intensidade de pixels
-- Verificação de desbalanceamento de classes
-- Preparação para augmentation (rotação, zoom, flip)
+## Integrantes
 
-**Bibliotecas:**
-- `OpenCV`, `PIL`
-- `matplotlib`, `seaborn`
-- `tensorflow.keras.preprocessing`
+- Tiago Alves Cordeiro (RM 561791) — líder do repositório  
+- Matheus Parra (RM 561907)  
+- Otavio Custodio de Oliveira (RM 565606)  
+- Thiago Henrique Pereira de Almeida Santos (RM 563327)  
+- Leandro Arthur Marinho Ferreira (RM 565240)  
 
----
-
-## 🛠️ Pré-processamento Planejado
-
-### Dados Numéricos:
-1. **Tratamento de outliers:** Valores de Cholesterol = 0 (possíveis erros)
-2. **Normalização:** StandardScaler ou MinMaxScaler
-3. **Encoding:** One-Hot Encoding para variáveis categóricas
-4. **Feature Engineering:** 
-   - Criar faixas etárias
-   - Combinar features relacionadas
-   - Criar índices de risco
-
-### Dados Textuais:
-1. **Limpeza:** Remoção de caracteres especiais
-2. **Normalização:** Lowercase, lematização
-3. **Vetorização:** TF-IDF ou Word2Vec
-
-### Dados Visuais:
-1. **Redimensionamento:** Padronizar para 128x128 ou 224x224
-2. **Normalização:** Pixels entre [0, 1]
-3. **Augmentation:** Aumentar dataset com transformações
-4. **Balanceamento:** Técnicas como SMOTE se necessário
-
----
-
-## 📊 Métricas de Avaliação (modelagem nas fases seguintes)
-
-Quando os modelos forem consolidados em produção acadêmica, recomenda-se reportar:
-
-**Para classificação (Dados Numéricos e Visuais):**
-- Acurácia
-- Precisão, Recall, F1-Score
-- Matriz de Confusão
-- ROC-AUC
-
-**Para NLP:**
-- Coerência dos tópicos identificados
-- Relevância dos termos extraídos
-
----
-
-## 📅 Cronograma
-
-| Atividade | Status | Prazo |
-|-----------|--------|-------|
-| EDA Parte 1 - Dados Numéricos | Concluído | 14/04/2026 |
-| EDA Parte 2 - Dados Textuais | Planejado / opcional | — |
-| EDA Parte 3 - Dados Visuais | Planejado / opcional | — |
-| Atividades Cap 1 (NLP + classificador) | Entregue | 14/04/2026 |
-
----
-
-## 👥 Equipe
-
-- **Tiago Alves Cordeiro** (RM 561791) - Líder do Repositório
-- **Matheus Parra** (RM 561907)
-- **Otavio Custodio de Oliveira** (RM 565606)
-- **Thiago Henrique Pereira de Almeida Santos** (RM 563327)
-- **Leandro Arthur Marinho Ferreira** (RM 565240)
-
----
-
-**Repositório:** [github.com/tiagoalvescordeiro/cardio-ia-fase1](https://github.com/tiagoalvescordeiro/cardio-ia-fase1)  
-**FIAP 2026** - Inteligência Artificial - Turma 1TIAO
+**Repositório:** [github.com/tiagoalvescordeiro/cardio-ia-fase1](https://github.com/tiagoalvescordeiro/cardio-ia-fase1) · FIAP 2026 · Turma 1TIAO

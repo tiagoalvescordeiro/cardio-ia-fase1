@@ -1,43 +1,41 @@
-# Simulação Wokwi — CardioIA Fase 3 (FIAP)
+# Simulação Wokwi — CardioIA (Fase 3 / FIAP)
 
-**Projeto público no simulador:** https://wokwi.com/projects/463138220013169665  
+**Projeto público (Share):** https://wokwi.com/projects/463138220013169665  
 
-Garanta que o **sketch** e o **diagram.json** no site sejam os mesmos desta pasta do GitHub (use copiar/colar a partir do repositório ou dos links *raw* em [`../links.md`](../links.md)).
+Recomenda-se manter o **sketch** e o **diagram.json** no Wokwi **idênticos** aos desta pasta no GitHub (copiar a partir do repositório ou dos links *raw* em [`../links.md`](../links.md)).
 
-## Conteúdo
+## Conteúdo da pasta
 
 | Arquivo | Função |
 |---------|--------|
-| `diagram.json` | Montagem: ESP32 DevKit v1, **DHT22** (temperatura + umidade) e **botão** (simula variação de BPM). |
-| `sketch.ino` | Firmware: leitura periódica, fila em RAM quando “offline simulado”, **MQTT** para `broker.hivemq.com` quando “online”. |
+| `diagram.json` | Hardware virtual: ESP32 DevKit v1, **DHT22** (temperatura e umidade) e **botão** (variação de BPM simulado). |
+| `sketch.ino` | Firmware: leitura periódica, fila em RAM em modo *offline* simulado, **MQTT** para `broker.hivemq.com` quando *online*. |
 | `libraries.txt` | Dependências Arduino no Wokwi. |
 
-## Como abrir no Wokwi
+## Reprodução no Wokwi
 
-1. Acesse [https://wokwi.com](https://wokwi.com) e crie **Novo projeto** → **ESP32** → **Arduino**.  
-2. Substitua o conteúdo de `diagram.json` e `sketch.ino` pelos arquivos desta pasta (ou importe o repositório GitHub se a opção estiver disponível).  
-3. Confirme que as bibliotecas **PubSubClient** e **DHT sensor library** (+ **Adafruit Unified Sensor**) foram instaladas (Wokwi costuma ler `libraries.txt`).  
-4. **Run** — o Monitor Serial deve mostrar alternância de modo simulado e fila; com Wi‑Fi virtual `Wokwi-GUEST` o MQTT publica em `cardioia/grupo54/telemetria`. Com o diagrama em foco, a tecla **P** também aciona o botão (atalho Wokwi).
+1. Acessar [https://wokwi.com](https://wokwi.com) e criar **Novo projeto** → **ESP32** → **Arduino**.  
+2. Substituir `diagram.json` e `sketch.ino` pelos desta pasta (ou pelo conteúdo dos *raw* em `links.md`).  
+3. Instalar **PubSubClient**, **DHT sensor library** e **Adafruit Unified Sensor** (o Wokwi costuma resolver via `libraries.txt`).  
+4. Executar (**Run**). O Monitor Serial deve exibir alternância de modo simulado e comportamento da fila; com Wi-Fi virtual `Wokwi-GUEST`, as publicações MQTT seguem para `cardioia/grupo54/telemetria`. Com o diagrama em foco, a tecla **P** aciona o botão (atalho Wokwi).
 
-## Link público do projeto (Share) — entrega FIAP
+## Link Share (entrega FIAP)
 
-O enunciado pede **link do projeto no Wokwi**. Depois de colar `diagram.json`, `sketch.ino` e `libraries.txt` e validar a simulação:
+O enunciado exige **URL público do projeto Wokwi**. Após validar a simulação:
 
-1. Faça login na Wokwi (conta gratuita), se ainda não estiver logado.  
-2. Use **Save** / **Salvar** para gravar o projeto na nuvem.  
-3. Abra **Share** / **Compartilhar** e copie o URL no formato `https://wokwi.com/projects/...`.  
-4. Cole esse URL em [`../links.md`](../links.md) (tabela Fase 3) e no campo de texto/link da **entrega no Moodle** (`on.fiap.com.br`), junto com o link do **GitHub**.
+1. Autenticar-se na Wokwi, se necessário.  
+2. **Salvar** o projeto na nuvem.  
+3. **Compartilhar** e copiar o URL `https://wokwi.com/projects/...`.  
+4. Registrar o URL em [`../links.md`](../links.md) e no campo correspondente da entrega no **Moodle** (FIAP ON), junto com o link do **GitHub**.
 
-A interface exata dos botões pode variar; o objetivo é um URL **público e estável** que abra o mesmo `diagram` + sketch.
+A interface da Wokwi pode variar entre versões; o relevante é um link **público e estável** que abra o mesmo diagrama e *sketch*.
 
-## Tópico MQTT (telemetria)
-
-Publicação JSON de exemplo:
+## Payload MQTT (telemetria)
 
 ```json
 {"temp_c":23.50,"hum_pct":58.0,"bpm":78,"ts_ms":12345}
 ```
 
-## Ajuste fino do hardware virtual
+## GPIOs
 
-Se o **DHT22** ou o **botão** não responderem, abra o diagrama no Wokwi e verifique os **GPIOs**: DHT em **4**, botão em **18** com `INPUT_PULLUP` no firmware.
+**DHT22:** GPIO **4**. **Botão:** GPIO **18**, com `INPUT_PULLUP` no firmware.

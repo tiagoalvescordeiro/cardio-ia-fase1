@@ -63,7 +63,7 @@ cardio-ia-fase1/
 
 ## 📊 Parte 1 — Dados numéricos (tabela / CSV)
 
-**Observação:** o **Heart Failure Prediction** (abaixo) é um CSV para EDA/modelagem em Python. **Não** corresponde à telemetria gerada pelo protótipo ESP32 da Fase 3 (fluxo IoT separado).
+**Observação:** no enunciado da FIAP, a *Parte 1* aparece como «Dados numéricos (IoT)» no sentido de **base tabular** para o projeto CardioIA — **não** se refere ao protótipo ESP32/MQTT da **Fase 3**. O **Heart Failure Prediction** (abaixo) é o CSV usado para EDA/modelagem em Python; a telemetria da Fase 3 é outro fluxo.
 
 ### Dataset Utilizado
 
@@ -254,6 +254,8 @@ Vetorização **TF-IDF**, divisão treino/teste e modelos **árvore de decisão*
 | Classificador treinado e testado corretamente | 2 |
 | Documentação clara e repositório público no GitHub com README completo | 1 |
 | Vídeo de demonstração no YouTube (não listado) com link no GitHub | 2 |
+
+**Vídeo (rubrica):** quando o grupo publicar a demonstração em **YouTube (não listado)**, o link deve constar neste `README.md` (seção sugerida: logo abaixo desta tabela) para fechar o critério acima.
 
 ---
 

@@ -1,10 +1,10 @@
-# Links Públicos dos Dados — CardioIA Fase 1
+# Links públicos — CardioIA (FIAP)
 
-> **Importante:** Todos os links abaixo devem estar acessíveis publicamente para que o time da FIAP possa acessar durante a correção. Certifique-se de que as permissões de compartilhamento estão configuradas como "Qualquer pessoa com o link".
+Este arquivo concentra **URLs públicas** para correção e reprodução: dados da **Fase 1** (tabular, textual, imagens), além de **Wokwi, MQTT e Node-RED** da **Fase 3**. Manter permissões de compartilhamento como *qualquer pessoa com o link*, quando aplicável.
 
 ---
 
-## Parte 1 — Dados Numéricos
+## Fase 1 — Parte 1 — Dados numéricos
 
 | Descrição | Link |
 |---|---|
@@ -13,18 +13,18 @@
 
 ---
 
-## Parte 2 — Dados Textuais
+## Fase 1 — Parte 2 — Dados textuais
 
-| Arquivo | Fonte Original | Link no Repositório |
+| Arquivo | Fonte original | Cópia no repositório |
 |---|---|---|
 | texto_01_estatistica_cardiovascular_brasil_2023.txt | https://www.scielo.br/j/abc/a/jzFMcdN5y3w6CtjVgdJdSdR/?lang=pt | [assets/texto_01](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/texto_01_estatistica_cardiovascular_brasil_2023.txt) |
 | texto_02_fatores_associados_doencas_cardiovasculares.txt | https://preprints.scielo.org/index.php/scielo/preprint/download/2927/5176/5408 | [assets/texto_02](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/texto_02_fatores_associados_doencas_cardiovasculares.txt) |
 
-> Os arquivos .txt já estão disponíveis diretamente neste repositório público do GitHub na pasta `assets/`.
+Os arquivos `.txt` estão versionados em `assets/`, conforme o enunciado da Fase 1.
 
 ---
 
-## Parte 3 — Dados Visuais (Imagens)
+## Fase 1 — Parte 3 — Dados visuais (imagens)
 
 | Descrição | Link |
 |---|---|
@@ -33,33 +33,25 @@
 
 ---
 
-## Notas
-
-- Os dados textuais já estão integrados ao repositório GitHub e não requerem link externo adicional
-- Os dados numéricos e visuais, por serem arquivos grandes, estão hospedados no Google Drive com acesso público
-- Todos os links estão configurados como "Qualquer pessoa com o link" para acesso durante a correção
-
----
-
 ## Fase 3 — IoT (Wokwi, MQTT, Node-RED)
 
 | Descrição | Link / recurso |
 |---|---|
-| **Código-fonte do projeto Wokwi** (`diagram.json`, `sketch.ino`, `libraries.txt`) | [pasta `wokwi` no GitHub](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/tree/main/wokwi) |
-| **Instruções de reprodução no Wokwi (sem link Share)** | [wokwi/README.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/README.md) — novo projeto ESP32 Arduino em [wokwi.com/projects/new/esp32](https://wokwi.com/projects/new/esp32), colar `diagram.json` e `sketch.ino` a partir dos **raw** abaixo |
-| **diagram.json (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/diagram.json |
-| **sketch.ino (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/sketch.ino |
-| **libraries.txt (raw)** | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/libraries.txt |
-| **Projeto numerado no Wokwi (Share)** — *entregável do enunciado* | **https://wokwi.com/projects/463138220013169665** (CardioIA Fase3 Grupo54 FIAP — público). Sincronize o **código** com o repositório: mesmo conteúdo que [`wokwi/sketch.ino`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/sketch.ino) e [`wokwi/diagram.json`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/diagram.json); instale as bibliotecas de [`libraries.txt`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/libraries.txt) no *Library Manager*. |
-| **Broker MQTT usado na demonstração** | `broker.hivemq.com` porta `1883` (público de teste — **não** usar dados sensíveis) |
-| **Tópico de telemetria** | `cardioia/grupo54/telemetria` (payload JSON: `temp_c`, `hum_pct`, `bpm`, `ts_ms`) |
-| **Fluxo Node-RED (dashboard)** | [flows.json no repositório](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json) |
-| **Diagrama de arquitetura (evidência)** | [arquitetura_fase3.svg](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/evidencias/arquitetura_fase3.svg) |
+| Código-fonte Wokwi (`diagram.json`, `sketch.ino`, `libraries.txt`) | [pasta `wokwi` no GitHub](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/tree/main/wokwi) |
+| Instruções de reprodução no Wokwi | [wokwi/README.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/README.md) — projeto novo ESP32 Arduino em [wokwi.com/projects/new/esp32](https://wokwi.com/projects/new/esp32); colar `diagram.json` e `sketch.ino` a partir dos *raw* abaixo |
+| **diagram.json** (raw) | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/diagram.json |
+| **sketch.ino** (raw) | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/sketch.ino |
+| **libraries.txt** (raw) | https://raw.githubusercontent.com/tiagoalvescordeiro/cardio-ia-fase1/main/wokwi/libraries.txt |
+| Projeto Wokwi (Share) — entregável | **https://wokwi.com/projects/463138220013169665** — manter o conteúdo alinhado a [`wokwi/sketch.ino`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/sketch.ino) e [`wokwi/diagram.json`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/diagram.json); bibliotecas em [`libraries.txt`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/wokwi/libraries.txt) |
+| Broker MQTT (demonstração) | `broker.hivemq.com`, porta `1883` (público — não transportar dados sensíveis) |
+| Tópico de telemetria | `cardioia/grupo54/telemetria` (JSON: `temp_c`, `hum_pct`, `bpm`, `ts_ms`) |
+| Fluxo Node-RED (dashboard) | [flows.json](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/node-red/flows.json) |
+| Diagrama de arquitetura | [arquitetura_fase3.svg](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/assets/evidencias/arquitetura_fase3.svg) |
 
-Arquivos do **Node-RED**: `docs/node-red/`. **Prints** em `assets/evidencias/` (ver README da pasta). **Texto pronto para colar no Moodle:** [`docs/TEXTO_ENTREGA_MOODLE.txt`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/TEXTO_ENTREGA_MOODLE.txt).
+Arquivos Node-RED: `docs/node-red/`. Evidências em imagem: `assets/evidencias/` (ver README da pasta). Texto para entrega no Moodle: [`docs/TEXTO_ENTREGA_MOODLE.txt`](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/TEXTO_ENTREGA_MOODLE.txt).
 
 ---
 
-*Repositório: https://github.com/tiagoalvescordeiro/cardio-ia-fase1* 
-*Grupo 1TIAO — FIAP 2026* 
-*Integrantes: Tiago Alves Cordeiro (RM 561791) | Matheus Parra (RM 561907) | Otavio Custodio de Oliveira (RM 565606) | Thiago Henrique Pereira de Almeida Santos (RM 563327) | Leandro Arthur Marinho Ferreira (RM 565240)*
+**Repositório:** https://github.com/tiagoalvescordeiro/cardio-ia-fase1  
+**Turma:** 1TIAO — FIAP 2026  
+**Integrantes:** Tiago Alves Cordeiro (RM 561791) | Matheus Parra (RM 561907) | Otavio Custodio de Oliveira (RM 565606) | Thiago Henrique Pereira de Almeida Santos (RM 563327) | Leandro Arthur Marinho Ferreira (RM 565240)

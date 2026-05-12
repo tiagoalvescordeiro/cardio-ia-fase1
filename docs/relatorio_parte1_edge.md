@@ -8,7 +8,7 @@
 
 ## 1. Introdução
 
-Esta etapa reproduz o papel do **Edge Computing** em um cenário de monitoramento cardíaco simplificado: o microcontrolador **ESP32** lê sensores com periodicidade estável, trata leituras localmente e precisa manter **continuidade operacional** mesmo quando a conectividade de nuvem não está disponível. O enunciado da FIAP exige explicitamente **dois sensores distintos**, sendo um deles o **DHT22** (temperatura e umidade relativa) e um segundo elemento para compor o “painel” de sinais vitais simulados — adotamos um **botão** com debounce que incrementa um **BPM simulado**, com decaimento lento para imitar variação fisiológica. Esse desenho conecta-se ao objetivo macro do **FIAP ON** na Fase 3 (*Além das Fronteiras Digitais*): dados de sensores alimentando visualizações e decisões no ecossistema **CardioIA**, com foco em governança e impacto social no âmbito acadêmico (telemetria simulada, sem dados identificáveis de pacientes).
+Esta etapa reproduz o papel do **Edge Computing** em um cenário de monitoramento cardíaco simplificado: o microcontrolador **ESP32** lê sensores com periodicidade estável, trata leituras localmente e precisa manter **continuidade operacional** mesmo quando a conectividade de nuvem não está disponível. O enunciado da FIAP exige **dois sensores distintos**, sendo um deles o **DHT22** (temperatura e umidade relativa) e um segundo elemento para compor o painel de sinais vitais simulados. O grupo adotou um **botão** com *debounce* que incrementa um **BPM simulado**, com decaimento lento para aproximar variação fisiológica. Esse desenho conecta-se ao objetivo macro do **FIAP ON** na Fase 3 (*Além das Fronteiras Digitais*): dados de sensores alimentando visualizações e decisões no ecossistema **CardioIA**, com foco em governança e impacto social no âmbito acadêmico (telemetria simulada, sem dados identificáveis de pacientes).
 
 ## 2. Montagem virtual (Wokwi)
 
@@ -20,13 +20,13 @@ No `sketch.ino`, a leitura do DHT22 ocorre a cada **3 segundos**, intervalo supe
 
 ## 4. Simulação de conectividade e resiliência
 
-O enunciado pede uma **variável booleana** que simule estar “conectado” ou não à rede. Implementamos `g_wifiSimuladoConectado`, que **alterna aproximadamente a cada 45 segundos**. Quando falsa, o firmware **não tenta publicar na nuvem**; em vez disso, cada amostra válida é armazenada em uma **fila circular em RAM** (`queue[]`, capacidade 48 itens). Quando a variável volta a verdadeira, o laço principal restabelece **Wi-Fi** (`Wokwi-GUEST`, canal 6, conforme documentação Wokwi) e **MQTT** (`broker.hivemq.com`) e executa `flushQueueIfOnline`, drenando a fila com publicações JSON.
+O enunciado exige uma **variável booleana** que simule conectividade à rede. O firmware define `g_wifiSimuladoConectado`, **alternando aproximadamente a cada 45 s**. Quando falsa, **não** há publicação na nuvem; cada amostra válida entra numa **fila circular em RAM** (`queue[]`, capacidade 48 itens). Ao retornar a verdadeiro, o laço principal restabelece **Wi-Fi** (`Wokwi-GUEST`, canal 6, conforme Wokwi) e **MQTT** (`broker.hivemq.com`) e executa `flushQueueIfOnline`, drenando a fila com JSON.
 
 Essa política demonstra o princípio de **sincronização adiada**: dados produzidos no perímetro são preservados quando o canal WAN está indisponível e reenviados quando o canal retorna — analogia direta com dispositivos vestíveis em corredor hospitalar ou domiciliar com Wi-Fi intermitente.
 
 ## 5. SPIFFS e limitações do simulador
 
-O roteiro da FIAP cita **SPIFFS** como armazenamento local opcional, mas alerta que o recurso não reflete fielmente no simulador. Por isso adotamos **persistência volátil em fila** + **trilhas no Monitor Serial** (`Serial.printf`), o que cumpre o espírito do requisito (“garantir resiliência offline”) sem depender de sistema de arquivos flash virtual.
+O roteiro da FIAP cita **SPIFFS** como armazenamento local opcional, mas alerta que o recurso não reflete fielmente no simulador. Por isso adotou-se **persistência volátil em fila** e **registro no Monitor Serial** (`Serial.printf`), atendendo ao requisito de resiliência **offline** sem depender de sistema de arquivos flash virtual no simulador.
 
 ## 6. Monitor Serial como evidência
 
@@ -34,4 +34,4 @@ Além do MQTT, cada publicação gera uma linha `[CLOUD] {...}` no serial — at
 
 ## 7. Conclusão da Parte 1
 
-O protótipo cumpre os pilares de **coleta**, **simulação de conectividade** e **resiliência** no edge, com sensores distintos e documentação no repositório (`wokwi/`). O ficheiro **`assets/evidencias/arquitetura_fase3.svg`** documenta visualmente a posição do edge no pipeline completo. A próxima etapa (Parte 2) detalha a integração **MQTT** e a visualização em **Node-RED**, usando o mesmo payload JSON para manter rastreabilidade ponta a ponta.
+O protótipo cumpre os pilares de **coleta**, **simulação de conectividade** e **resiliência** no edge, com sensores distintos e documentação no repositório (`wokwi/`). O arquivo **`assets/evidencias/arquitetura_fase3.svg`** documenta a posição do *edge* no pipeline completo. A próxima etapa (Parte 2) detalha a integração **MQTT** e a visualização em **Node-RED**, usando o mesmo payload JSON para manter rastreabilidade ponta a ponta.

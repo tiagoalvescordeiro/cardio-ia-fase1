@@ -10,11 +10,11 @@
 
 Após consolidar o processamento em borda, o fluxo Fog/Cloud concentra-se em **transportar telemetria** até um broker **MQTT** acessível pela Internet e em **exibir** esses dados em um **dashboard Node-RED**, com elementos gráficos e **alertas automáticos** quando variáveis ultrapassam limiares definidos pelo grupo. Essa arquitetura é típica de MVPs de IoT em saúde: sensores baratos publicam tópicos leves; aplicações de visualização assinam esses tópicos e disparam ações (notificações, cores, textos de alerta).
 
-No **FIAP ON**, a Fase 3 (*Além das Fronteiras Digitais*) explicita o objetivo de integrar IA, IoT e sistemas na **CardioIA**, com atenção a **escalabilidade**, **governança de dados** e **impacto social** — este protótipo atende ao âmbito acadêmico (dados simulados, broker público, sem identificação de pacientes), mantendo o repositório e os relatórios como instrumentos de transparência e reprodutibilidade.
+No **FIAP ON**, a Fase 3 (*Além das Fronteiras Digitais*) explicita integração de IA, IoT e sistemas na **CardioIA**, com **escalabilidade**, **governança de dados** e **impacto social**. O protótipo restringe-se ao **âmbito acadêmico** (dados simulados, broker público, sem identificação de pacientes), com rastreabilidade via repositório e relatórios.
 
 ## 2. Escolha do broker e tópicos
 
-Para fins acadêmicos e de reprodutibilidade internacional, utilizamos o broker público de testes **`broker.hivemq.com`** na porta **1883**, sem credencial embutida no firmware — o que evita vazamento de segredos no GitHub. O cliente MQTT do ESP32 utiliza um **ID único** derivado do endereço MAC da placa simulada, reduzindo colisões de sessão.
+Para fins acadêmicos e de reprodutibilidade internacional, utilizou-se o broker público de testes **`broker.hivemq.com`** na porta **1883**, sem credencial no firmware, evitando exposição de segredos no GitHub. O cliente MQTT do ESP32 utiliza um **ID único** derivado do endereço MAC da placa simulada, reduzindo colisões de sessão.
 
 O tópico principal de telemetria é:
 
@@ -33,7 +33,7 @@ Esse formato único simplifica o pipeline no Node-RED: um único **mqtt in** ali
 
 ## 3. Segurança e ética de uso do broker público
 
-O broker de demonstração **não** deve transportar dados clínicos reais identificáveis. Limitamo-nos a **valores sintéticos/simulados** coerentes com o caso de uso acadêmico. Em produção, seriam exigidos **TLS (8883)**, **ACLs por tópico**, **rotação de credenciais** e **tenant** dedicado (ex.: HiveMQ Cloud com autenticação).
+O broker de demonstração **não** deve transportar dados clínicos identificáveis. Utilizam-se apenas **valores sintéticos ou simulados**, coerentes com o uso acadêmico. Em produção, seriam exigidos **TLS (8883)**, **ACLs por tópico**, **rotação de credenciais** e **tenant** dedicado (ex.: HiveMQ Cloud com autenticação).
 
 ## 4. Node-RED — arquitetura do fluxo
 
@@ -55,17 +55,17 @@ Conforme rubrica sugerida pelo enunciado (exemplos):
 - **Taquicardia simulada:** `bpm > 120` → mensagem `ALERTA: BPM elevado`.  
 - **Febre simulada:** `temp_c > 38.0` → mensagem `ALERTA: febre (temperatura)`.
 
-A prioridade visual é simples: o último critério verdadeiro sobrescreve o texto curto na área de status — suficiente para demonstração; em produção usaríamos máquina de estados ou cores graduais.
+A prioridade visual é simples: o último critério verdadeiro sobrescreve o texto na área de status — suficiente para demonstração; em produção recomendam-se máquina de estados ou codificação visual adicional.
 
 ## 6. Grafana (opcional)
 
-Não foi obrigatório para a rubrica base. Caso o grupo deseje “ir além”, recomenda-se conectar o HiveMQ como **MQTT broker datasource** ou ingerir os mesmos JSON via **Telegraf** → **InfluxDB** → **Grafana Cloud**, documentando credenciais fora do repositório.
+Não foi exigido na rubrica base. Para extensão, pode-se conectar o HiveMQ como *datasource* MQTT ou ingerir os mesmos JSON via **Telegraf** → **InfluxDB** → **Grafana Cloud**, mantendo credenciais fora do repositório.
 
 ## 7. Testes integrados sugeridos
 
-1. Rodar o **Wokwi** e observar publicações no **MQTT Explorer** (desktop) assinando `cardioia/grupo54/#`.  
-2. Com Node-RED ativo, validar que os **gráficos** respondem em até alguns segundos e que os **alertas** disparam ao pressionar o botão repetidamente (subida de BPM) ou ao alterar a temperatura simulada do DHT no editor de atributos do Wokwi.
+1. Executar o **Wokwi** e observar publicações no **MQTT Explorer** (desktop), assinando `cardioia/grupo54/#`.  
+2. Com Node-RED em execução, validar resposta dos **gráficos** em poucos segundos e o disparo de **alertas** ao pressionar o botão (subida de BPM) ou ao alterar atributos simulados do DHT22 no Wokwi.
 
 ## 8. Conclusão da Parte 2
 
-Demonstramos o encadeamento **device → MQTT → dashboard**, com separação de papéis e evidências versionadas (`flows.json`, README). O diagrama **`assets/evidencias/arquitetura_fase3.svg`** resume a arquitetura; **prints PNG** da interface podem ser acrescentados na mesma pasta se a rubrica da FIAP exigir capturas de tela.
+Demonstra-se o encadeamento **dispositivo → MQTT → *dashboard*** com artefatos versionados (`flows.json`, documentação em `docs/node-red/`). O arquivo **`assets/evidencias/arquitetura_fase3.svg`** resume a arquitetura; **capturas PNG** da interface podem ser acrescentadas em `assets/evidencias/` se a rubrica exigir *prints* além do export.

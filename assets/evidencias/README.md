@@ -1,19 +1,19 @@
-# Evidências (prints / exports)
+# Evidências (capturas de tela / export)
 
-## Entregue no repositório
+## Arquivos já versionados
 
-- **`arquitetura_fase3.svg`** — diagrama Edge → MQTT → Node-RED (abre no navegador ou no VS Code).  
-- **`wokwi_projeto_publico_url.png`** — imagem com o **URL público** do Wokwi e instruções (evidência de entrega; pode substituir por *print* real do simulador se desejado).  
-- **`node_red_flows_github_export.png`** — imagem com o **link** do `flows.json` no GitHub e nota de importação (evidência do export Node-RED).
+- **`arquitetura_fase3.svg`** — diagrama Edge → MQTT → Node-RED.  
+- **`wokwi_projeto_publico_url.png`** — evidência do URL público do Wokwi.  
+- **`node_red_flows_github_export.png`** — evidência do `flows.json` no GitHub.
 
-## Recomendado (e alinhado ao enunciado FIAP)
+## Recomendações adicionais
 
-O enunciado aceita **prints da aplicação** *ou* **export do dashboard**; o export está em [`../../docs/node-red/flows.json`](../../docs/node-red/flows.json). Mesmo assim, **PNG** ajudam na correção.
+O enunciado da Fase 3 admite **capturas da aplicação** *ou* **export do *dashboard***; o export está em [`../../docs/node-red/flows.json`](../../docs/node-red/flows.json). Mesmo assim, **PNG** facilitam a correção.
 
-Inclua **PNG** que comprovem:
+Sugestão de evidências:
 
-1. **Wokwi** em execução com leituras no Monitor Serial (fila + modo simulado).  
+1. **Wokwi** em execução com saída relevante no Monitor Serial (fila e modo simulado).  
 2. **Node-RED / Dashboard** (`/ui`) com gráficos e alerta acionado.  
-3. (Opcional) **MQTT Explorer** ou outra ferramenta mostrando mensagens em `cardioia/grupo54/telemetria`.
+3. (Opcional) Cliente MQTT mostrando mensagens em `cardioia/grupo54/telemetria`.
 
-Sugestão de nomes: `wokwi_serial.png`, `dashboard_ui.png`, `mqtt_explorer.png`.
+Nomes sugeridos: `wokwi_serial.png`, `dashboard_ui.png`, `mqtt_explorer.png`.

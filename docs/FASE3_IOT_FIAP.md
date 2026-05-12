@@ -1,6 +1,6 @@
 # Fase 3 (FIAP ON — *Além das Fronteiras Digitais*) — **Cap 1: CardioIA Conectada: IoT e Visualização de Dados para a Saúde Digital**
 
-Atividade alinhada ao enunciado **“FASE 3: Monitoramento Contínuo – IoT na Saúde”** (ESP32, Wokwi, MQTT, Node-RED, resiliência offline) e ao **objetivo da fase no portal**: integrar IA, IoT e desenvolvimento de sistemas na **CardioIA**, com dashboards que apoiem decisões clínicas, **governança de dados** e **impacto social** positivo (texto orientador no FIAP ON).
+Atividade referente ao enunciado **«FASE 3: Monitoramento Contínuo – IoT na Saúde»** (ESP32, Wokwi, MQTT, Node-RED, resiliência *offline*), alinhada ao objetivo da fase no **FIAP ON** (*Além das Fronteiras Digitais*): integração de IA, IoT e sistemas na **CardioIA**, com *dashboards*, governança de dados e impacto social (telemetria simulada; sem dados identificáveis de pacientes).
 
 ## Mapeamento enunciado → artefatos neste repositório
 
@@ -37,6 +37,6 @@ Antes do prazo (**até 12/05/2026** no calendário FIAP ON — conferir no *dash
 
 1. Repositório público GitHub com `wokwi/` e `docs/` atualizados.  
 2. **URL Share do Wokwi** obtido e informado (Moodle + `links.md`).  
-3. **Export** Node-RED: já está em `docs/node-red/flows.json`; opcionalmente anexar o mesmo ficheiro no Moodle se houver campo de ficheiro.  
+3. **Export** Node-RED: já está em `docs/node-red/flows.json`; opcionalmente anexar o mesmo arquivo no Moodle, se houver campo de upload.  
 4. **Relatórios** Parte 1 e Parte 2: links no README / `docs/`.  
 5. (Recomendado) 1–2 **imagens** em `assets/evidencias/` com commit final.
