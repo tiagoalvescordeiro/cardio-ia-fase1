@@ -54,6 +54,19 @@ Arquivos Node-RED: `docs/node-red/`. Evidências em imagem: `assets/evidencias/`
 
 ---
 
+## Fase 3 — Ir Além (Atividades Extras)
+
+| Descrição | Link / recurso |
+|---|---|
+| Script de RPA (E-mail e REST) | [scripts/fase3_ir_alem1_rest_email.py](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/scripts/fase3_ir_alem1_rest_email.py) |
+| Relatório Ir Além 1 | [docs/relatorio_ir_alem1_rest_email.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/relatorio_ir_alem1_rest_email.md) |
+| Notebook de IA (Neuromórfica/LIF) | [notebooks/fase3_ir_alem2_ia_series_temporais.ipynb](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/notebooks/fase3_ir_alem2_ia_series_temporais.ipynb) |
+| Detalhamento Técnico IA | [docs/detalhes_modelos_ia_cardioia.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/detalhes_modelos_ia_cardioia.md) |
+| Relatório Ir Além 2 | [docs/relatorio_ir_alem2_ia_comparativo.md](https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/docs/relatorio_ir_alem2_ia_comparativo.md) |
+| **Vídeo no YouTube** | https://youtu.be/mKrq-MxRo0s |
+
+---
+
 **Repositório:** https://github.com/tiagoalvescordeiro/cardio-ia-fase1  
 **Turma:** 1TIAO — FIAP 2026  
 **Integrantes:** Tiago Alves Cordeiro (RM 561791) | Matheus Parra (RM 561907) | Otavio Custodio de Oliveira (RM 565606) | Thiago Henrique Pereira de Almeida Santos (RM 563327) | Leandro Arthur Marinho Ferreira (RM 565240)

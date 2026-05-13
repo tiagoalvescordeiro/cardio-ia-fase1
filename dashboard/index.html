@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioIA | Edge Monitoring Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar glass-panel">
+        <div class="brand">
+            <i class="fa-solid fa-heart-pulse"></i>
+            CardioIA
+        </div>
+        <nav class="nav-menu">
+            <div class="nav-item active" data-view="dashboard-view">
+                <i class="fa-solid fa-chart-line"></i>
+                Monitoramento UTI
+            </div>
+            <div class="nav-item" data-view="email-view">
+                <i class="fa-solid fa-envelope-circle-check"></i>
+                Gestor de E-mails
+            </div>
+            <div class="nav-item" data-view="notebook-view">
+                <i class="fa-solid fa-brain"></i>
+                Modelo IA (LIF)
+            </div>
+        </nav>
+        <div style="margin-top: auto; font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+            Fase 3 - Edge Computing<br>Simulação IoT
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        
+        <!-- View 1: Dashboard Real-time -->
+        <section id="dashboard-view" class="view-section active">
+            <div class="header">
+                <div>
+                    <h1>Monitoramento Contínuo</h1>
+                    <p style="color: var(--text-muted); margin-top: 5px;" id="current-patient-name">Selecione um paciente...</p>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <div class="simulation-controls">
+                        <button class="btn btn-sm btn-outline" onclick="triggerManualAlert('bpm')" title="Simular Taquicardia">
+                            <i class="fa-solid fa-bolt"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline" onclick="triggerManualAlert('temp')" title="Simular Febre">
+                            <i class="fa-solid fa-fire"></i>
+                        </button>
+                        <button class="btn btn-sm" onclick="exportActivePatientCSV()" title="Exportar CSV">
+                            <i class="fa-solid fa-file-csv"></i>
+                        </button>
+                    </div>
+                    <div class="status-badge">
+                        <div class="pulse"></div>
+                        MONITORAMENTO ATIVO
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-dashboard">
+                <!-- Gráfico Principal -->
+                <div class="glass-panel chart-container-wrapper">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Sinais Vitais (Tempo Real)</h3>
+                            <div style="color: var(--text-muted); font-size: 0.85rem;">
+                                <i class="fa-solid fa-satellite-dish"></i> Telemetria Edge
+                            </div>
+                        </div>
+                        <canvas id="vitalsChart"></canvas>
+                    </div>
+                    
+                    <!-- Barra de Potencial IA (LIF) -->
+                    <div class="lif-brain-view">
+                        <div class="lif-header">
+                            <span><i class="fa-solid fa-brain"></i> Potencial de Membrana IA (Modelo LIF)</span>
+                            <span id="lif-val">0.00 / 5.00</span>
+                        </div>
+                        <div class="lif-bar-bg">
+                            <div id="lif-progress" class="lif-bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Pacientes -->
+                <div class="glass-panel">
+                    <div style="padding: 1.5rem 1.5rem 0 1.5rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 1rem;">
+                        <h3>Pacientes Internados</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Clique para visualizar telemetria</p>
+                    </div>
+                    <div class="patients-list" id="patients-list">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- View 2: Gestor de E-mails (RPA) -->
+        <section id="email-view" class="view-section">
+            <div class="header">
+                <div>
+                    <h1>Gestor de E-mails e Alertas (RPA)</h1>
+                    <p style="color: var(--text-muted); margin-top: 5px;">Log de disparos automáticos de emergência baseados em regras clínicas</p>
+                </div>
+            </div>
+            <div class="glass-panel email-log" id="email-log-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- View 3: Modelo IA (Notebook) -->
+        <section id="notebook-view" class="view-section">
+            <div class="header">
+                <div>
+                    <h1>Modelo de IA: Regressão Logística vs Neuromórfico (LIF)</h1>
+                    <p style="color: var(--text-muted); margin-top: 5px;">Visão do "Ir Além 2" das séries temporais.</p>
+                </div>
+                <a href="https://github.com/tiagoalvescordeiro/cardio-ia-fase1/blob/main/notebooks/fase3_ir_alem2_ia_series_temporais.ipynb" target="_blank" class="btn">
+                    <i class="fa-brands fa-github"></i> Ver no GitHub
+                </a>
+            </div>
+            
+            <div class="glass-panel notebook-container">
+                <div class="notebook-mock">
+                    <h2 style="color:var(--text-main); margin-bottom: 1rem;">[RESUMO] fase3_ir_alem2_ia_series_temporais.ipynb</h2>
+                    <p>O modelo neuromórfico (Leaky Integrate-and-Fire - LIF) simula um neurônio que acumula estímulos até disparar um alerta (spike). É muito mais leve computacionalmente do que a Regressão Logística, ideal para dispositivos Edge (como o ESP32).</p>
+                    
+                    <pre class="code-block"><code><span class="code-comment"># Função Neurônio LIF (Leaky Integrate-and-Fire)</span>
+<span class="code-keyword">def</span> <span class="code-func">run_lif_model</span>(input_series, threshold, decay_rate):
+    potential = <span class="code-num">0.0</span>
+    spikes = []
+    
+    <span class="code-keyword">for</span> stimulus <span class="code-keyword">in</span> input_series:
+        <span class="code-comment"># Estímulo baseado na variação do BPM</span>
+        stim_val = max(<span class="code-num">0</span>, stimulus - <span class="code-num">75</span>)
+        
+        <span class="code-comment"># Acúmulo com vazamento (Leak)</span>
+        potential = (potential * decay_rate) + (stim_val * <span class="code-num">0.1</span>)
+        
+        <span class="code-keyword">if</span> potential >= threshold:
+            spikes.append(<span class="code-num">1</span>) <span class="code-comment"># Spike!</span>
+            potential = <span class="code-num">0.0</span>   <span class="code-comment"># Reset</span>
+        <span class="code-keyword">else</span>:
+            spikes.append(<span class="code-num">0</span>)
+            
+    <span class="code-keyword">return</span> spikes</code></pre>
+                    
+                    <h3 style="color:var(--text-main); margin-top: 2.5rem; margin-bottom: 1rem;">Glossário de Parâmetros</h3>
+                    <div class="ai-glossary">
+                        <div class="glossary-item">
+                            <h4>Potencial de Membrana</h4>
+                            <p>O nível de carga acumulada pelo neurônio artificial. Representa o estado atual de alerta do sistema.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Limiar (Threshold)</h4>
+                            <p>O valor crítico (5.00). Ao ser atingido, a IA confirma uma anomalia real e dispara o alerta (Spike).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Vazamento (Leak)</h4>
+                            <p>A taxa de decaimento (0.8). Permite que a IA "esqueça" picos momentâneos e ruídos que não são riscos contínuos.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h4>Estímulo (Stimulus)</h4>
+                            <p>A entrada de dados. No CardioIA, é a diferença entre o BPM atual e a zona de repouso (75 BPM).</p>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 2rem; border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        Para visualizar o Notebook original interativo gerado na Fase 3, clique no botão "Ver no GitHub" acima ou abra o arquivo `notebooks/fase3_ir_alem2_ia_series_temporais.ipynb` na sua IDE de preferência.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/mockApi.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

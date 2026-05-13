@@ -14,7 +14,10 @@ Implementação do módulo **Monitoramento contínuo com IoT na saúde**: ESP32 
 | Dashboard Node-RED (gráfico, gauge, alerta) | [`node-red/flows.json`](node-red/flows.json) + instruções em [`node-red/README.md`](node-red/README.md) |
 | Relatório Parte 1 (edge) | [`relatorio_parte1_edge.md`](relatorio_parte1_edge.md) |
 | Relatório Parte 2 (MQTT + dashboard) | [`relatorio_parte2_mqtt_dashboard.md`](relatorio_parte2_mqtt_dashboard.md) |
-| Grafana (opcional) | Não incluído — podem acrescentar capturas em `assets/evidencias/` se no futuro existir Grafana |
+| **Ir Além 1 (REST + RPA)** | [`scripts/fase3_ir_alem1_rest_email.py`](../scripts/fase3_ir_alem1_rest_email.py) + [`relatorio_ir_alem1_rest_email.md`](relatorio_ir_alem1_rest_email.md) |
+| **Ir Além 2 (IA Neuromórfica)** | [`notebooks/fase3_ir_alem2_ia_series_temporais.ipynb`](../notebooks/fase3_ir_alem2_ia_series_temporais.ipynb) + [`relatorio_ir_alem2_ia_comparativo.md`](relatorio_ir_alem2_ia_comparativo.md) |
+| **Dashboard de Monitoramento** | [`dashboard/index.html`](../dashboard/index.html) (Interface Web Premium) |
+| Vídeo de Apresentação | https://youtu.be/mKrq-MxRo0s |
 
 ## SPIFFS e simulador
 
