@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório Comparativo - CardioIA</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        h1 { color: #1e293b; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        h2 { color: #3b82f6; margin-top: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; }
+        h3 { color: #475569; }
+        p { margin-bottom: 1rem; text-align: justify; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; margin-bottom: 1.5rem; page-break-inside: avoid; }
+        th, td { border: 1px solid #cbd5e1; padding: 0.75rem; text-align: left; }
+        th { background-color: #f8fafc; color: #0f172a; }
+        ul { margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        .header-box { background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 2rem; }
+        .page-break { page-break-before: always; }
+        @media print {
+            body { padding: 0; }
+            .header-box { background: transparent; border: none; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Relatório Comparativo: Desempenho de IA em Séries Temporais</h1>
+    
+    <div class="header-box">
+        <strong>Projeto:</strong> CardioIA - Monitoramento Contínuo IoT na Saúde (Fase 3)<br>
+        <strong>Atividade:</strong> Ir Além 2 – Inteligência Artificial em séries temporais de saúde<br>
+        <strong>Alunos:</strong> Tiago Alves Cordeiro, Matheus Parra, Otavio Custodio, Thiago Santos, Leandro Ferreira<br>
+        <strong>Repositório:</strong> <a href="https://github.com/tiagoalvescordeiro/cardio-ia-fase1">github.com/tiagoalvescordeiro/cardio-ia-fase1</a><br>
+        <strong>Vídeo de Demonstração:</strong> <a href="https://youtu.be/mKrq-MxRo0s">youtu.be/mKrq-MxRo0s</a>
+    </div>
+
+    <h2>1. Introdução e Objetivo</h2>
+    <p>No contexto do monitoramento cardiológico em tempo real via Edge Computing (como no microcontrolador ESP32 adotado neste projeto), os sinais vitais como os batimentos por minuto (BPM) geram <strong>séries temporais</strong> ruidosas. O objetivo desta análise é aplicar técnicas de Inteligência Artificial para detectar anomalias nessas séries (como picos de taquicardia) e comparar duas metodologias:</p>
+    <ul>
+        <li><strong>Regressão Logística:</strong> Um classificador estatístico tradicional.</li>
+        <li><strong>Modelo LIF (Leaky Integrate-and-Fire):</strong> Uma rede neuromórfica bio-inspirada que imita o comportamento de um neurônio pulsante.</li>
+    </ul>
+
+    <h2>2. Metodologia de Implementação</h2>
+    <p>Para garantir um ambiente de teste isolado e comparável, geramos uma série temporal sintética no Python contendo 1.000 amostras. A linha base do BPM foi definida em 75, com ruído aleatório embutido para simular sensores reais. Foram injetados artificialmente "surtos" de taquicardia (BPM > 115) para atuar como as anomalias alvo da detecção.</p>
+    <p>Ambos os modelos foram programados no ambiente Jupyter Notebook, sem o uso de processamento pesado em nuvem, focando em avaliar a viabilidade de execução diretamente na borda (Edge/IoT).</p>
+
+    <h2>3. Avaliação de Desempenho e Arquitetura</h2>
+
+    <h3>3.1 O Classificador Tradicional: Regressão Logística</h3>
+    <p>A Regressão Logística, por natureza, não lida com dados temporais sequenciais de forma contínua. Para contornar isso, empregamos a técnica de <em>Feature Engineering</em> conhecida como <strong>Janela Deslizante (Sliding Window)</strong>. Forçamos o modelo a "lembrar" do passado ao empacotar os 3 batimentos cardíacos anteriores como variáveis de entrada.</p>
+    <ul>
+        <li><strong>Acurácia:</strong> Altíssima para detecção dos picos artificiais gerados no treino.</li>
+        <li><strong>Problema de Ruído:</strong> O modelo mostrou-se frágil contra <em>outliers</em> biológicos. Um único pico irreal (erro do sensor) pode forçar a classificação para uma anomalia grave.</li>
+        <li><strong>Custo Computacional:</strong> Exigir que o microcontrolador mantenha um <em>buffer</em> de janela e realize dezenas de multiplicações matriciais em ponto flutuante drena a bateria rapidamente.</li>
+    </ul>
+
+    <div class="page-break"></div>
+
+    <h3>3.2 O Modelo Neuromórfico: Leaky Integrate-and-Fire (LIF)</h3>
+    <p>A rede LIF abandona as matrizes estatísticas em favor de uma equação dinâmica que simula o estresse do músculo cardíaco. Definimos o "Estímulo" como a diferença entre o BPM atual e a zona de repouso. Cada batimento alto adiciona carga a uma variável interna chamada <strong>Potencial de Membrana</strong>. Se esse potencial cruzar a barreira limite (<em>Threshold</em> de 5.0), o neurônio "dispara" o alerta de emergência e esvazia a carga. Para evitar falsos alertas, o neurônio possui uma taxa de "Vazamento" (<em>Leak</em> = 0.8) que limpa a carga ociosa.</p>
+    <ul>
+        <li><strong>Resiliência Orgânica:</strong> O LIF ignorou completamente picos isolados. O alerta só disparou quando o acúmulo da taquicardia se manteve por vários segundos.</li>
+        <li><strong>Zero Memória Explícita:</strong> Não há janelas deslizantes. O LIF precisou armazenar apenas uma variável (o potencial) na memória RAM, poupando processamento máximo do dispositivo IoT.</li>
+    </ul>
+
+    <h2>4. Comparativo de Vantagens e Limitações</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Critério de Análise</th>
+                <th>Regressão Logística (Janelas)</th>
+                <th>Neuromórfico (LIF Neuron)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Processamento Requerido</strong></td>
+                <td>Moderado (Operações matriciais/sigmoides contínuas)</td>
+                <td><strong>Mínimo</strong> (Apenas uma soma e multiplicação)</td>
+            </tr>
+            <tr>
+                <td><strong>Uso de Memória RAM</strong></td>
+                <td>Alto (Necessita armazenar histórico passado)</td>
+                <td><strong>Irrisório</strong> (Guarda apenas o estado atual de tensão)</td>
+            </tr>
+            <tr>
+                <td><strong>Reação a Falsos Positivos</strong></td>
+                <td>Alta sensibilidade a <em>outliers</em> repentinos.</td>
+                <td><strong>Robusta</strong>. Vazamento (Leak) filtra ruídos isolados.</td>
+            </tr>
+            <tr>
+                <td><strong>Fase de Treinamento</strong></td>
+                <td>Obrigatória e computacionalmente cara.</td>
+                <td>Adaptativa. Ajuste manual de limiares clínicos.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>5. Conclusão e Escolha Estratégica</h2>
+    <p>Enquanto a Regressão Logística é uma ferramenta formidável para a construção de <em>Dashboards</em> e processamento posterior na nuvem (Cloud Computing), ela peca no monitoramento imediato do hardware vestível (IoT Wearable).</p>
+    <p>A implementação do <strong>modelo LIF provou ser a arquitetura ideal</strong> para as ambições do projeto CardioIA. Ele permite que o processamento preditivo ocorra localmente no ESP32 (Edge Computing), sem dependência de internet constante, utilizando quase nenhuma bateria e protegendo a equipe médica de alarmes falsos causados por erros de biotelemetria momentânea. Este modelo é o alicerce biológico perfeito para a saúde digital do futuro.</p>
+
+</body>
+</html>
