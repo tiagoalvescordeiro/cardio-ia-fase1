@@ -135,7 +135,7 @@ ESP32 no Wokwi com **DHT22** (temperatura/umidade) e **botão** simulando varia�
 ### Ir Além (Atividades Extras da Fase 3)
 Além dos requisitos básicos de Edge e Fog Computing, adicionamos as atividades bônus:
 - **Ir Além 1 (REST e RPA de E-mail):** Em `scripts/fase3_ir_alem1_rest_email.py` simulamos um microsserviço que ingere dados via POST e aplica regras clínicas para disparar alertas automáticos por e-mail. Relatório em `docs/relatorio_ir_alem1_rest_email.md`.
-- **Ir Além 2 (IA e Redes Neuromórficas):** O notebook `notebooks/fase3_ir_alem2_ia_series_temporais.ipynb` traz a implementação inovadora de um classificador clássico vs modelo LIF em séries temporais cardíacas. Relatórios em `docs/relatorio_ir_alem2_ia_comparativo.md` e o detalhamento profundo em `docs/detalhes_modelos_ia_cardioia.md`.
+- **Ir Além 2 (IA e Redes Neuromórficas):** O notebook `notebooks/fase3_ir_alem2_ia_series_temporais.ipynb` traz a implementação inovadora de um classificador clássico vs modelo LIF em séries temporais cardíacas. Relatórios detalhados em `docs/Relatorio_Comparativo_CardioIA.pdf` e `docs/detalhes_modelos_ia_cardioia.md`.
 
 **(Opcional/Ação Requerida):** Vídeo de apresentação do Ir Além 2 no YouTube: https://youtu.be/mKrq-MxRo0s
 
